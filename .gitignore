@@ -1,0 +1,19 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+dist/
+
+# Local caches (model downloads, cloned source repos)
+.cache/
+
+# Claude Code local settings
+.claude/settings.local.json
+
+.DS_Store

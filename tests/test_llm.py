@@ -5,7 +5,7 @@ from typing import Any
 import httpx
 import pytest
 
-from router.llm import LLMClient
+from router.llm import LLMClient, ResponseCache
 from router.spend import SpendLimitExceeded, SpendTracker
 
 MODEL = "openai/gpt-4o-mini"
@@ -66,6 +66,21 @@ def test_unpriced_model_rejected(tmp_path: Path) -> None:
     with pytest.raises(ValueError):
         LLMClient("key", tracker, http).chat("some/other-model", MESSAGES, purpose="test")
     assert seen == []
+
+
+def test_cache_hit_is_free_and_offline(tmp_path: Path) -> None:
+    tracker = SpendTracker(tmp_path / "ledger.jsonl", 5.0)
+    http, seen = fake_http(ok_response({"prompt_tokens": 1, "completion_tokens": 1, "cost": 0.01}))
+    cache = ResponseCache(tmp_path / "cache.jsonl")
+    client = LLMClient("key", tracker, http, cache)
+    first = client.chat(MODEL, MESSAGES, purpose="test")
+    # A fresh cache instance reads the same file, as a later run would.
+    client2 = LLMClient("key", tracker, http, ResponseCache(tmp_path / "cache.jsonl"))
+    second = client2.chat(MODEL, MESSAGES, purpose="test")
+    assert (first.cached, second.cached) == (False, True)
+    assert second.text == "hi"
+    assert len(seen) == 1
+    assert tracker.total() == pytest.approx(0.01)
 
 
 def test_missing_key_rejected(tmp_path: Path) -> None:

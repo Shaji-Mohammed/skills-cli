@@ -187,3 +187,38 @@ def rewrite(
 
     with ThreadPoolExecutor(WORKERS) as pool:
         return dict(pool.map(one, skills))
+
+
+# --- 4. Strict second check: keep a rewrite only if the original is trigger-only --------------
+
+VERIFY_SYSTEM = """You check one AI-agent skill description.
+
+Mentally delete every part that says WHEN to use the skill: "use when...", "when the user...",
+"triggers on...", lists of phrases a user might say, and mentions of what the user asks for.
+Then look at what is left.
+
+- trigger_only = true: nothing is left that says what the skill itself does, performs or
+  produces.
+- trigger_only = false: something left states a capability, action or output of the skill,
+  even briefly (for example "Prepares production launches" or "Generates a checklist").
+
+When in doubt, answer false.
+
+Reply with only a JSON object, no other text: {"trigger_only": true | false}"""
+
+
+def verify_request(original: str) -> Request:
+    return _system_user(VERIFY_SYSTEM, f"description: {original}"), 20
+
+
+def verify_trigger_only(client: LLMClient, originals: dict[str, str]) -> dict[str, bool | None]:
+    """id -> strict verdict on the ORIGINAL description; None if the reply didn't parse."""
+
+    def one(item: tuple[str, str]) -> tuple[str, bool | None]:
+        sid, original = item
+        data = _call(client, verify_request(original))
+        verdict = data.get("trigger_only") if data else None
+        return sid, verdict if isinstance(verdict, bool) else None
+
+    with ThreadPoolExecutor(WORKERS) as pool:
+        return dict(pool.map(one, sorted(originals.items())))

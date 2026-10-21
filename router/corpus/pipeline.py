@@ -25,6 +25,7 @@ REMOVED = CORPUS_DIR / "removed.jsonl"
 OVERLAPS = CORPUS_DIR / "overlaps.jsonl"
 PAIR_JUDGMENTS = CORPUS_DIR / "raw" / "pair_judgments.jsonl"
 LLM_CACHE = CORPUS_DIR / "raw" / "llm_cache.jsonl"
+REWRITE_DECISIONS = CORPUS_DIR / "raw" / "rewrite_decisions.jsonl"
 
 # Pairs below the 0.92 auto-dedup threshold but at or above this go to the LLM pair judge.
 # The run records nearest-neighbour cosine percentiles so this choice can be checked.
@@ -164,11 +165,34 @@ def run_curation(
     needs_rewrite = [s for s in skills if not labels[s["id"]]["states_what"]]
     print(f"Rewriting {len(needs_rewrite)} trigger-only descriptions")
     rewrites = curate_llm.rewrite(client, needs_rewrite, read_body)
+    drafted = {sid: text for sid, text in rewrites.items() if text is not None}
+    by_id = {s["id"]: s for s in skills}
+    print(f"Strict check on {len(drafted)} rewritten descriptions")
+    strict = curate_llm.verify_trigger_only(
+        client, {sid: by_id[sid]["description"] for sid in drafted}
+    )
+    # A rewrite survives only if the strict check confirms the original never says what the
+    # skill does. Parse failures revert: keeping the author's text is the conservative choice.
+    decisions = [
+        {
+            "id": sid,
+            "description_original": by_id[sid]["description"],
+            "rewrite": text,
+            "strict_trigger_only": strict[sid],
+            "kept": strict[sid] is True,
+        }
+        for sid, text in sorted(drafted.items())
+    ]
+    write_jsonl(REWRITE_DECISIONS, decisions)
+    kept_rewrites = {d["id"]: d["rewrite"] for d in decisions if d["kept"]}
+
+    # Every skill keeps its author's text in description_original; `description` is the
+    # rewrite where one was kept. Retrieval picks one via descriptions.description_for().
     for s in skills:
         s["domain"] = labels[s["id"]]["domain"]
-        if (new := rewrites.get(s["id"])) is not None:
-            s["description_original"] = s["description"]
-            s["description"] = new
+        s["description_original"] = s["description"]
+        s["rewritten"] = s["id"] in kept_rewrites
+        s["description"] = kept_rewrites.get(s["id"], s["description"])
 
     kept_ids = {s["id"] for s in skills}
     overlaps = [j for j in judgments if j["verdict"] == "overlap" and {j["a"], j["b"]} <= kept_ids]
@@ -189,11 +213,14 @@ def run_curation(
         "pair_verdicts": dict(Counter(str(j["verdict"]) for j in judgments)),
         "overlap_pairs_kept": len(overlaps),
         "flagged_trigger_only": len(needs_rewrite),
-        "rewritten_descriptions": sum(v is not None for v in rewrites.values()),
+        "rewrites_drafted": len(drafted),
+        "rewrites_kept": len(kept_rewrites),
+        "rewrites_reverted": len(drafted) - len(kept_rewrites),
         "parse_failures": {
             "pairs": sum(j["verdict"] == "parse_failed" for j in judgments),
             "classify": sum(v["domain"] == "parse_failed" for v in labels.values()),
             "rewrite": sum(v is None for v in rewrites.values()),
+            "strict_check": sum(v is None for v in strict.values()),
         },
         "domains": dict(domains.most_common()),
         "max_domain_share": round(max(domains.values()) / len(skills), 4),

@@ -85,10 +85,17 @@ def render(run_dir: Path) -> str:
         "",
         "## Description rewrites",
         "",
-        f"{cfg['llm_model']} flagged {metrics['flagged_trigger_only']} descriptions that say "
-        "when to trigger the skill but not what it does. "
-        f"{metrics['rewritten_descriptions']} were rewritten from the SKILL.md body; the original "
-        "is kept in `description_original`. Nothing else was rewritten.",
+        f"A first pass by {cfg['llm_model']} flagged {metrics['flagged_trigger_only']} "
+        "descriptions as saying when to trigger the skill but not what it does, and "
+        f"{metrics['rewrites_drafted']} rewrites were drafted from the SKILL.md body. A stricter "
+        "second check then re-read each original: a rewrite is kept only if nothing in the "
+        "original says what the skill does. "
+        f"**{metrics['rewrites_kept']} rewrites kept, {metrics['rewrites_reverted']} reverted.** "
+        "Every decision is in `corpus/raw/rewrite_decisions.jsonl`.",
+        "",
+        "All 500 skills keep the author's text in `description_original`; `description` holds "
+        "the kept rewrite where there is one (`rewritten: true`). Retrieval chooses between them "
+        "with `description_source = original | rewritten`, compared on dev in Phase 3.",
         "",
         "## Domain spread",
         "",
@@ -123,7 +130,7 @@ def render(run_dir: Path) -> str:
         *[f"| {k} | {v} |" for k, v in metrics["licenses"].items()],
         "",
         f"LLM parse failures: pairs {pf['pairs']}, classify {pf['classify']}, rewrite "
-        f"{pf['rewrite']}.",
+        f"{pf['rewrite']}, strict check {pf['strict_check']}.",
         "",
     ]
     return "\n".join(lines)

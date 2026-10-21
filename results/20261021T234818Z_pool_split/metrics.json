@@ -1,0 +1,29 @@
+{
+  "pooled_before_d4": 394,
+  "dropped_d4": 10,
+  "pooled": 384,
+  "dev": 234,
+  "test": 150,
+  "dev_review_rows": 84,
+  "dev_by_stratum": {
+    "implied/hand_written/single": 11,
+    "implied/hand_written/multi": 4,
+    "explicit/model_drafted/single": 79,
+    "explicit/model_drafted/multi": 39,
+    "implied/model_drafted/single": 43,
+    "implied/model_drafted/multi": 15,
+    "no_skill/model_drafted/single": 43
+  },
+  "test_by_stratum": {
+    "implied/hand_written/single": 7,
+    "implied/hand_written/multi": 3,
+    "explicit/model_drafted/single": 51,
+    "explicit/model_drafted/multi": 25,
+    "implied/model_drafted/single": 27,
+    "implied/model_drafted/multi": 10,
+    "no_skill/model_drafted/single": 27
+  },
+  "multi_skill_share": 0.25,
+  "pool_sha256": "3b8214a5dac4207edd29ffe3a9ab7fa12d3fde18992209b4c071b845dfaeb52d",
+  "test_review_sha256": "b35edc724a1af9cf0634a16e4f54cfa00451146db1c56da344ee2bf1760b5dd6"
+}

@@ -92,12 +92,23 @@ slice (which overlaps the first two).
 Every result is reported for `hand_written` and `model_drafted` separately as well as combined,
 because qwen3.5:9b both drafts prompts and acts as the fallback.
 
-**Product-locked skills are explicit-bucket only.** A skill is product-locked if a prompt can
-only select it by naming its product or hosted service, because the product is the means by
-which the capability is delivered (RunComfy, Higgsfield, Tavily/Exa, Stripe Projects, Caveman,
-Agentix, shoehorn, Kling, Firecrawl and similar). Product-locked skills never appear in implied
-prompts, hand-written or drafted. The confirmed list is `corpus/product_locked.json`: qwen
-pre-screens every skill, and a person confirms each flag.
+**Product-locked skills are explicit-bucket only.** A skill is product-locked if picking it
+means picking one specific product, model or library among interchangeable alternatives, and
+the user's environment doesn't settle that choice.
+
+- **Locked:** single-model skills (`kling-3-0`, `nano-banana-2`), single-provider skills
+  (`web-search` on Tavily/Exa, `stripe-projects`), single-library migrations (shoehorn), and
+  skills that operate a vendor's product (Caveman Cloud manage, setup, discover, stats and
+  evidence-review; `agentix-ceo`).
+- **Not locked:** platforms, frameworks and services the user already works in (Azure, Vue,
+  HyperFrames, a RunComfy account, Clerk and similar); implied prompts may cue these as
+  environment. Generic process skills that happen to live in a vendor's repo (`lean-build`,
+  `caveman-review`, `caveman`) are not locked either.
+
+Product-locked skills never appear in implied prompts, hand-written or drafted. The confirmed
+list is `corpus/product_locked.json`: qwen pre-screens every skill, and a person confirms each
+flag. (The pre-screen in `results/20261021T210931Z_product_locked_prescreen` used an earlier,
+broader definition; the human decisions follow this one.)
 
 **Environment cues are allowed in implied prompts; capability names are not.** An implied
 prompt may name what the user already has ("our Vue app", "our Azure subscription", "we use

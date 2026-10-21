@@ -4,7 +4,7 @@ import typer
 
 from router.config import REPO_ROOT, SPEND_LEDGER, load_settings
 from router.corpus import collect as collect_mod
-from router.corpus import leaderboard, pipeline
+from router.corpus import leaderboard, pipeline, product_locked
 from router.corpus import report as corpus_report
 from router.evalset import equivalence, handwritten, slots
 from router.llm import LLMClient, ResponseCache
@@ -76,6 +76,35 @@ def report() -> None:
     run_dir = corpus_report.latest_run()
     (pipeline.CORPUS_DIR / "CURATION.md").write_text(corpus_report.render(run_dir))
     typer.echo(f"Wrote corpus/CURATION.md from {run_dir.relative_to(REPO_ROOT)}")
+
+
+@corpus_app.command("product-locked-prescreen")
+def product_locked_prescreen(
+    allow_dirty: bool = typer.Option(
+        False, "--allow-dirty", help="Run from uncommitted code (the run can't be quoted)"
+    ),
+) -> None:
+    """Have qwen flag product-locked skills into a review sheet (uses the local LLM)."""
+    settings = load_settings()
+    client = LLMClient(
+        settings.ollama_model, settings.ollama_url, cache=ResponseCache(product_locked.LLM_CACHE)
+    )
+    try:
+        run_path = product_locked.prescreen(client, allow_dirty=allow_dirty)
+    except DirtyTree as e:
+        typer.echo(f"Stopped: {e}", err=True)
+        raise typer.Exit(1) from e
+    typer.echo(
+        f"Review {product_locked.REVIEW_CSV.relative_to(REPO_ROOT)} "
+        f"(run {run_path.relative_to(REPO_ROOT)})"
+    )
+
+
+@corpus_app.command("freeze-product-locked")
+def freeze_product_locked() -> None:
+    """Write the confirmed product-locked list to corpus/product_locked.json."""
+    locked = product_locked.freeze()
+    typer.echo(f"Froze {len(locked)} product-locked skills")
 
 
 @evals_app.command("equivalence-candidates")

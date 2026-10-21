@@ -56,10 +56,25 @@ Candidates come from skill text only (`router evals equivalence-candidates`):
   repos, same-repo pairs with related names, alias pairs (a description that says it's
   deprecated or renamed) and umbrella pairs (a router skill and the skills it routes to).
 
+Review rules (applied in the 2026-10-21 review):
+
+- **Accept** a pair only if, for any realistic prompt where one skill is REQUIRED, the other
+  serves the user equally well.
+- **Umbrella ~ specific: reject** (tie-breaker 2: the specific skill is gold).
+- **Different hosted services or platforms: reject** (tie-breaker 3), for example Firecrawl vs
+  ScrapeGraph, RunComfy vs Higgsfield, an Azure-specific skill vs a generic one. Local tools
+  that produce the same result are accepted (agent-browser, browser-act, browser-use).
+- **Design-quality skills stay distinct by policy** (frontend-design, impeccable,
+  ui-ux-pro-max and similar). This is a known over-routing risk; see `docs/DECISIONS.md`.
+- **Canonical member:** the most-installed member, except `prisma/skills/prisma-postgres-setup`
+  for the alias set and `shadcn/ui/shadcn` for the shadcn set.
+
 qwen3.5:9b pre-screens the pool with the curation pair prompt. A person reviews every pair it
 calls `same` or `overlap`, every alias and umbrella pair, and a random sample of pairs it called
-`distinct` (to check what the pre-screen misses). Accepted pairs are merged into sets, and the
-sets are frozen in `evals/equivalence.json` before any prompt is generated.
+`distinct` (to check what the pre-screen misses). If 3 or more of the 20 spot-check pairs had
+been accepted, the sheet would have been widened before freezing; 0 were. Accepted pairs are
+merged into sets, and the sets are frozen in `evals/equivalence.json` before any prompt is
+generated.
 
 ## 3. Buckets and mix
 

@@ -78,3 +78,22 @@ skill, never reviewed), so Phase 4 builds its taxonomy separately rather than re
 
 **LLM outputs are cached in the repo** (`corpus/raw/llm_cache.jsonl`), so rebuilding the
 corpus gives the same result without re-running the model.
+
+## Phase 2
+
+**Known over-routing risk: the design-quality cluster.** Skills that improve how a UI looks or
+feels overlap heavily, but they're kept distinct by policy rather than merged into an equivalence
+set. Each has a different approach or house style, and merging them would hide real routing
+choices. The 19 review rows marked "Design-quality cluster" in
+`evals/review/equivalence_candidates.csv` involve 15 skills:
+`anthropics/skills/frontend-design`, `pbakaus/impeccable/impeccable`,
+`nextlevelbuilder/ui-ux-pro-max-skill/ui-ux-pro-max`,
+`addyosmani/agent-skills/frontend-ui-engineering`,
+`jakubkrehel/make-interfaces-feel-better/make-interfaces-feel-better`,
+`uizze/uizze/uizze-ui`, `leonxlnx/taste-skill/design-taste-frontend`, `nutlope/hallmark/hallmark`,
+`emilkowalski/skills/apple-design`, `emilkowalski/skills/emil-design-eng`,
+`emilkowalski/skills/animate`, `emilkowalski/skills/improve-animations`,
+`emilkowalski/skills/review-animations`, `designed-by-ai/skills/design-mobile-apps` and
+`greensock/gsap-skills/gsap-plugins`. Expect the router to return several of these for one
+design prompt. Phase 3 onward should report over-routing on prompts whose gold set contains one
+of them, so the cost of this policy is measured rather than assumed.

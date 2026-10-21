@@ -1,0 +1,114 @@
+{
+  "frozen_at": "2026-10-21T20:49:18.879133+00:00",
+  "review_csv_sha256": "0cd4137a94a5a7cfb23281a302a6e736b44e6673c39291af6a76e8fae60f40ad",
+  "corpus_version": "269860b82ceae5b47856aecb8f619a9d9efb5ff0f91f9e718cfc91f14b535859",
+  "sets": [
+    {
+      "id": "eq:anthropics/skills/skill-creator",
+      "canonical": "anthropics/skills/skill-creator",
+      "members": [
+        "anthropics/skills/skill-creator",
+        "obra/superpowers/writing-skills"
+      ]
+    },
+    {
+      "id": "eq:coreyhaines31/marketingskills/competitor-profiling",
+      "canonical": "coreyhaines31/marketingskills/competitor-profiling",
+      "members": [
+        "101-skills/superpowers/competitor-teardown",
+        "coreyhaines31/marketingskills/competitor-profiling"
+      ]
+    },
+    {
+      "id": "eq:juliusbrussee/caveman/caveman-review",
+      "canonical": "juliusbrussee/caveman/caveman-review",
+      "members": [
+        "dietrichgebert/ponytail/ponytail-review",
+        "juliusbrussee/caveman/caveman-review"
+      ]
+    },
+    {
+      "id": "eq:mattpocock/skills/diagnosing-bugs",
+      "canonical": "mattpocock/skills/diagnosing-bugs",
+      "members": [
+        "addyosmani/agent-skills/debugging-and-error-recovery",
+        "juliusbrussee/caveman/investigate-first",
+        "mattpocock/skills/diagnosing-bugs",
+        "obra/superpowers/systematic-debugging"
+      ]
+    },
+    {
+      "id": "eq:mattpocock/skills/grill-me",
+      "canonical": "mattpocock/skills/grill-me",
+      "members": [
+        "mattpocock/skills/grill-me",
+        "mattpocock/skills/grilling"
+      ]
+    },
+    {
+      "id": "eq:mattpocock/skills/implement",
+      "canonical": "mattpocock/skills/implement",
+      "members": [
+        "mattpocock/skills/implement",
+        "mattpocock/skills/implement-spec"
+      ]
+    },
+    {
+      "id": "eq:mattpocock/skills/tdd",
+      "canonical": "mattpocock/skills/tdd",
+      "members": [
+        "addyosmani/agent-skills/test-driven-development",
+        "mattpocock/skills/tdd"
+      ]
+    },
+    {
+      "id": "eq:microsoft/playwright-cli/playwright-cli",
+      "canonical": "microsoft/playwright-cli/playwright-cli",
+      "members": [
+        "anthropics/skills/webapp-testing",
+        "microsoft/playwright-cli/playwright-cli"
+      ]
+    },
+    {
+      "id": "eq:obra/superpowers/verification-before-completion",
+      "canonical": "obra/superpowers/verification-before-completion",
+      "members": [
+        "juliusbrussee/caveman/verify-and-stop",
+        "obra/superpowers/verification-before-completion"
+      ]
+    },
+    {
+      "id": "eq:obra/superpowers/writing-plans",
+      "canonical": "obra/superpowers/writing-plans",
+      "members": [
+        "addyosmani/agent-skills/planning-and-task-breakdown",
+        "obra/superpowers/writing-plans"
+      ]
+    },
+    {
+      "id": "eq:prisma/skills/prisma-postgres-setup",
+      "canonical": "prisma/skills/prisma-postgres-setup",
+      "members": [
+        "prisma/skills/prisma-postgres",
+        "prisma/skills/prisma-postgres-setup"
+      ]
+    },
+    {
+      "id": "eq:shadcn/ui/shadcn",
+      "canonical": "shadcn/ui/shadcn",
+      "members": [
+        "google-labs-code/stitch-skills/shadcn-ui",
+        "shadcn/ui/shadcn"
+      ]
+    },
+    {
+      "id": "eq:vercel-labs/agent-browser/agent-browser",
+      "canonical": "vercel-labs/agent-browser/agent-browser",
+      "members": [
+        "browser-act/skills/browser-act",
+        "browser-use/browser-use/browser-use",
+        "vercel-labs/agent-browser/agent-browser"
+      ]
+    }
+  ]
+}

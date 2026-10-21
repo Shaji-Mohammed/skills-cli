@@ -1,0 +1,20 @@
+{
+  "name": "equivalence_freeze",
+  "started_at": "2026-10-21T20:49:18.872948+00:00",
+  "config": {
+    "review_csv": "evals/review/equivalence_candidates.csv",
+    "review_csv_sha256": "0cd4137a94a5a7cfb23281a302a6e736b44e6673c39291af6a76e8fae60f40ad"
+  },
+  "corpus_path": "/Users/shajimohammed/Desktop/Projects/skills_router_cli/corpus/skills.jsonl",
+  "corpus_version": "269860b82ceae5b47856aecb8f619a9d9efb5ff0f91f9e718cfc91f14b535859",
+  "evalset_path": null,
+  "evalset_version": null,
+  "git_commit": "d2ce1b2ef64dc6e670afbe840de3d2267f9f3939",
+  "git_dirty": false,
+  "python": "3.12.15",
+  "packages": {
+    "skill-router": "0.1.0",
+    "httpx": "0.28.1",
+    "typer": "0.27.3"
+  }
+}

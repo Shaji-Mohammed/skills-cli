@@ -71,3 +71,35 @@ def test_draw_singles_is_proportional_and_seeded() -> None:
     assert [s["id"] for s in first] == [s["id"] for s in again]
     domains = sorted(s["domain"] for s in first)
     assert domains.count("big") == 6 and domains.count("small") == 2
+
+
+def test_named_products_match_whole_tokens_only(monkeypatch: Any) -> None:
+    from router.evalset import slots
+
+    monkeypatch.setattr(slots, "load_product_locked", lambda: set())
+    monkeypatch.setattr(slots, "flagged_ids", lambda: {"q/flag/x"})
+    skills = [
+        {
+            "id": "a/b/search",
+            "source_repo": "a/b",
+            "name": "search",
+            "description_original": "Search the web with Exa and Tavily",
+        },
+        {
+            "id": "a/b/docs",
+            "source_repo": "a/b",
+            "name": "docs",
+            "description_original": "Write an example document",
+        },
+    ]
+    excluded = slots.product_locked_exclusions(skills)
+    assert "a/b/search" in excluded
+    assert "a/b/docs" not in excluded  # "example" is not the token "exa"
+    assert {"q/flag/x", "stripe/ai/stripe-projects"} <= excluded
+
+
+def test_confirmed_list_replaces_provisional_exclusions(monkeypatch: Any) -> None:
+    from router.evalset import slots
+
+    monkeypatch.setattr(slots, "load_product_locked", lambda: {"c/d/only"})
+    assert slots.product_locked_exclusions([]) == {"c/d/only"}

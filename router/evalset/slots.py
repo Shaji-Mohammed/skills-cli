@@ -17,6 +17,7 @@ from router.config import REPO_ROOT
 from router.corpus.collect import CACHE_DIR
 from router.corpus.curate_llm import _call, _system_user
 from router.corpus.pipeline import read_body
+from router.corpus.product_locked import flagged_ids, load_product_locked
 from router.evalset.equivalence import EQUIVALENCE, SKILLS, load_equivalence
 from router.evalset.filters import canonical_id
 from router.llm import LLMClient
@@ -32,6 +33,9 @@ MAX_PAIRS_PER_REPO = 2
 COLUMNS = [
     "slot",
     "reserve",
+    "swapped",  # yes: the writer replaced this slot; see swap_reason
+    "swap_reason",
+    "draw",  # initial | redraw1 | ...
     "kind",
     "source",
     "bucket",
@@ -105,19 +109,26 @@ def cross_reference_pairs(skills: list[Skill], eq: dict[str, str]) -> list[tuple
 
 
 def draw_pairs(
-    client: LLMClient, by_id: dict[str, Skill], pool: list[tuple[str, str]], rng: random.Random
+    client: LLMClient,
+    by_id: dict[str, Skill],
+    pool: list[tuple[str, str]],
+    rng: random.Random,
+    target: int,
+    min_cross: int,
+    used: set[str] | None = None,
+    per_repo: Counter[str] | None = None,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
-    """Walk the shuffled pool, cross-repo pairs first, judging each pair until enough are
-    accepted. Returns (accepted, every judgment made)."""
+    """Walk the shuffled pool, cross-repo pairs first (until min_cross are accepted), judging
+    each pair until `target` are accepted. `used` and `per_repo` carry the once-per-skill and
+    per-repo limits over from slots already drawn. Returns (accepted, every judgment made)."""
     cross = [p for p in pool if _repo(p[0]) != _repo(p[1])]
     same = [p for p in pool if _repo(p[0]) == _repo(p[1])]
     rng.shuffle(cross)
     rng.shuffle(same)
-    target = PAIRS + PAIR_RESERVES
     accepted: list[dict[str, Any]] = []
     judged: list[dict[str, Any]] = []
-    used: set[str] = set()
-    per_repo: Counter[str] = Counter()
+    used = set(used or ())
+    per_repo = Counter(per_repo or {})
 
     def consider(candidates: list[tuple[str, str]], limit: int) -> None:
         for a, b in candidates:
@@ -134,7 +145,7 @@ def draw_pairs(
                 used.update((a, b))
                 per_repo.update(repos)
 
-    consider(cross, MIN_CROSS_REPO_PAIRS)
+    consider(cross, min_cross)
     remaining = [p for p in cross if not any(p == (j["a"], j["b"]) for j in judged)] + same
     rng.shuffle(remaining)
     consider(remaining, target)
@@ -156,6 +167,43 @@ def draw_singles(eligible: list[Skill], n: int, rng: random.Random) -> list[Skil
     picked = [s for d, v in sorted(by_domain.items()) for s in rng.sample(v, counts[d])]
     rng.shuffle(picked)
     return picked
+
+
+def make_row(
+    by_id: dict[str, Skill],
+    slot: int,
+    kind: str,
+    ids: list[str],
+    reserve: bool,
+    draw: str,
+    reason: str = "",
+) -> dict[str, Any]:
+    return {
+        "slot": slot,
+        "reserve": "yes" if reserve else "no",
+        "swapped": "no",
+        "swap_reason": "",
+        "draw": draw,
+        "kind": kind,
+        "source": "hand_written",
+        "bucket": "implied",
+        "gold": ";".join(ids),
+        "domain": ";".join(by_id[i]["domain"] for i in ids),
+        "skill_descriptions": " || ".join(f"{i}: {by_id[i]['description_original']}" for i in ids),
+        "skill_md_paths": ";".join(body_path(by_id[i]) for i in ids),
+        "pair_reason": reason,
+        "prompt": "",
+        "helpful_excluded": "",
+        "notes": "",
+    }
+
+
+def write_sheet(rows: list[dict[str, Any]]) -> None:
+    SHEET.parent.mkdir(parents=True, exist_ok=True)
+    with SHEET.open("w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=COLUMNS)
+        writer.writeheader()
+        writer.writerows(rows)
 
 
 def build(client: LLMClient, allow_dirty: bool = False) -> Path:
@@ -185,45 +233,24 @@ def build(client: LLMClient, allow_dirty: bool = False) -> Path:
     rng = random.Random(SEED)
     pool = cross_reference_pairs(skills, eq)
     print(f"{len(pool)} cross-reference pairs; judging until {PAIRS + PAIR_RESERVES} co-occur")
-    pairs, judged = draw_pairs(client, by_id, pool, rng)
+    pairs, judged = draw_pairs(
+        client, by_id, pool, rng, target=PAIRS + PAIR_RESERVES, min_cross=MIN_CROSS_REPO_PAIRS
+    )
     used = {p["a"] for p in pairs} | {p["b"] for p in pairs}
     singles = draw_singles(
         [by_id[i] for i in sorted(eligible_ids - used)], SINGLES + SINGLE_RESERVES, rng
     )
 
     rows: list[dict[str, Any]] = []
-
-    def add(kind: str, ids: list[str], reserve: bool, reason: str = "") -> None:
-        rows.append(
-            {
-                "slot": len(rows) + 1,
-                "reserve": "yes" if reserve else "no",
-                "kind": kind,
-                "source": "hand_written",
-                "bucket": "implied",
-                "gold": ";".join(ids),
-                "domain": ";".join(by_id[i]["domain"] for i in ids),
-                "skill_descriptions": " || ".join(
-                    f"{i}: {by_id[i]['description_original']}" for i in ids
-                ),
-                "skill_md_paths": ";".join(body_path(by_id[i]) for i in ids),
-                "pair_reason": reason,
-                "prompt": "",
-                "helpful_excluded": "",
-                "notes": "",
-            }
-        )
-
     for n, s in enumerate(singles):
-        add("single", [s["id"]], reserve=n >= SINGLES)
+        rows.append(make_row(by_id, len(rows) + 1, "single", [s["id"]], n >= SINGLES, "initial"))
     for n, p in enumerate(pairs):
-        add("pair", [p["a"], p["b"]], reserve=n >= PAIRS, reason=p["reason"])
-
-    SHEET.parent.mkdir(parents=True, exist_ok=True)
-    with SHEET.open("w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=COLUMNS)
-        writer.writeheader()
-        writer.writerows(rows)
+        rows.append(
+            make_row(
+                by_id, len(rows) + 1, "pair", [p["a"], p["b"]], n >= PAIRS, "initial", p["reason"]
+            )
+        )
+    write_sheet(rows)
     (SHEET.parent / "pair_judgments.jsonl").write_text(
         "".join(json.dumps(j) + "\n" for j in judged)
     )
@@ -239,6 +266,138 @@ def build(client: LLMClient, allow_dirty: bool = False) -> Path:
             "reserves": len(rows) - len(main),
             "single_domains": dict(Counter(r["domain"] for r in main if r["kind"] == "single")),
             "repos_in_main_slots": len({_repo(i) for r in main for i in r["gold"].split(";")}),
+            "sheet_sha256": file_sha256(SHEET),
+        }
+    )
+    return run.path
+
+
+# --- re-draws ------------------------------------------------------------------------------
+
+SWAPS = REPO_ROOT / "evals" / "handwritten" / "swaps.json"
+REDRAW_SEED = SEED + 1
+# Products the writer named as product-locked (2026-10-22), matched as whole tokens in a
+# skill's repo, name or original description. Used, with qwen's provisional flags, until the
+# confirmed list in corpus/product_locked.json exists. Exclusion only: a false match costs a
+# candidate, never adds one.
+NAMED_PRODUCTS = {
+    "runcomfy",
+    "higgsfield",
+    "tavily",
+    "exa",
+    "caveman",
+    "agentix",
+    "shoehorn",
+    "kling",
+    "firecrawl",
+    "hyperframes",
+}
+NAMED_PRODUCT_SKILLS = {"stripe/ai/stripe-projects"}
+
+
+def _tokens(text: str) -> set[str]:
+    return set(re.findall(r"[a-z0-9]+", text.lower()))
+
+
+def product_locked_exclusions(skills: list[Skill]) -> set[str]:
+    confirmed = load_product_locked()
+    if confirmed:
+        return confirmed
+    named = {
+        s["id"]
+        for s in skills
+        if _tokens(f"{s['source_repo']} {s['name']} {s['description_original']}") & NAMED_PRODUCTS
+    }
+    return named | NAMED_PRODUCT_SKILLS | flagged_ids()
+
+
+def redraw(
+    client: LLMClient, singles: int, pairs: int, min_cross: int, allow_dirty: bool = False
+) -> Path:
+    """Mark the swaps in swaps.json and append replacement reserve rows, drawn with the same
+    procedure: product-locked skills and every skill already in the sheet are excluded, and
+    existing pair rows count toward the per-repo limit."""
+    skills = [json.loads(line) for line in SKILLS.read_text().splitlines() if line.strip()]
+    eq = load_equivalence(EQUIVALENCE)
+    by_id = {s["id"]: s for s in skills}
+    swaps: dict[str, str] = json.loads(SWAPS.read_text())
+    with SHEET.open(newline="") as f:
+        rows: list[dict[str, Any]] = list(csv.DictReader(f))
+    earlier = {r.get("draw", "") for r in rows if r.get("draw", "").startswith("redraw")}
+    draw = f"redraw{len(earlier) + 1}"
+    for r in rows:
+        r.setdefault("swapped", "no")
+        r.setdefault("swap_reason", "")
+        r.setdefault("draw", "initial")
+        if r["slot"] in swaps:
+            r["swapped"], r["swap_reason"] = "yes", swaps[r["slot"]]
+    unknown = set(swaps) - {r["slot"] for r in rows}
+    if unknown:
+        raise ValueError(f"swaps.json names slots not in the sheet: {sorted(unknown)}")
+
+    in_sheet = {g for r in rows for g in r["gold"].split(";")}
+    locked = product_locked_exclusions(skills)
+    excluded = in_sheet | locked
+    live_pairs = [r for r in rows if r["kind"] == "pair" and r["swapped"] == "no"]
+    per_repo = Counter(
+        repo for r in live_pairs for repo in {_repo(g) for g in r["gold"].split(";")}
+    )
+
+    run = start_run(
+        "handwritten_redraw",
+        config={
+            "seed": REDRAW_SEED,
+            "draw": draw,
+            "singles": singles,
+            "pairs": pairs,
+            "min_cross_repo_pairs": min_cross,
+            "max_pairs_per_repo": MAX_PAIRS_PER_REPO,
+            "swaps": swaps,
+            "product_locked_source": "confirmed" if load_product_locked() else "named+qwen",
+            "named_products": sorted(NAMED_PRODUCTS),
+            "llm_model": client.model,
+            "swaps_sha256": file_sha256(SWAPS),
+        },
+        corpus_path=SKILLS,
+        evalset_path=None,
+        allow_dirty=allow_dirty,
+    )
+    rng = random.Random(REDRAW_SEED)
+    pool = [p for p in cross_reference_pairs(skills, eq) if not set(p) & excluded]
+    accepted, judged = draw_pairs(
+        client,
+        by_id,
+        pool,
+        rng,
+        target=pairs,
+        min_cross=min_cross,
+        used=in_sheet,
+        per_repo=per_repo,
+    )
+    used = in_sheet | {p["a"] for p in accepted} | {p["b"] for p in accepted}
+    eligible = sorted({canonical_id(s["id"], eq) for s in skills} - used - locked)
+    new_singles = draw_singles([by_id[i] for i in eligible], singles, rng)
+
+    next_slot = max(int(r["slot"]) for r in rows) + 1
+    for s in new_singles:
+        rows.append(make_row(by_id, next_slot, "single", [s["id"]], True, draw))
+        next_slot += 1
+    for p in accepted:
+        rows.append(make_row(by_id, next_slot, "pair", [p["a"], p["b"]], True, draw, p["reason"]))
+        next_slot += 1
+    write_sheet(rows)
+    with (SHEET.parent / "pair_judgments.jsonl").open("a") as f:
+        f.write("".join(json.dumps({**j, "draw": draw}) + "\n" for j in judged))
+
+    run.write_metrics(
+        {
+            "swapped_slots": sorted(swaps, key=int),
+            "excluded_product_locked": len(locked),
+            "pair_pool_after_exclusions": len(pool),
+            "pairs_judged": len(judged),
+            "pairs_accepted": len(accepted),
+            "cross_repo_pairs_accepted": sum(_repo(p["a"]) != _repo(p["b"]) for p in accepted),
+            "singles_drawn": len(new_singles),
             "sheet_sha256": file_sha256(SHEET),
         }
     )

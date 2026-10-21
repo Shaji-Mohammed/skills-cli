@@ -150,6 +150,30 @@ def handwritten_slots(
     )
 
 
+@evals_app.command("redraw-handwritten")
+def redraw_handwritten(
+    singles: int = typer.Option(8, help="Replacement single-skill slots"),
+    pairs: int = typer.Option(6, help="Replacement pair slots"),
+    min_cross: int = typer.Option(3, help="Cross-repo pairs to draw first"),
+    allow_dirty: bool = typer.Option(
+        False, "--allow-dirty", help="Run from uncommitted code (the run can't be quoted)"
+    ),
+) -> None:
+    """Mark swaps from evals/handwritten/swaps.json and append replacement reserve slots."""
+    settings = load_settings()
+    client = LLMClient(
+        settings.ollama_model, settings.ollama_url, cache=ResponseCache(equivalence.LLM_CACHE)
+    )
+    try:
+        run_path = slots.redraw(client, singles, pairs, min_cross, allow_dirty=allow_dirty)
+    except DirtyTree as e:
+        typer.echo(f"Stopped: {e}", err=True)
+        raise typer.Exit(1) from e
+    typer.echo(
+        f"Updated {slots.SHEET.relative_to(REPO_ROOT)} (run {run_path.relative_to(REPO_ROOT)})"
+    )
+
+
 @evals_app.command("check-handwritten")
 def check_handwritten() -> None:
     """Run filled hand-written prompts through the D1-D4 filters and label checks."""

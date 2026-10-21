@@ -12,11 +12,12 @@ def test_wilson_known_values() -> None:
 
 def test_wilson_extremes_stay_in_bounds() -> None:
     lo, hi = wilson(0, 10)
-    assert lo == 0.0
+    assert lo == pytest.approx(0.0, abs=1e-12)
     assert hi == pytest.approx(0.2775, abs=1e-4)
     lo, hi = wilson(10, 10)
     assert lo == pytest.approx(0.7225, abs=1e-4)
-    assert hi == 1.0
+    assert hi == pytest.approx(1.0, abs=1e-12)
+    assert 0.0 <= lo <= hi <= 1.0
 
 
 def test_wilson_narrows_with_n() -> None:

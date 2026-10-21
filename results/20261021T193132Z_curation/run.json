@@ -1,0 +1,28 @@
+{
+  "name": "curation",
+  "started_at": "2026-10-21T19:31:32.645328+00:00",
+  "config": {
+    "min_description_words": 5,
+    "max_non_latin_ratio": 0.1,
+    "near_duplicate_cosine": 0.92,
+    "cap": 500,
+    "pair_judge_min_cosine": 0.85,
+    "max_domain_share": 0.35,
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "llm_model": "qwen3.5:9b",
+    "snapshot_version": "1cfc9f2f24542ba40610b43dca0e07d8c3b5a68d307084d617f576032937f6b6",
+    "raw_version": "768775a24f6eefb3804866b3261ce94b7ee058990fddfe2565c2ff475e7a16ee"
+  },
+  "corpus_path": "/Users/shajimohammed/Desktop/Projects/skills_router_cli/corpus/skills.jsonl",
+  "corpus_version": "269860b82ceae5b47856aecb8f619a9d9efb5ff0f91f9e718cfc91f14b535859",
+  "evalset_path": null,
+  "evalset_version": null,
+  "git_commit": "cede5c5fb288c7e55387ddb975400d89e0bbfbb7",
+  "git_dirty": false,
+  "python": "3.12.15",
+  "packages": {
+    "skill-router": "0.1.0",
+    "httpx": "0.28.1",
+    "typer": "0.27.3"
+  }
+}

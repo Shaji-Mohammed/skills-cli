@@ -1,0 +1,691 @@
+{"key": "f104a60e0c953e7b3a538846ec6d5e67b2244aa6f4963b6dbe3f661bd049ac37", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A resolves specific paper details; Skill B scans repos and creates reproduction plans.\"}"}
+{"key": "74af5b5a2291ab6d2f31d69a8eb880b41baae5bfb4fdd1735f1649a55eb6e525", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A includes Skill B's capabilities plus ElevenLabs; requests for cheap/ACE-specific tasks overlap.\"}"}
+{"key": "4fd7bcdfb7b48e9b4a28f46ea994a2f2b27c15522a7bb56e5663823704d3cb46", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A handles deployment and infrastructure; Skill B handles monitoring, logging, and tracing.\"}"}
+{"key": "b510e148407bc606b581303c159f0d4eeefc1750329d35456de5171c91becec6", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A handles deployment operations; Skill B handles project creation and scaffolding.\"}"}
+{"key": "3c3bc0a12522de1bdf84c3dbde6f25d19f851217910fc526b919472265a5ec8c", "text": "{\"verdict\": \"overlap\", \"reason\": \"Both are interviews for planning; A adds documentation, making it a superset of B.\"}"}
+{"key": "a32ad04017d5456a602fe41403cabc2c6654b162788d95561d3df770535b26cb", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A handles repo scanning and planning; Skill B handles environment and asset setup.\"}"}
+{"key": "da1145895d4d80a3e07ddf3f6b8c7f6b0fc86ed6f037f35b71db8b0aacbf9b3b", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A creates new or rewrites copy from briefs; Skill B edits and improves existing text.\"}"}
+{"key": "73ee14fd8653de8380abac83ffdbb4892a87466c5bc03e7e311bd7031420b975", "text": "{\"verdict\": \"distinct\", \"reason\": \"A extracts data from Docs to emails; B saves emails to Docs.\"}"}
+{"key": "26f819bfc72492180c7bfb1ab8875cb5b3ef871cbcfd67e4a4d7e0d6458922dc", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A is a general router for multiple models; Skill B is specific to one model within that set.\"}"}
+{"key": "d7c847e5c39f83651f7efba21ade009ca4d14cec9a7a1b1086e06dc9f872d094", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A covers general Go error handling; Skill B is a specific subset focused on the samber/oops library.\"}"}
+{"key": "48f8c50ab42f40019ea15acd1fb87ac4eb40dcd380ca92fd557e882acf308b7a", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill B is a specific subset of Skill A, which routes to multiple models including GPT Image 2.\"}"}
+{"key": "64dc45b9000e266967b9d0deb8761d8df08bc83b51e44665d3db5a666363b9f3", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill B is a specific intake step within Skill A's broader reproduction workflow.\"}"}
+{"key": "8eda40d6024422d33d1ee62d7b78fdede94c32d478ef3bad6f1635964dab1be1", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A covers the full Neon platform (Auth, Storage, Functions), while Skill B focuses exclusively on Postgres database operations.\"}"}
+{"key": "cd93c439eec146a119d7187634e8609b26d5936b4b32eafbce1be69151b19ec5", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A is a router including ElevenLabs; Skill B is only ElevenLabs. Both handle similar requests.\"}"}
+{"key": "a1c3a84d0254b007399decbb6c132b6f390c195fdaac6e8b011d7322e05a8f10", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A handles deployment/infrastructure; Skill B handles ADK code/API patterns.\"}"}
+{"key": "d50d611f4dedbf13da0edadcb562d8358ee4220ec4fe9b2f8a7df3ae40344f0e", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A executes tests and writes outputs; Skill B scans repos and creates plans.\"}"}
+{"key": "d490debe946670095e6b406ad2943ddb40520a03e78feea26d91742216b969d4", "text": "{\"verdict\": \"distinct\", \"reason\": \"They use different underlying models (OpenAI vs Google) with distinct strengths and routing logic.\"}"}
+{"key": "cd7b2b44a48d592522a78a9ac9f1cca1a56dbff2eb1134f484d9144fa903a5eb", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A handles project scaffolding and lifecycle management; Skill B focuses on writing agent code and API patterns.\"}"}
+{"key": "edaa9e97f71a6db903848f07a533a85221f8b6ec49a425bd41cc81923e90fa33", "text": "{\"verdict\": \"distinct\", \"reason\": \"They are specific implementations of different models (HappyHorse vs Wan) with unique strengths and routing logic.\"}"}
+{"key": "d593b659b1b1967a9fac74d532a1e29398e2320faec6dce1a65766fcdd74c278", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A focuses on post-signup activation and retention, while Skill B handles the signup/registration process itself.\"}"}
+{"key": "b2711ae84d17fd97d22f852e8b5604a6a061358671d836f68fdbab1716b6f563", "text": "{\"verdict\": \"overlap\", \"reason\": \"Both route RunComfy edits, but A covers generation too; B is strictly editing.\"}"}
+{"key": "6c3004e1ce854748f034d17df03f7415d7f7d1374b9101d4a7dc75ff6321c6dd", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A covers full reproduction workflow; Skill B focuses on evidence capture within that workflow.\"}"}
+{"key": "2470f42a2fdf46557ec2bb1546c1c327c6788c44c1c7ad522d932357a043d33c", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A is specialized for talking-head/lip-sync; Skill B covers all video types including A's niche.\"}"}
+{"key": "aba807a5cacb332fdff69c09fc2cc8474afb4a39691723c6a733805e662fb29e", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A executes existing deployments; Skill B creates infrastructure and prepares projects for deployment.\"}"}
+{"key": "809a8ce15c5d74c9714f8857876a0c11211c5afb3125a0b36242f736d31f23a4", "text": "{\"verdict\": \"distinct\", \"reason\": \"Google Forms handles surveys/data collection, while Google Docs handles document editing; they serve different primary purposes.\"}"}
+{"key": "2c5287dc1c89186895251da8196fc16a6b5a06e411ecacada10adccf29c956a1", "text": "{\"verdict\": \"overlap\", \"reason\": \"Both are routers for RunComfy video edits; A focuses on inpainting, B on general editing/restyling.\"}"}
+{"key": "89416864ca057d14dd039c6bf3bc57f3bdc37274019b5c425d8551693a1583ad", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A handles execution evidence capture; Skill B handles pre-run environment and asset preparation.\"}"}
+{"key": "a39fdf71c9a8d3cdbc18c7acf65c60cb7533132dfaa843d6f1bc5387332d3e4f", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A is specific to Cobra library APIs, while Skill B covers general CLI patterns and explicitly excludes Cobra.\"}"}
+{"key": "d82f7fe8cf08ac519de131087d7bcadc49cb7880f9d73233554be9f3752b11ff", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A resolves paper-specific details; Skill B prepares the execution environment and assets.\"}"}
+{"key": "196c44d65102ea6bebd7e8586b02745b09b6a81b7817f890a5573d68efade6e2", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A focuses on code modification and architecture changes; Skill B focuses on executing experiments and sweeps.\"}"}
+{"key": "c23036b7dbc453591208a72537ee010cf16e8f7fdf6bbca62cf74495574134cf", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A covers general page conversions; Skill B is specific to account creation and signup flows.\"}"}
+{"key": "552345b8596eaf15fad42b61406ac69de5e4be32e8cfa09a60277634fbf26b2b", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A handles full end-to-end reproduction; Skill B handles only initial environment and asset setup.\"}"}
+{"key": "3ad6732ad4ce7e252a598f1c6ca1aac65f407e3a092dc70dea2175f8086a3271", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill B is a specialized subset of Skill A's broader reproduction workflow.\"}"}
+{"key": "e05cb80f3e71b74c30850db41fa25c16ee4c82268b3f717beebe7023c3526b94", "text": "{\"verdict\": \"overlap\", \"reason\": \"A is a subset of B; B covers A's viewing plus management tasks.\"}"}
+{"key": "1f9c32ef7fc890159bc04d5347439844637f84ac4cd064f573e8bed66483b4ef", "text": "{\"verdict\": \"distinct\", \"reason\": \"One prepares future meetings; the other summarizes past events and tasks.\"}"}
+{"key": "564121c0630ffa7713b6c1ecbf2bacaffc533444a1ea986f833df55160f3fa16", "text": "{\"verdict\": \"distinct\", \"reason\": \"A renews existing subscriptions; B creates new ones. Different lifecycle actions.\"}"}
+{"key": "aa555204941e1bcd2a376e7ba9fe86088029bafd0f1d4aa477c50057fd139ece", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A covers full avatar creation; Skill B focuses on lip-syncing existing video/portraits, but both handle audio-driven mouth movement.\"}"}
+{"key": "f2829aac682f978bf475067284f483163ead3875548417e6205fed0de5019e47", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A handles static sites; Skill B handles full-stack SSR apps like Next.js.\"}"}
+{"key": "21d9a939faaa1872adf8e95b2441411f0872d31d5754a68f95a685e7fec4a55a", "text": "{\"verdict\": \"distinct\", \"reason\": \"A generates images from text; B edits existing images. They serve different primary tasks.\"}"}
+{"key": "187b85cd241b41845cb58e0c0c2def3265632284278e3a1e02ca463eaa3fe591", "text": "{\"verdict\": \"same\", \"reason\": \"Both describe building full-stack Convex backends; B is a concise summary of A's capabilities.\"}"}
+{"key": "be82e177ee0b932992c0962a4ccd8f0a8215dcfd61ea70a8b5e5a41b292883f4", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A handles non-Bazel Xcode projects; Skill B is legacy and specific to existing RBE workspaces.\"}"}
+{"key": "ecfd9e5d2313d83d7fa96caec8ef621271197a6092a0343d592d12f8e7058961", "text": "{\"verdict\": \"distinct\", \"reason\": \"One handles agent registration/publishing; the other handles runtime deployment/infrastructure.\"}"}
+{"key": "c46462e452ecdc88f840aa2cc3fa42d304068bb54de74ee815cb2bbe86f7f38e", "text": "{\"verdict\": \"distinct\", \"reason\": \"One handles deployment/infrastructure, the other handles evaluation/testing. They serve mutually exclusive purposes.\"}"}
+{"key": "e7944ae07a7fb35c80e39006405b8a91c0e02a15b5dd4a720be88aea82af1e9d", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A is a general router covering multiple models; Skill B is a specific instance of one model within that set.\"}"}
+{"key": "0ce42f02b9a356deddc50a8e2725503524a57c7662a153a083e0a16c7735e55e", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A includes Nano Banana as one of several routing options; Skill B is specific only to that model.\"}"}
+{"key": "2b67f60fbb0a4d653386f5cd92d6431f1668caad144a369d59d62b4d633cbb9e", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill B is a specific case of Skill A, focusing on specs/tickets.\"}"}
+{"key": "0b26cb42dee031d269d9504cf455d0c57cb4d7878bd8999d000263d68c2eda0d", "text": "{\"verdict\": \"distinct\", \"reason\": \"A resolves paper-specific details; B executes commands and captures outputs.\"}"}
+{"key": "712c5c0329fbd16337f4f490ac42cbdac038195ac0defa6fa5292d07905eee3b", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A covers all of Skill B's i2v capabilities plus additional t2v and model selection features.\"}"}
+{"key": "8c580f83bf6fbec2958aa7ce1fe84af88cc38c9f7002db8bb632658225396364", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill B is a specialized subset of Skill A focused exclusively on animation/motion.\"}"}
+{"key": "07a98fbda966e10aef8b1c49514eca284aa360632f217abf2baf787d69ffce83", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A handles MongoDB-specific upgrade impossibility; Skill B handles general v6-to-v7 migrations.\"}"}
+{"key": "d9a6ea11f74ef6b353fd1b97ddb2b93c5fa0b044c5ef7ebaf525d88d6b3e71a1", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A handles evaluation and optimization; Skill B handles code generation and API patterns.\"}"}
+{"key": "3f500800617443719a8c2a30f6784897b6f561622f6979c94fc1d0a7d5fda6cc", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A is a specific agent implementation using Skill B's underlying anti-detect technology.\"}"}
+{"key": "6edd7f45fd24df42988e576e8cbdca45a1e154e2241498e7d649953567836323", "text": "{\"verdict\": \"distinct\", \"reason\": \"A handles static page extraction; B handles dynamic interactions requiring browser actions.\"}"}
+{"key": "457879dd99bb5e06694ebd7e136b2c9988f18194065ce3b4740b38cf8dfa8ec7", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A covers full lifecycle; Skill B focuses on code patterns, but both serve ADK development needs.\"}"}
+{"key": "4cb13f5e53fb05744cf164a443626cbf1bf5f12de24c7008f9eeada9aad50950", "text": "{\"verdict\": \"distinct\", \"reason\": \"A creates emails from docs; B reads existing emails.\"}"}
+{"key": "f87900131b3c9bc5e47a6ea5b8e279453d99d4d4ea48882a46fb14f18bd754ac", "text": "{\"verdict\": \"distinct\", \"reason\": \"A manages spaces/messages broadly; B specifically sends messages.\"}"}
+{"key": "2ab1be98d8c59223444320832544ab9051a7e9c8f0441182af951d10d78c49f2", "text": "{\"verdict\": \"distinct\", \"reason\": \"Pricing covers strategy and public pages; Paywalls cover in-app upgrade moments.\"}"}
+{"key": "9f109e83c9dbab1849fdb749c16ddbb22dd8a210d9661aed1119102248a8118a", "text": "{\"verdict\": \"distinct\", \"reason\": \"One handles static images, the other handles video; they process different media types.\"}"}
+{"key": "69c0396bd699ac131aee003447b0e8ce6c1e11c4f15785552071b24275520e0f", "text": "{\"verdict\": \"distinct\", \"reason\": \"A handles canvas extension/outpainting; B handles in-place modifications like object removal or text rewriting.\"}"}
+{"key": "0f8edd943ca030980e62f69ea3483ed5a0e61304b75775d9c677bfd607fe00f6", "text": "{\"verdict\": \"distinct\", \"reason\": \"A streams incoming mail; B handles sending, reading, and management.\"}"}
+{"key": "9d01b4478246ebcc38255b65f94a4d64db2e3bad379771b9b584851288ef998d", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A generates event candidates from a brief; Skill B creates the brief from a PR diff.\"}"}
+{"key": "7b9afefec428833a3fc1fa06974f3a2bd2a53d9e08bf950bd330d79d261ce5f1", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A creates professional brand photos; Skill B generates compliant marketplace listing cards.\"}"}
+{"key": "cf9644143b480e22702fcc02e0a804f2e2529f62b5a53eabeeb1ca73aa08f40a", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A enriches specific named entities; Skill B generates new prospect lists.\"}"}
+{"key": "d30b764dc914b2675ccdb02d0e41a253baca84b599dfc661b56dbde3659b00e6", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A optimizes code; Skill B measures and profiles performance.\"}"}
+{"key": "239b372c6f1de24b6d8a212ebedcfe844074295cb94105fee1deb34042c234b2", "text": "{\"verdict\": \"distinct\", \"reason\": \"A reschedules existing events; B creates new ones. They serve different primary actions.\"}"}
+{"key": "67b60e71ba7a4a1c4a3d8d3347efd3de3b2d7212217256e353040f2bee078f5a", "text": "{\"verdict\": \"distinct\", \"reason\": \"One retrieves existing events, the other creates new ones.\"}"}
+{"key": "820cdf08d9212dd3c893c6a60362d6696b4d3093760ec9fc92d48f770e09a1fa", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A is a general router for multiple models; Skill B is a specific instance of one model.\"}"}
+{"key": "51190eb5d72a7664695ce099e87fec078ae0dad96952874c771c2ee71265333c", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A creates comparison content; Skill B researches competitor data.\"}"}
+{"key": "8d427146cfe1a7dc4737e30187ae3589a4f867dead8fc6959d39427354e51e21", "text": "{\"verdict\": \"overlap\", \"reason\": \"Both are browser automation skills with nearly identical core capabilities; choice depends on specific CLI syntax requirements.\"}"}
+{"key": "f366634db22f77e716b414a00a1888239d733bfc8162b7dc0976342b4616a651", "text": "{\"verdict\": \"overlap\", \"reason\": \"Both route i2v models, but A adds audio-driven talking-head capabilities beyond static animation.\"}"}
+{"key": "9ffb3e4a971b5c082d217e12656e137506ebbd4a84e5d13163d883bfe74a875f", "text": "{\"verdict\": \"overlap\", \"reason\": \"Both generate visual summaries; A targets social media cards, B targets professional infographics.\"}"}
+{"key": "7b050f8475d5df34fcc0fe5e995a8a66c35b19367404c027b821beafe294bc6e", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A is for candidate idea generation; Skill B is for executing bounded experimental runs.\"}"}
+{"key": "a63fec98300ee139b23a8c5353000f4f41bee2a243cb828f80d9da741357e800", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A is specialized for product photoshoots; Skill B is a general-purpose generator excluding photoshoots.\"}"}
+{"key": "53ebbbf5db97d8acb7400a7453f62965bb489ca8af9432a5225f3af0b8375437", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A targets Vue/Svelte frameworks; Skill B targets React. They serve mutually exclusive contexts.\"}"}
+{"key": "674fa875f448fa2e23d4a3ff7a704f87ed02f793d0b56d9a16268ba8677574c1", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill B is a specific subset of Skill A's broader CRO capabilities.\"}"}
+{"key": "5db50ac75849ace47eb1527d004ec186e7ee8b4cc9672004c8add48dda108383", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A is the CLI tool; Skill B is a specific use-case router for images within that tool.\"}"}
+{"key": "7dc8b1a3fba120791fcf3cf5852b214231da251d2d3fe3f96df48dfb9b08a893", "text": "{\"verdict\": \"distinct\", \"reason\": \"A provides weekly summaries; B provides daily standups with different data points.\"}"}
+{"key": "46e7fbd888efee7b639e610347acd8ec34bbc83959c402d84773cfb196a82a9e", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A handles static downloadable content; Skill B handles interactive functional tools.\"}"}
+{"key": "041aac83acd8ddc0828449daae82c8d8e49ce6407f2f3c281b4791b5f6b52d95", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill B is a specific instance of Skill A; requests for samber/do fit both.\"}"}
+{"key": "cab02de45c247feaf6c26258d6e5e5036f13d146e72eae7aca1cf8d9f2f029bb", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A focuses on database connection while Skill B covers full ORM setup; they overlap in connecting databases.\"}"}
+{"key": "3185e174191940cc100703b6011b2aef290b90bf95a23dac243e000906203b1d", "text": "{\"verdict\": \"distinct\", \"reason\": \"A shares an existing doc; B creates a new one from a template.\"}"}
+{"key": "c11a92affba46ed83ad10cceb2f1574e3fb363e77ec2317efad86890defa1649", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A creates video; Skill B creates images. They serve fundamentally different media types.\"}"}
+{"key": "2dfdd9e52e60659c08a005859e0b2cb5bf08d90ee8a4760ac3fadc9946a90fcd", "text": "{\"verdict\": \"distinct\", \"reason\": \"Outpainting extends canvas boundaries; inpainting edits specific masked regions within existing bounds.\"}"}
+{"key": "06a32c70b32b92d1eac975f41483b7412820921b05b06cf61358752442148bb4", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A is a specific implementation of Skill B, adding streaming details but serving the same core purpose.\"}"}
+{"key": "02c9339b2f85132595343ec7c328c303af966feacc108848b3a4d175083e3b11", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill A is the general CLI; Skill B is a specialized router for video tasks within that CLI.\"}"}
+{"key": "b7c73d8c9f3901ad6cc7d07849cbdf28b836e5ae7e9fb9b97edd70d51839d195", "text": "{\"verdict\": \"overlap\", \"reason\": \"Both handle mask-driven edits, but A covers broader image editing while B focuses specifically on inpainting.\"}"}
+{"key": "f429b336fea95ec5f3c02c74cee87869564c0fc70eceb6074ffbefd65f242770", "text": "{\"verdict\": \"distinct\", \"reason\": \"A saves email attachments; B saves the message body. They handle different content types.\"}"}
+{"key": "b4ed5546652c9daae425710e3a7b1cd01eb5d5d7a61afa0c9d86e254429c1d61", "text": "{\"verdict\": \"distinct\", \"reason\": \"A generates meeting summaries; B manages task lists.\"}"}
+{"key": "5518b86e9a5c61be811e52e72928fd8006faa1e99b8170cbcb5ac9b8cc3cef26", "text": "{\"verdict\": \"distinct\", \"reason\": \"A provides data transformation utilities; B provides monadic types for error handling and null safety.\"}"}
+{"key": "178285d64f8ce927e026e2112258f2a9c3327b5dda72eec4975a98b90c2fa5dc", "text": "{\"verdict\": \"distinct\", \"reason\": \"Dig is for raw dependency injection; Fx includes DI plus application lifecycle management.\"}"}
+{"key": "e4de42f4a74863437226747ee10df79d74e66f6a9e74e1c02847b3ce681313f6", "text": "{\"verdict\": \"overlap\", \"reason\": \"Both handle independent tasks; A is general, B is specific to development sessions.\"}"}
+{"key": "51ad2d85b1abcfbbfe79f3229d60e35c9ee023591ba30c226b9787ed3a915ebf", "text": "{\"verdict\": \"overlap\", \"reason\": \"Skill B is a specific subset of Skill A; both handle DI but B targets only the dig library.\"}"}
+{"key": "0642500f22cae95c9f4655a99b2b39214da6e84791613d66c6f06c131b9f65da", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A is a general router for all models; Skill B is specific to one model.\"}"}
+{"key": "d3aad8c8f16000330c44d41e4830e4873c4ac80031d81ead019e7f2b2ad37c8d", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A handles agent registration and publishing; Skill B handles evaluation and optimization.\"}"}
+{"key": "d1531c928af9d4ee2a95d5f2e5b35ebbf3098247e79e6fa2722fe2b80a02caff", "text": "{\"verdict\": \"overlap\", \"reason\": \"Specific report is a subset of general workflow capabilities.\"}"}
+{"key": "0de953933f1e1c10c47e279f11a3271b3858d1f193e3133ce9f60134196de53c", "text": "{\"verdict\": \"distinct\", \"reason\": \"Skill A handles evaluation and optimization, while Skill B handles project creation and scaffolding.\"}"}
+{"key": "53ef7394a4747c1815429294b966f7d2934189488e3fecac719f22113ca197e8", "text": "{\n  \"domain\": \"business-strategy\",\n  \"states_what\": false\n}"}
+{"key": "ff73666061baea2b87b52566f4f805d3163ac9e2c813c14da8d6f717aa928d09", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": false\n}"}
+{"key": "e6b947034256e0cca2d73afb2a945c5ba97e6e33f218096e21eb0c0c45bb5143", "text": "{\"domain\": \"business-strategy\", \"states_what\": true}"}
+{"key": "5019fca7a721773ac843fd0de0e8ab600046e8e59e9065791b15a7419d383661", "text": "{\n\"domain\": \"web-automation\",\n\"states_what\": true\n}"}
+{"key": "13666f9107cbf5cff554caa71383848a81968366c897a74f78bf291c86be0343", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "d4a508e12ba55574b0cbb4c9ad609f5021b408823a750b854cab67fd0b867dee", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "ab647becf490bbdf7dc075ad41e476dc3b874afd5e2face52e8aeb3a4aa417f8", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": false\n}"}
+{"key": "65954aab9fd458f9d7f1c51125513ab0a106565531fd8ba60838bfdaaebe9b95", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "816dd57ca018110a3b2e2a6ac18dcade9be9cd3aaf6d9c7eca694950b996445f", "text": "{\"domain\": \"ai-agents\", \"states_what\": false}"}
+{"key": "51d8093579418ae8de6c49dadb53fe67ce80c771f52252dbfb00026212346c57", "text": "{\"domain\": \"marketing-seo\", \"states_what\": true}"}
+{"key": "97f671ac8a338d7e195d958c5ec06af6b4bbaa93bedaabf9b32755e2179fa1d7", "text": "{\n  \"domain\": \"ai-agents\",\n  \"states_what\": true\n}"}
+{"key": "3e3ef4ed6357ffc9155f7c9b788d053ec9a2106b749af46c6ed100bf31cff1a4", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "94b93f1688254388522c47aed8115d0e740cd424dc894552ebb70be49c974bcc", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "62f60d5a7ac0b3d5e84057a3a293f2f0865b83ad1ce2007e51c78fd6ead16c23", "text": "{\n\"domain\": \"design-ui\",\n\"states_what\": true\n}"}
+{"key": "a86b48769cf94393cfcc0e9fb6177bfbd224555fbde8ace2db4933a1d988f178", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "3e5566342f1763876cca6a715b87f1f0d45afb83d712126a50f2b08c725946fc", "text": "{\"domain\": \"ai-agents\", \"states_what\": false}"}
+{"key": "ce9bdeaa8609b3b3342c67d9ed74107c31dbded31bba3246eb93d72e9d553023", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "42031267440e68e37cb020b1fbae94dab94cce68745a459b60c2f4bc8cc112ab", "text": "{\n\"domain\": \"design-ui\",\n\"states_what\": true\n}"}
+{"key": "b92acd083c46044116ef3e1eca0d72d62c087cf8e055de8fdee4f0ff3272f412", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "d294c825180e8c680ccb0c997900e33ecd3b712c67cc2edd451f4b8924f7472b", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "34cab8a33157529cb417e84102059407e6de482c07d4eeecbe3d0a5cf0319e32", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "658a650d1d079c2588a80605f2066f9a10287fed3fde993593d72b1f94b10dd7", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "7a3c6401858d4f3527bde561931599c51ea22960f7cda9e68754bad05668ca0d", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "5d06972f7dbf9c2dd0e4493892e76d9e966274ca10e51ae462b7cc715bb0305f", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "62cb9334129f0214687556cd4b26afadf7c3e92990fb1bbdaf79f90d9c1c5f40", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "cfda018ac0dfced1504ccf2daa2b23be4c538512b242f8e75628b51e54370bf6", "text": "{\"domain\": \"software-dev\", \"states_what\": false}"}
+{"key": "5035c9024fa88594ccf0d2ddb3faa1bac809b0d0263eda0fd5efb2459cfa6675", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "b3afa5c8e498113f8571c38164d73ed8725138a9b5843350d1d512ed2680056d", "text": "{\"domain\": \"design-ui\", \"states_what\": false}"}
+{"key": "4a0b94684210b2b557d8161455c07320061fe52f62e6ce3538a1eb7bba3be7c1", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "74dfcd2d0f46ab1a487f4f82329207ae63ef66166211c643efba31f3bfaea6c6", "text": "{\n  \"domain\": \"ai-agents\",\n  \"states_what\": false\n}"}
+{"key": "ec385164f10f85a2f5e517226a6978f19df9fb337ee4d2bc09d8b559cd61cc25", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": false\n}"}
+{"key": "267482a1f1a66884389cd4b107caab26466e20125fd35c431cdc6ca3ec46067d", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "cd17c760c294e832842866b0bfc770915ed499a6212a27c067192797f4787899", "text": "{\"domain\": \"productivity-collab\", \"states_what\": true}"}
+{"key": "02a4f178c22d2e750f83e5b20f2f20a6f05f923b13bfc1a505240d15d9cda44a", "text": "{\n\"domain\": \"research-writing\",\n\"states_what\": true\n}"}
+{"key": "2bda950712806e23d47bbca6dbb4f7537fdc7616d3865f12a2d28b64f808c4a4", "text": "{\"domain\": \"productivity-collab\", \"states_what\": true}"}
+{"key": "d7fc980a8ebfd8b71f5a9e2e8129456d3320ee39604b0772825172399b11e293", "text": "{\"domain\": \"ai-agents\", \"states_what\": false}"}
+{"key": "b49d046918e702292e5f44ff6d196802dc5372fdfa57c31122458d6180337869", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "9939725ba0b0b9d58385bf8f06b83a4fd67855e50366a7c42dd80e5007595232", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "7189bd5e5f70b321f3c817c6f48e77fdb7c85a95a7ae8f5293ae69d55e744e5f", "text": "{\n  \"domain\": \"design-ui\",\n  \"states_what\": true\n}"}
+{"key": "9673b60aefcaa8d1733c1a422ea4e8bd6519ecbaf9aab0b3a02731b21c6765e6", "text": "{\"domain\": \"ai-agents\", \"states_what\": false}"}
+{"key": "b03059bacc65ced4120425f7723e8f05bcc08c3fa321a46ffe2c3e6f6354801b", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": true\n}"}
+{"key": "744cbb2e4a595900e3f4f64b60b063c77f569e9be96c5e2ca028edbcd7b1b955", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": false\n}"}
+{"key": "dc954e0c543c1f7bc4bfbdf987dd85d69d12436fd6592f0549fd727a19187784", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "ac1331e10482eabbfb4029fb58b954c5e96dac47d7a41b843aa793510e6845ce", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "6f5fd55288b6848ccfd9158325a3faa719609ff23045b9d9ffa57ab0f3c86806", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "907cc0e1cb3ab4b1f57d135e2b52f32f2f232b6b745081a2b887671e17d18cea", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "3fa95f53362e87d1b78dfd4e0184bd6d3191a8bf2da81df9ed276268770e16ff", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "ee4e5702f55d074b3d65a01f30e8ed8c96cf2c3721766e79b3ce942a12985618", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "d084a2993df1df7f5f5942132fe92b8fa22d1fa01b5cbc9303ac29c64dab52eb", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "b82ce83498d0d617041143ab2825acf9b98042bb8146e30ad59b8c964d425b8e", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "120a6bdab67f594af9c91a03e81a56dadfed308d5df89b86548cfddea0b90c4d", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "7837ab8bed96aa104f1934ca5ba97255894d1ef87d600c78d37b429a2752c6ca", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "b5c9a6c3566082dd58a985f601ab0e70200078efd50037f7cd5b629f50162b7a", "text": "{\n\"domain\": \"data-analytics\",\n\"states_what\": true\n}"}
+{"key": "fb1ae190d3eb6373c2615d41ed15998028a3c982a2ba4697122c7d3531549445", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": false\n}"}
+{"key": "81f32d9e07881595d7c6afcf3f9470b6dda00567b618c08d3b27d687b8231034", "text": "{\"domain\": \"devops-cloud\", \"states_what\": false}"}
+{"key": "abc05728b293c14fd3818652fa34e83839454cfe36663c2f5857186d030117cb", "text": "{\"domain\": \"devops-cloud\", \"states_what\": false}"}
+{"key": "86eb815dabf23de54f4e06b27a78f5c6de0ac6e3ecbc3d5b7397a131484ce008", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "1bf5a863cab586586e7e88d800416db992f0f5fbab339e1a7a3d68b5225fb1a7", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "22d89e6d0fadba8653a248ac9cc199887a7c53d46e4b69f730fa5c64b4e2d095", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "0cd011cd3159ed09e3b74af45b3847546b3b26aa1f8af7629be4d15c5b8bc4d7", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "ef6fa43852cc73a33196a7ce58cdc1f092d1a3391c81c89f9a775439e993aec3", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "994f08a991154eebd7b1e210c1d5a4ba43c69926721ce3a8071541931d5ba105", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "2a213dd0344523983fec00876daa29535e112aa363f0bb2dc8a6626427741d78", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "11607be16e29642db9f6f3c44b54822000ee44ced777d378abb48924872c1c06", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "fc87b45f776dcbdd8aa048a20b30caf1f8667f9680a3d9900fae4338e362e876", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "e1d9b5934c70e9db922c7e4e9cb448534217c72c9803e0991155ad4ff0ef4182", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "4835ac8d3ecbaa8bdd49012de6c19704caf74dbd36ac4973575cf2185ab9c3c6", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "e75b8f3a17f4359145930e3a6ab9d1d95972e2a5f3c697758bd4b143201334cc", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "0df25dff56f23183ed5b718a0ca0e85d9ab59fa56f4ca81190e10c484015a696", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "301075e7bb11d2fb5dd9ed694458c39e94c48b72ba141836c09d2c4368902ffa", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "4a086f5d8a0b42d83f12b41b660891e1faf89a262479447899671b98c4a7e9df", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "70a7d1edabbb996d1270ac83f0a44732def7a31178d1168f813cec64445db242", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "d1040d4736459a2ed5720a79aff1bcbb9f7ea86d48bcee7eda35da77efa21d60", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "a4ca1ff4e807c35524f25811ff36ccc7649d9629393626cc089909cd8dd604f0", "text": "{\"domain\": \"research-writing\", \"states_what\": true}"}
+{"key": "e9755d29958909d9002426a7447d04fd85326525e84f1a58de748a024871ba9a", "text": "{\"domain\": \"documents-office\", \"states_what\": true}"}
+{"key": "de2bcb30219d37ce2a38bf4149b5b9e43b7d388792851d2ac6817751e6cf0411", "text": "{\"domain\": \"research-writing\", \"states_what\": true}"}
+{"key": "dbec8fd62a3eaf2ecaa03a81b840583a1c613eced89c3cdd9806a5dbfd0490cd", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "dcd75c2c4a8e1043ab5ca1ee39bbd56d557083a5107c539769359aaedce63aca", "text": "{\"domain\": \"research-writing\", \"states_what\": false}"}
+{"key": "544526b419399b8a23023c7fdc176b9dac9875925b205ec74c02be2534bd5e44", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": true\n}"}
+{"key": "a159b046e0f4bf395a5838d39953211a35522818b0c963ae2c82de9d460ac436", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": true\n}"}
+{"key": "5e388c2a029d93ed934936ca3dac55e6d18beac696d1287f5a4f2cd2179300f4", "text": "{\"domain\": \"ai-agents\", \"states_what\": false}"}
+{"key": "040f23d69c754ebd9cb369d9f086bb2e757b70a79953ac288ef510ebaa149fff", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "c4cbc12fe941db4599901405a319c8502e5b57c029e4d127de472f11fd0920f3", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "1882328b06dce44f1b6edfc873763f112cdd6f3c98d4e00c997b22af86788228", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": true\n}"}
+{"key": "2d4241e7b339231649abc710ff284ef312125c4f697f632f6ab876d0763fe6d1", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "5404a212da1fea105377dd07b153af9d6dc6500a8e324c92a10d2188d0c50791", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "82e4554311f856a3b0d746bcb358f6e665b670fcb3d83b1d1a8601a4d9cdfa50", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "7f34569bc140cfb69a3308be0e5cbdb1a69e1b795f80646fcab4a0af409a66dd", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "e56855fb9103ad26ec5e0fadac7098865e0c5a93f6b21c6342104decd5f9a5ba", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "3cf92358d722870f04dcd711ced5003a4ba316407e31c3f4a51929f811c4f641", "text": "{\n  \"domain\": \"media-generation\",\n  \"states_what\": true\n}"}
+{"key": "a17932c31c8201d1cd221bd7740ba9c91eae208eed6add7ac6c938ea4e2ee7f1", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "747014ed403b6e93785ad4fd4225566b6daf92b0bb662e2cc86c144b09bf9aaa", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "57a891773eb4c4e844581260d174c1549016c5edffbcc5a6ec7747dc7c6efcb9", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "9106f4e5efef4d76e11a08978f341b0048816cfe9c5ea20fae834817857b9e81", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "7469cb0c475042f409cc359535e9d8c39ad79532ba544cd111d52a225bde4a97", "text": "{\n  \"domain\": \"media-generation\",\n  \"states_what\": true\n}"}
+{"key": "418e5ab0f6882af6652a059c442e55ee6be92b95c56ef0b7c1ae71778831d3a1", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "75522432d151d2750810bc8d2cf2a4e148cf4c51fdcb8421c422c65d01714aee", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "421f4530a5449c219d24724aa132ff62d39930d1588ce4f372a7471ba291eeeb", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "a05ece5602a484c1d395d825a0a4dbaa58772f28e148bf3edd7b656a27761a6d", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "d8eedf55f4fbe6860bd5bcc94041dae56b794d9f6537fe8eaf04fb6362efb0c8", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "20fc904aa184ae8e2575efa3612f7a427a11c838daa2bac7e2f364b9467e49b5", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "c1d613ab0ce9e8ae472e491f26b25712c013df86f16d02fa19435bfaf786caa6", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "ea0cd4d9fe2796b26c2c15c9dbcd23674568c7cccfc7357f19b3ea33ff53f7a7", "text": "{\"domain\": \"ai-agents\", \"states_what\": false}"}
+{"key": "32deec9ce2744210ccf8127b9b84be4d833e4c97fdf8e938c8f009523ed7e580", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "5914c657f63d720bc3f71dd654e47547ab5ad7341635a87b3c7e5989ac67c630", "text": "{\n  \"domain\": \"ai-agents\",\n  \"states_what\": false\n}"}
+{"key": "fc71b2c8ef05e03a042540e47007ec2a46dbe96c19ecf681c08f423086890352", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "36a762ed19f64e8c5a9d10b3ffe42369bad96a15151b0bf009bf9f09fde5abea", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "2b84d38ad22a99a9a793a42f13f26fede17389d8ec41326c858e7eb230beb238", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "ffcb6006fd6fff4669316f02a4b61fa58031fc922346b4232f5993bf2bea6b60", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": true\n}"}
+{"key": "b58350fa7a7b9f0930afd4fcdcc3c040d6c645ceec349ab43af1712af20e8e26", "text": "{\n  \"domain\": \"ai-agents\",\n  \"states_what\": true\n}"}
+{"key": "8d4063df8b3d45989d7c68a310a444c4e9daf135470410e80c9dd5b41fddfd09", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "2d8395e3e18a20283973c65f410ea18fb36682f37e0c224019aab52f16c9700f", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "dedcaa6d448b235ec224170f0bbaea38ff17681ba70442ad12db38f55bf31e8a", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "bc924594e6042d1443bb60eecd1a553f835fb150c83549d847a216ad4cc8119f", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "0edd08feeeff53dfee16c85f692a6bec029e70c1d66b37e849b520b7949a1ad1", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "fb9fd7bc7e3dd12e686c67f9a9e0ccc1b3bf46a46126d4790111a76a15f7d673", "text": "{\"domain\": \"ai-agents\", \"states_what\": false}"}
+{"key": "6a3202d9e1e0dedc262cff0e11c4d8c5331e525bec9cb22484e31bfd5e691dd9", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": true\n}"}
+{"key": "0d08eb043fbc0c9263fbea37528d92d1963fdf196cd2a2c5b7197c3521ef8fb2", "text": "{\"domain\": \"ai-agents\", \"states_what\": false}"}
+{"key": "287a756da9bcb7c2413477b48db01250e171d29cc9d75c12400cdc1f32d98bdf", "text": "{\"domain\": \"documents-office\", \"states_what\": true}"}
+{"key": "3bdb6f8e1bbeaebcd0933d0a72d5c3d9f667b70e7ed841aac3bd63dcb24b988a", "text": "{\n  \"domain\": \"media-generation\",\n  \"states_what\": true\n}"}
+{"key": "7ca9249d359ecae057f7b2cadf092f89455879a3047ee3c4daf442177db7f7e7", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "6c194069db666128a06633f77bb12f5088978e1cf5cd6b426a6196597041d048", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "21f952283207bb3efedcded4771b0a4baf4c2569de09d1467625f1b3ad3a2550", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "d7095054f9bed86147b0833c54f29e54c8d30b037a0b321cebb6ba51cd1cb78c", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "5404dd3e5ebc9df2eb8f890b0918c788cb292ef14f9b77fbab61cebb487170ee", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "ff81d02411ffcb35a10f90cd65f9418f3a3961a8d9f3081f6f645f32af593485", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "02af6b0401b9d5c395d1da6b2047c5192561c8afd26d4a8d82e523ab64148040", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "a6f154c7a194d8ae3e6278ec5164f22321e04f7fb8fc27d7bfb5b48a0f46e918", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "eb0a3323e7fbb2d09a384edec7422401d59265878667319f1fe37909f05b8238", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "25784b8465f5415160f791565ab4541638e030f86ac42d29b308f2e08a251e47", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "262a0d48865a11c6dff8cce4ecfe497fc9d9d6e25c6607c2e49def841d459da6", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "66bc4b6208bf186fea10d3d89f7aa3e1256bbdde192586805c1f20a8dcd8d995", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "6e42fef952770cf93c40bfd6e6b77b409f36987df70321f3ce2b5067b1198d28", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "01b18e7eda2a098f9df7f580f0c57c9f204c92aee89d9ffe4cef8eb449c848d4", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "d223ff97c2a0501de26e53dabc5ff0398539d8547fa6544349812a4d8b4d5b1a", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "b14cf8775e24e3cb7f9e819439ed7b62ac5a76ae005a437b0e1cfbee81588dd1", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "b70ad9e121457b5633779280310f0f4e523cc04d2ebfdc60123dc17b4ffba9b6", "text": "{\"domain\": \"software-dev\", \"states_what\": false}"}
+{"key": "f3f95144f0e98eb20b36308bbcf4dea1c52eb284877429da747c105717cc6c4c", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "531e4624edb8540e6f100049bf2ce73facefe116c6e3eceb5382d54ead228970", "text": "{\n  \"domain\": \"media-generation\",\n  \"states_what\": true\n}"}
+{"key": "f300cfe567ab0eab9f762020b7865a3ee27632d988335e7b12d1e86d10291f4d", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "cad987e9edcabdb96d61abf5a6485946ea283a4a9d1542d13b588716737eabfe", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "fc26203a92daa264cecd7131bdb4b06ec248083d4ec6aa429f6cd9478964f50b", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "9e7166381f73b65111c51e61b6678dfb0010c460cbf8c0e88f1d3b8f68bb9332", "text": "{\"domain\": \"devops-cloud\", \"states_what\": false}"}
+{"key": "f8d8b58861ae4ff0acd86448fc6fbae2f1609a68e2d6ed73f4e0e3f083837f39", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "6a9a5fcb45169f77b5d4347791a77c035201b64b0dfa5f5c30669a4587229e2f", "text": "{\"domain\": \"software-dev\", \"states_what\": false}"}
+{"key": "be9abd3b526ce367119ea68fbd292dded4bce81391a8ec0c9d96cbe960291764", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": false\n}"}
+{"key": "fef0fea558e14889a01dcd9c5366fc4a34fcf61553ef5ab4588900888ddf906f", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": false\n}"}
+{"key": "490178c4fcb922d78a962c3b6ba48ae10005a41dd27712ec7def177cc1535b1c", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "a85ef647921018c4849bc816cb15849440c30e5150cf29eda84aa86dd8b5f362", "text": "{\n\"domain\": \"design-ui\",\n\"states_what\": true\n}"}
+{"key": "ade0e80eb0fa14dba0ca95ca5fb439fda65f8c10739167787ec6c239f7dc418b", "text": "{\n  \"domain\": \"ai-agents\",\n  \"states_what\": true\n}"}
+{"key": "ec57410821bf0e62ff9783652a7d3b0a5c6683525d09bcab0f36bb5338e65f3b", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "67f245213c4fc4596e94eb35c298463c5cd3056bb6140cff7b898930c3c29e32", "text": "{\n  \"domain\": \"ai-agents\",\n  \"states_what\": true\n}"}
+{"key": "c06628362bdb2addc3c0fdcc570cf14557da673baa05e9d24525b83bc4c599ec", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "cae65a9f9f957585d29ff166ed63ea7c0ba1f219141be4c8566ef4a6660a7910", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": false\n}"}
+{"key": "4c2718f3e50acb3a0e43531a70b6e4d1e2fecc2ac8226d3581b99aafaaeeb403", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": false\n}"}
+{"key": "b56f487f3eb5f8ea34e2763a9ad4b8c3cbd2c7f8c9eb94cb78b418d9813427b5", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": true\n}"}
+{"key": "5c9b4ab87df4f61348701bef7897811aacd8fbb47897a415ea8edb84d989971b", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": false\n}"}
+{"key": "47e6db55f31e94efd44129bcf8914fdea60622772a172b327d7499eabcc3ec5a", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": false\n}"}
+{"key": "6194c89a569a6afb44d7cd51af4f6a8414d7501ddd6e8ee4f1ae71a99e0550ce", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": true\n}"}
+{"key": "702888257f17c223db3169f8143f7b02e1bb9ba229da8a28417afd22c548c375", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": false\n}"}
+{"key": "cce034f01ca58b96928a4831fac1fcb195ca82e58c68492b1fdbc33a5f4181bd", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "09e2f8b184244e58da1ba1dc112c69afa41a5ac4a8a16f186b7145009e45e0e3", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": false\n}"}
+{"key": "2a4c8f5e7926872128b1759fd4cefc165c90860f50f116b1acf8c74493980bd9", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "d5736c75c6c58b896d2c07521a8cdca5a81832443b3d2952f11bbaeb77ca89e1", "text": "{\"domain\": \"software-dev\", \"states_what\": false}"}
+{"key": "83a9b4c2f38878e101592d7983e84ccc2437d5201ed75ffd2d9f23e36d9eec32", "text": "{\n\"domain\": \"design-ui\",\n\"states_what\": true\n}"}
+{"key": "af42191e5f7c0567a27524337ba86d0248e4a2bcc092f8f9ca6c5cae6e790050", "text": "{\"domain\": \"ai-agents\", \"states_what\": false}"}
+{"key": "f9af65570871a97171a1f28964461b0c3437441cfbca8958c20e80a2304fbe15", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "4d944eba4ea0b9b40fd6c4b55e18da8f5d708ced3e2e186aec874d5c2fa07a47", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "0f2030b94a80a4adfc0f6d7b96db697393c56ac2d11aee097a74b7d508c154f3", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": true\n}"}
+{"key": "ef5f02024b6420186c2cf02de031bda5a5039465e4cd57528e007a3ce0ecc898", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": false\n}"}
+{"key": "71b785e573d14d27b54db0fb6f9e24a14c897c1afa63106d19ea47deb1b924a8", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "e47d2c2ce702333a3d0b3ae84f5f92709b0e874fa60a8b150d5b9ddb740ca010", "text": "{\"domain\": \"software-dev\", \"states_what\": false}"}
+{"key": "2da402e11ec0a9db7a6f33bbbeefa10c10b8a098bcfba6623c3ae2807cb9b6aa", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "44cc3ffebb28fb4f07447c5b12b75aeed910dbfb95c415f8c800542be72a8c64", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "574e3b0354ff982c3403f7c359a7e030417c726d94d78ce3d7073ba0eb892b75", "text": "{\"domain\": \"ai-agents\", \"states_what\": false}"}
+{"key": "ce6682c1344949439b651f48448d495157e83795751a1d16d3f9bcc1a684bded", "text": "{\"domain\": \"documents-office\", \"states_what\": true}"}
+{"key": "fa72912e73177145a895773c6d69d40f55fc05542340dd17ff5e8977538f4666", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": false\n}"}
+{"key": "c1ab4d164a3ad1cc68f93a7a72b54b77b66c3a70765f36198c07b209f391da9f", "text": "{\"domain\": \"marketing-seo\", \"states_what\": true}"}
+{"key": "ff0bbbb286ad8e0d1821f0accba941492c4b58bfa729e22ef97692c907fb0e5e", "text": "{\"domain\": \"marketing-seo\", \"states_what\": true}"}
+{"key": "43e89705ebcb49ff2b1cf80734d26d13686774ef39f8cab460e8b1272b303f99", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "38fbcada57764c5a7454092796abf9b629bb2871188a4e7d60918085758a1a40", "text": "{\n  \"domain\": \"design-ui\",\n  \"states_what\": true\n}"}
+{"key": "768c8f9fa5c9b4e7060721151878a867e1f25118008b4c4777792b4f504822eb", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "4955ab0a37a678284bc361d7ec7d4a8c3f048f107a54682c783f96f8f2d0104e", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "df4747f3219a925568a3385d1afef755e8785ac6bcf6ae89fcc575f71e981385", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": false\n}"}
+{"key": "cd78bbd3933c20eeb2a90c4ddb558219fb5b56bca8019dabc6e4a20c1509e023", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "a5ff9b08465f5a3979a45e7699b463bf1a4e31d38e724591bd3d10ea5ffd9998", "text": "{\"domain\": \"ai-agents\", \"states_what\": false}"}
+{"key": "0d4f319ddf09c227f504e27a0fabdd3abdccc6ca79678630cca4e54c9390450d", "text": "{\n  \"domain\": \"ai-agents\",\n  \"states_what\": false\n}"}
+{"key": "cc4b98302ce4e26939f23cd300dc0eeee375ccb1abdc47c8eeca79dfc46e4a1e", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "1efbb61decdad17d50c99b42e6319ae9c839a621c377d870b81f03f0d136ea2c", "text": "{\n  \"domain\": \"documents-office\",\n  \"states_what\": true\n}"}
+{"key": "a05a4364ea88071bd13ca2ad43e3c0680fd080eb696c64df372d40096f55aafd", "text": "{\"domain\": \"software-dev\", \"states_what\": false}"}
+{"key": "d4ee1ea33b5d049086ce922b1acc402a7aecd7ee1e033110e4ca326e8b2d1c44", "text": "{\n  \"domain\": \"media-generation\",\n  \"states_what\": true\n}"}
+{"key": "43ba85650b015a884ea49e71779c08cca280adc25283505e4972c34d5afcded9", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "bc95d7bae7f315955c717d748bef5d5fefdfd3d7ed2d40334b52e99b3d3a880a", "text": "{\n  \"domain\": \"documents-office\",\n  \"states_what\": true\n}"}
+{"key": "fa820260c306d48c70486facc429993ea6839c10fbef1b6ad0eed091a8f1ceac", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "cbc947eba1ea2d9345ff12ce1e0e49cd37b728abdacf02101fe76f4e85b7db8f", "text": "{\n  \"domain\": \"web-automation\",\n  \"states_what\": true\n}"}
+{"key": "e07033565550c909e77b906bd886d4694c38ca9edebf0881f81926abab0423d9", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "3a901f78507161e2f8f5dc159a3853ee3888321effd2bd14490d6d3697cea2b7", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "e3bac4a08c0b454fedcaa84b91801896d0b856c7422a8190756e428be31fcbb2", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "32654314a1e68c625efed435a257a0d577b657114c8fb4316c287ca954e2a03c", "text": "{\n\"domain\": \"documents-office\",\n\"states_what\": true\n}"}
+{"key": "0d84924ccb1b8bde59a5239182f261be7ca70b806cd6acd63eac18ff687789ea", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "35bed786de4395093c36ed2b349dd3cbed7f355312df0a11dd0e4fe3ed8acccb", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "d96d62828e08dc21061d255265ae06f4948f606e6e4b7c4ca8d303ebb2c91517", "text": "{\n  \"domain\": \"media-generation\",\n  \"states_what\": true\n}"}
+{"key": "6f93489671faf2bdb48f5728971a4cfdd7908846b8eb7a6cf04ce432731707e6", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "8923855e15ade40bbc37173b7cd6965dc67a90bda1394a9a8a8d40f36c6d4adf", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": true\n}"}
+{"key": "0d3627ac1f2d3a26615b9aa7185b710b7f4e935a7793a9d7c5d310e2b8fc9931", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "7a789cdfd0d215da338bbf75e4a2a884c13136ba52ff7e32fc5e59ca38ed2011", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "4e013fd1566dcd263de6c9fa6aef951b4b7630a07f5bba0c8ddc7dbaa8eda39f", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "87f9528d0578338f72e15da420460a56e4b03acdf2e87a82114fa13be7b4ad16", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": false\n}"}
+{"key": "b74483dcd22ed8d6742a79f7edc2f206830690e1302ebeeb3d5527c89dd0db26", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "2148d14c6961783a515dae7c9a3ec3cc1432a08fe46e83f794c366de47b6e793", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "719e5d07769a1b2b8ab54a2ca965d6bf2617474521845b7b0a3f2d0eb1b2846c", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "3c10df2bb096918b98597d139e16bca645451a85229fc2f25c0ec76cf2a7a9cd", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "a2bd62e01e984b092157846721337050c42373ee9a59751c5b197b7281744a9f", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": true\n}"}
+{"key": "745edea7fa20d063b069813d08387e701c282c88f19dc1e486c1e0687d9e7461", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "b9717b0f83dbcb52ce76ee77056f1e1d5d6677d2609a5ead53d1f1b8885ef42d", "text": "{\n  \"domain\": \"design-ui\",\n  \"states_what\": true\n}"}
+{"key": "1913d30a0758c7171670e2f84fc6dcceff91f7d59090907f511cdf067880b533", "text": "{\"domain\": \"marketing-seo\", \"states_what\": false}"}
+{"key": "4bf77af6436cf96cca493fc7ecd72743ad7b2756741a6562d460b9860ae62bca", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": true\n}"}
+{"key": "7e62d095e1ac606f3553b97c4385569dc8896fc86bfb90cfcacdcd549f4ca276", "text": "{\"domain\": \"marketing-seo\", \"states_what\": true}"}
+{"key": "9a9ab1df827dc152cc853eb8c940c2dff72056a3a208a48ca3595bdd3901345f", "text": "{\n\"domain\": \"design-ui\",\n\"states_what\": true\n}"}
+{"key": "efdbce4b3297f3620e6b516e9fcc3db3e25a64c715f99c6998ba34aa5e8077f2", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": false\n}"}
+{"key": "1a6d2d6fa08cccc88d4bc72f7c7e7126607747fe7dc9691c34cf7b7a5856cf4b", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "796c44f667d577c63091af5bd672aff45d66a68c4442562f6eaeccff144e5338", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "cf13cdfbfff3fe64aab4146a382f9bb082b04fbedb6d5ade9ce1a61060cb8cc1", "text": "{\"domain\": \"marketing-seo\", \"states_what\": false}"}
+{"key": "5acaf14addead71bdc7ed5c540060d129fc2cc412e775930a81e48d66eadbdf4", "text": "{\"domain\": \"marketing-seo\", \"states_what\": true}"}
+{"key": "4640a6123999d1208d40372e3001c70d4a9a2cdfbab0b3eb73394d0c55e5fef6", "text": "{\"domain\": \"marketing-seo\", \"states_what\": true}"}
+{"key": "30343bad595eb0bc45464affe60be57fe396a9f32b96cad02a52fbd921b55e38", "text": "{\"domain\": \"marketing-seo\", \"states_what\": false}"}
+{"key": "73863b7c3f2e875558f943a99b6853639f539775ea0dcc99ba0a2daae1fe2700", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "ddbe3e43242175cb9dc01f47847f504a6c942e2dfa0e2318db6a7fbaf7020d76", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "4331f41fafea362dff1156989ab48285f5bf2727c5a3b9aab1e7a08b9bef29dc", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "7ac50b020c4426d55f03e01f67bc4ca06e156cd2655cf8fef1f394f705b28520", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": false\n}"}
+{"key": "1ebaced3d521db91896fecf82595d3ad43ae7de5e7bc56073c862e4c8c08e4d6", "text": "{\"domain\": \"marketing-seo\", \"states_what\": true}"}
+{"key": "d3a5a4fcee45c115a20858bfa598c0f13d4b627151bdc020d5a21265cc380b98", "text": "{\n  \"domain\": \"web-automation\",\n  \"states_what\": true\n}"}
+{"key": "a5b099153ce4c1b58afca8bf835611e1cbc9cab2d70869f96da25ca3e399d7e5", "text": "{\n  \"domain\": \"design-ui\",\n  \"states_what\": true\n}"}
+{"key": "805529ffc9c55fbfcb48bf06348cefb36661388bc67992379b8cd03f5e13a617", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "b1bbbf5199cfce763062078d37fbe1548be6fbf64d30a5f7e89f7bdb4b638651", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": true\n}"}
+{"key": "fa9b545cc7cf205e453f6f8d9884aa21e0951162eb3115c6914a681d2a74dfb4", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "6269380b108273f5e2483c61d57426f9f3e5501fea2f975028b69f176e1d29d0", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": true\n}"}
+{"key": "dbf6b1bdd48da08ac62edcf78954630777825938de47c0c6b21163cb9a861617", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "e0c834aa34e62a3378b621829dd0a1e08981363cc12790ae6769bd97e6b8badf", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "3655fd83bd2f42133529a817aad7d1a0fbe62e640500c4e9c67a872c10d39a3a", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": true\n}"}
+{"key": "ef88495e235ccaab07f2e76a0f3ef62c30fe7e1bb89ebfc3210fc3ed6c686c35", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "70d5bfd6704f42b86381c711ce7c2f74f30b81d58c5245aa92540733eadafce8", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "fc533c292e1cdf8fe8d59f9b767056f22a1ad643aea23f43b405b3e156cae62c", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "b5afe950aa8b552b885089f44d810a5fa29a398d83be5f70ad61bb3fdbfc0528", "text": "{\n\"domain\": \"marketing-seo\",\n\"states_what\": true\n}"}
+{"key": "011d7b6604a65e1ef5aad47b6a8aa6d495c23138baaf05679107a847264883d4", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "caf4ccc8d4192095bcf9bf4635f6b0f80a1ecf376a1723cc6c261ef477a37892", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "824b778bb8a995f93c22ad9d345ddb135b1c4e8aee5094d3e80ccd14b430a842", "text": "{\"domain\": \"marketing-seo\", \"states_what\": false}"}
+{"key": "a6b1bbe5662b53ff4685e2bf54c7c6481940b38cda134a7fbdbf2c8d7ab2a75e", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "2ecf93ec735e40b4124fb67ce9f17618b23f005f7a7eb76789cf1c9757c23050", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "b2439a499d7dda78100ead6155c690ef6e152832d31e7df940812503c916c8dc", "text": "{\"domain\": \"business-strategy\", \"states_what\": false}"}
+{"key": "a3af4db8e73dc4b2b5175a1a2a7e2f085d4bc009b607bec764ec67df928eaa2f", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "88678e93fe98fb41786c435f90f50b48312f4659468fe1ca8b3a94a55a56bbc1", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "f062cb3e7c75df2b0690c12179643f58cc06d87f09f0cbf9665b8bea7641fb36", "text": "{\n\"domain\": \"marketing-seo\",\n\"states_what\": true\n}"}
+{"key": "90bc5f4fa94cb1628fcee2d76291572014e3bb734cc11809c287c2e12a9f7c9d", "text": "{\n\"domain\": \"business-strategy\",\n\"states_what\": true\n}"}
+{"key": "96a1e1ed65126cfdc521b08d8122d94ad6c43ae645071273571aab24dfab0f53", "text": "{\n\"domain\": \"business-strategy\",\n\"states_what\": false\n}"}
+{"key": "7719eafc2ee3d9b1106a4c8a005560e879c8f93917e86f390c3cb9a357253c37", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "e123af6d67f233bad7a31b536dc223e05bed8f4e495a362539f5484f810c0770", "text": "{\n\"domain\": \"marketing-seo\",\n\"states_what\": false\n}"}
+{"key": "3ca2b3d4465e32f88101b9f704e0479335ff37900fdea24262ba8983c2d10213", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "f53b90612ab54b1776d3a628406c2a986d45bad25a5aa2e519f87a877dabe8c1", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": true\n}"}
+{"key": "270d5c6c467253ea137ad597ceb69299599c5473e91c557cda9678ea1a9a84b1", "text": "{\n  \"domain\": \"design-ui\",\n  \"states_what\": true\n}"}
+{"key": "7aabb27d1ace40fce36ce2f5ce946b472b47d29663bfba092dd607fd74c8984d", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": true\n}"}
+{"key": "572e4744bd0c9acf930dccbf4327369cce0931c38f920861a61a8cb9b00894bc", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": true\n}"}
+{"key": "4df3b58558279378c1babc9f87f34a397ec8e17ebf78c0ec2dd3c3af4db55400", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "f0105aec330c04f73af67468737165546ad391d75870d75fdb63fb86e71a9436", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "fda56bc75958dd0aa04ea36cbf4b3de8a3e414684a25a2694d11538740807ccb", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "e773522b7f9227537e09001139a59d02e639249cbf19e6e07328d4711b8bc9a0", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "2bccb872ffcc2810722f8f345ed91a2ab7b8fbe40d6556fde9332706fa7027ae", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "5c90ee9ad4a77e6b651a55afb0372d273528f3fbd50c6a3b1fb37d754c156bc2", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": true\n}"}
+{"key": "62e139e6a55b7517632abc0676d58e2604565311d7b6909a1f79ab6866472df4", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "2ce5518066e9eabdf9ed8c2cbd8df5f3f41f9581f7d09a736c1038b414b67fc2", "text": "{\n  \"domain\": \"ai-agents\",\n  \"states_what\": true\n}"}
+{"key": "0d0eae5a702c92eda4fed78cbd98428baf99acc2d0fe360b868458b889678e08", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "6301f0a5e3124210ac9bd1e14a24ec0381b1c5ab793671e881ddd8f2005b85b9", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "e3951e2a25353969a908c877aef94951cfb4e93630a93f6422222389716c3d5b", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "45e96993488941cbee38eeb68815ba3432fe64acf7fbf5a6ee0e4852c5b331c2", "text": "{\"domain\": \"research-writing\", \"states_what\": false}"}
+{"key": "266580b83b8394304cc015931f22281cd1ed6c36845754e547a62b45cc3c4aaa", "text": "{\n  \"domain\": \"web-automation\",\n  \"states_what\": true\n}"}
+{"key": "b5edadddd8e5e9b5cb0642f0a78ff3c513ed6c89fcb46ded12419bc9de7db44b", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "d501070523db23386693f75b094d37963e1bf392ca1a47f875cb85defb146e52", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": true\n}"}
+{"key": "3aded44ffc07cceac2b919b42023eb44ba7d68a86f1a09e1084b60abafa6a6cf", "text": "{\"domain\": \"ai-agents\", \"states_what\": false}"}
+{"key": "04263b40b0348bcbdba5154a2f760be80f6e5e784b10c8b74a3d86203a097eb5", "text": "{\"domain\": \"ai-agents\", \"states_what\": false}"}
+{"key": "3a99d18ffd765fed702478381f3b0ad1824953042b7b22639f1dcfa9cb6119d0", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "c4f2e733ac114dd90448764d7b93bcb391925632eb4194c39c3b4a1cb87c7adf", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "11f75fcdbd0296e363c61d679eb4268dd69d2e1a0a70c13d762aa4560c1b9074", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "7681c59045226d975f8fff4181dbdb9553b33d3cf7dd320a684143484db98d8a", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "c20988b16c0c0aada73b739e11a32c79aaba901262ef5bdeb8875ff8a91e274d", "text": "{\"domain\": \"business-strategy\", \"states_what\": false}"}
+{"key": "3070141794d154dd5c050fc0621f10a9cdada559794802b2f05926de8ea50978", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "7dc4edb73091ab5d244cb4b3016651a2d9e806601a7c29a6d94e2374a01efad8", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "9a3a940dd4592bd339679c882b8b850db10e305363843cc36c5cd5fc716d9dd8", "text": "{\"domain\": \"marketing-seo\", \"states_what\": true}"}
+{"key": "c0f9fd2dfd416acb929e77afab24c007a383bbe1ecb53ede293f9ef2fcf4a528", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "e0f06f8bccdef24a1b777970d94a6c806eb4a9961de1da78bf5d9b43e4d1c5a0", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "379fb9e552ed32432160bc0de3b275a5c1714c3627fd98f50b4fc793bf1362c2", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "ffebf7415980dbc60e4e303d5a5ed5010b22855b58480f48e32a6c55cf5672dc", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "2eb0a39f11a849f7455b0b45fccd0c0231c0a6637a6d8868f32f320ccc1663e2", "text": "{\n  \"domain\": \"marketing-seo\",\n  \"states_what\": true\n}"}
+{"key": "74c09b81f4d39a911c58857e2399ce6af13b29332e01da0133205819e5bbba9f", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "44fc60581803cfc46ee773655688e4de57dfe80921ae3104e84775a44f7a4bcc", "text": "{\"domain\": \"business-strategy\", \"states_what\": true}"}
+{"key": "36393cbe824031376f5671a4a63451dd65f2df9d3b62320557031dc4e822a3e9", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "011c38a702dfa1e4d255471d999ee1ba4e3b4b922c7b720ae91edee97db98436", "text": "{\"domain\": \"business-strategy\", \"states_what\": true}"}
+{"key": "1b1b35c73bed8822c49755b2104324d2ba6df8bfe49ddd8024f3e9a2d2ee61a5", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "54bb97025675c99134c8f0330b4f28ec4480f02f7c49fc4d12be7cec808f5e10", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "da9a9e9aa54bdf51ee7f853adc493bc60243b51a70892e89875c411e542ac8c8", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": true\n}"}
+{"key": "f366c3861019154670dd8c3c7a9cdc9af1d9006b6d67306f1f757a7659c95421", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "a986e4c33c3f79b0b57763e13b3e9efd0ffe1fcf27a1673bda4578322ec5ad51", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "fa7ac848d8b847e1dcb8e6016f1202423539d1b61525672d212c69006e1474b1", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "c6e192be90f48546d4f3c5dea31569e2cdf694a73b5f164d2529c825a6d3a57f", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "bf5d76130c4b79b1faf8d95f7768efbed8161b14432d4f2658b7ccf90cbf36a8", "text": "{\n  \"domain\": \"design-ui\",\n  \"states_what\": true\n}"}
+{"key": "6090c90aa912b487a599fcb40e0f68b5185a0319c682078951abb36d327a41c2", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": true\n}"}
+{"key": "1c546a16878b36f6f023884a00555c008153e0aa4d62d0e7bd2308fa6cdd024b", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "7a1a255b7c76f3f73693065deecbaa6b3ce933ce24dfb8ed47e96232ea82be96", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": true\n}"}
+{"key": "68980f9f71c880ea8f3551ae2c207b28cd56b0d6734ce6a840aeec35b889e9cf", "text": "{\n\"domain\": \"documents-office\",\n\"states_what\": true\n}"}
+{"key": "12d5eb538c19a77c4d3d32254d111afcc380cc17f2522a1fa5d83b737ae9a1f0", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "e632bae8c749b0586bfe722b2d131b20e3c3ba0fff34a1979b7e77be96e3e36b", "text": "{\"domain\": \"documents-office\", \"states_what\": true}"}
+{"key": "2be087b24c860ac8a475bc79a5ed3b12a46131c7c0bd542b52c93edc9dee6143", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "d6b40c90f14600d7d7863aeb02ace98ba83d7c7684cc041ccfa0dc2bf44356f6", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "5f5c2e9f3f577daa314eae92ec845f39c7b14bed39aa98826028c4891de669dc", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "a107c83a31ea8eddcb63aa7a5f1d248efcfeb59f580ca218976d61a6d4dd01bf", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "6cc2c08abdfc13c72f7952eaa94a58e8e3947ab580686c52138f5552b1684919", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "63c6dded4c40b98e73be3d431db87b5a03725633a89aa9f8ba13ea50379c1afb", "text": "{\"domain\": \"marketing-seo\", \"states_what\": true}"}
+{"key": "756e5ce3938207193e9b45d829e9467c46b2a38697d8bf77a9d73e7b612892ab", "text": "{\n\"domain\": \"marketing-seo\",\n\"states_what\": false\n}"}
+{"key": "ec1e0c25f2d6994a4ff22e9bd45ffe4dcd699cc7eae3af3bfad4790c9cff8405", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "0dbcb2c6f84864fbc5c44b622452e15a1e8470f2024483e45cefa781e84f3482", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "d6b794fc0e476da906f8ff18fe8459c9db2b9a68b8b83e08f170019a1a59a9f1", "text": "{\n  \"domain\": \"media-generation\",\n  \"states_what\": true\n}"}
+{"key": "17b5aafc2b4122f750ccae18b22517f5e00790a20be74285f0793dbf096274eb", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "68e1cc8b06817fd9027788486b6532c0d5836d40219c25e2b12922e0b4d32efd", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": true\n}"}
+{"key": "f865cd40ee9888e763c2da15eee79381fe86f498234dc24333a1c8ce43b6f4bb", "text": "{\n  \"domain\": \"media-generation\",\n  \"states_what\": true\n}"}
+{"key": "df705c868620d928e6cb628a501d53c37d6ce13c942abab9c330ea0d679a4cad", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "3aeecf8f1b74f13bde8188cc8aab1333b23b294672aaf8ac46d241e6274ccdf4", "text": "{\"domain\": \"marketing-seo\", \"states_what\": false}"}
+{"key": "5abb42f65b9fcead9cb5554f8a19e6a2bf937cf69fc70d1a8776e66c55e4aff6", "text": "{\"domain\": \"data-analytics\", \"states_what\": false}"}
+{"key": "1b43449a4dd75bdbe42df01944791d9ffe7cbab6747f515dbb34d4368e9ebc7d", "text": "{\n\"domain\": \"marketing-seo\",\n\"states_what\": true\n}"}
+{"key": "b6e7d13166a86e00ee1ab242d80b3c1358674c1ce59515319bf30a858590dbef", "text": "{\n\"domain\": \"marketing-seo\",\n\"states_what\": false\n}"}
+{"key": "fd46726e39b32466016dbdb512057fa733b2e8971d2fd3b1b0d004f39b982bdf", "text": "{\n  \"domain\": \"productivity-collab\",\n  \"states_what\": true\n}"}
+{"key": "12f3375fc37d33db7c5e8862ed46115bc38b04295bd20b13e667369965d5002f", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "b46131122bd1f02c166bf7adbbdebc2399e860b90170ecda08f0a76e033a3495", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "dfffbbded1660e5f9c6b28cdb80db92f4c6c77d975ea92ba3ca4b01aa591b24e", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "f6a7b859aff3146448dee394832a0338feeba840a2a70e727370819546aa52f4", "text": "{\n  \"domain\": \"marketing-seo\",\n  \"states_what\": true\n}"}
+{"key": "731606552769345ab2771f22609b6a500c540ec648dadf0ff7cde38e07c4b77c", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "79252ac21e8bb04bc67cef2787fd24db9e4e3e42e04a8e4b2d18ad0c2b0bb7f9", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "da823ad811434a83752292950cea3ce9cd1275368a91606c4ae62f76515698fd", "text": "{\n\"domain\": \"documents-office\",\n\"states_what\": false\n}"}
+{"key": "06268da11a0aa7cda9a57f757b0d45dfd2b2bc66b35a67c05d8548d5d8472a83", "text": "{\"domain\": \"productivity-collab\", \"states_what\": true}"}
+{"key": "38cfe9d76ba5707d8eba01e4f4a60fbe81f2bb0047f3964260f6444bb0343ad9", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": true\n}"}
+{"key": "f0a9ce7bd01483f06e6fcda7469f8ea2960efd937064a887b655f27cc73a3c55", "text": "{\"domain\": \"business-strategy\", \"states_what\": true}"}
+{"key": "11c6b4e3dfc5c050997cac60ea49b787f91e19761011f7a19e62ad40b7356339", "text": "{\n\"domain\": \"marketing-seo\",\n\"states_what\": false\n}"}
+{"key": "a38e08affc172e2460caa6560b466072ebe34543222775f5e386d8330602df35", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "439f590faa828a56aafdf07a1d37b7d40253722359f25a622b7ddd7d9bb5283c", "text": "{\n\"domain\": \"business-strategy\",\n\"states_what\": false\n}"}
+{"key": "a3ce2262c73f6c94baee78b35fd8071528665b8885c927db730a31dabfdb369a", "text": "{\"domain\": \"marketing-seo\", \"states_what\": true}"}
+{"key": "27888ecd42c852ed49398c20190c755c419036908d24a88497cac6bf8e2fabd6", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "2692a4ae1bd1a4aaee6b5ff05e4eb059ca78c74bfc02345e9afca91f1e9f74a9", "text": "{\"domain\": \"productivity-collab\", \"states_what\": false}"}
+{"key": "d6fe0d3d0f0d7ea53cd58cc72f3d9e19a70e8e10126b5deef6fd6f88cdb7a741", "text": "{\n\"domain\": \"business-strategy\",\n\"states_what\": false\n}"}
+{"key": "1c851914ebabe7c77f8d4c4bc5b2b518c21153625ffc6e4762e335a5538957ff", "text": "{\"domain\": \"marketing-seo\", \"states_what\": false}"}
+{"key": "64ee42ef5a3a222aa9abfe8f227cec9b2567ffddc5a781cc826b6f57e6ac9197", "text": "{\"domain\": \"business-strategy\", \"states_what\": false}"}
+{"key": "bc35a07e308b3957b3eefffae3ea2444057319df378d536a111e7d0c390f0b7a", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "78872a6c87d0422b50b4b53a8a9093bb97b5beea00f6e6d56e4088a450a50aa9", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "4327866a2dfe18055bf7b25e2a5b0c31dc9a8b5a47330a3149f4cfe5b5db4e07", "text": "{\"domain\": \"productivity-collab\", \"states_what\": true}"}
+{"key": "63844b8d34297f4e3a76983a7243b2794308c30166ed46e96e4b46c6658c15f3", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "ed0cfa70a41216760b4ce1abbf3eff3159498ac0666e166e7d5d6f10ca0fb8de", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "82f221750189aac33f473a8753f28dd0a9fcf595a5d16e3fd72d4f9726efdcf3", "text": "{\"domain\": \"documents-office\", \"states_what\": true}"}
+{"key": "06816880aa7afefe4dad2fc409305ebcc5ba346fd878345782826a4f73979d04", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "2f82e855484a1bc51779a1900fa0f408c2714a7ef5b61d4f2e6759355901642a", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": true\n}"}
+{"key": "5183f72b1ac97f10a94c8fc78053acb51dbe61a1b876fa05879f60a03c35aabb", "text": "{\n\"domain\": \"marketing-seo\",\n\"states_what\": false\n}"}
+{"key": "da0858c288164fa79d46d1ac122f44eb2632991e0c8b4927e9e92681cd00f389", "text": "{\n\"domain\": \"design-ui\",\n\"states_what\": true\n}"}
+{"key": "92653bff2e56af0c025b85970f77547bc59ad37f8b356a4adf6a95a7ceac2afc", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "d3807372e554a42e533fe1924d9de32b927f455f4387a85593a4ad4fd923a4e3", "text": "{\n  \"domain\": \"design-ui\",\n  \"states_what\": true\n}"}
+{"key": "473dc788648501289a4032e924b6eeca36ef2752b0b524616fa093afde814e24", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": false\n}"}
+{"key": "7669b2ed49bbf33c95b2fcbea2aa194c67f4435218ad4bf1aa0bf070c721fca1", "text": "{\"domain\": \"marketing-seo\", \"states_what\": false}"}
+{"key": "53d5d85c75a28cef5746dacd85e7022e74f263aa88fce594d04720d7af4c9294", "text": "{\"domain\": \"business-strategy\", \"states_what\": false}"}
+{"key": "1b7cc71f0d14eacb9d1d5cf3802c7ced61f362eb77e2e9c68d4d127b69ccf8a4", "text": "{\n  \"domain\": \"ai-agents\",\n  \"states_what\": true\n}"}
+{"key": "d9ba638c7e9e3184488324bda5555c7e52583375667d3d562b9cd67f446047b3", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": false\n}"}
+{"key": "afe24e4af6cc5addae085d6bc1536f73405ef5270478d64d52dea8d308479673", "text": "{\"domain\": \"ai-agents\", \"states_what\": false}"}
+{"key": "0edd383ccfdece9b8be4ed0534a7a3e02e6880710ec48998ad0d47130338453d", "text": "{\"domain\": \"marketing-seo\", \"states_what\": false}"}
+{"key": "c4572671117bc238e0124ddcd87d8b3571a05f985bb454e129597f0c70593556", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "2dac90761652c12c5bf8e072a91d83445bcf334f21f1fa670004be4e6028d424", "text": "{\"domain\": \"business-strategy\", \"states_what\": false}"}
+{"key": "bbecfe964a25402090d8d657aabef935bb0af360c3240cca8723d0e756df9c5a", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": false\n}"}
+{"key": "d010bbdf648eb501e41be5233c52680e4041cd3c083446622830b93296ed3b98", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": true\n}"}
+{"key": "e82a48fa09813788218c3d25b550db2e5521fc61842cf5c176139081da4cc8b5", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "00043ee1a57eeb7f8fe230b61a745815243099e839f10ecfe7c9411da92056a6", "text": "{\n\"domain\": \"design-ui\",\n\"states_what\": true\n}"}
+{"key": "86e1d0823ea1fca626db42d07ca0cff12cc944756e27fcafc4fd06875cea65d4", "text": "{\"domain\": \"marketing-seo\", \"states_what\": true}"}
+{"key": "de0fa3801a7cf70269f575c43e9808992350bab249fb980cfd93f7befbbd79cc", "text": "{\"domain\": \"marketing-seo\", \"states_what\": false}"}
+{"key": "47901407ba4eeffbe63b014c45f1dd22c4515f8a805f3eb9ae0952f5afc8b6ca", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "5ca1396588ee8977994c13b3fde080d0304a69f02cf58ed7637e168677d01d16", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": true\n}"}
+{"key": "7e465b0257f284f11f640a38d75dba1a62e5dec00b80e4870751870bb7146944", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "f7e53f6e34f55f91418a0b382aff3f3e61fe1d9e2f7f411fb1750ff0a402fea6", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "8e7906604460e6645419ace08eb7cd09c246316e3984c4b47fd314831c5cbedf", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": true\n}"}
+{"key": "ad7071e4275451a8a71a7c11969b15c7b149742bbd99471d89136bb1f5037236", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "8fdf74cf38f340a5f2e45e5f84c50319624021099940ec51ce05f0ff99fdcc89", "text": "{\n\"domain\": \"marketing-seo\",\n\"states_what\": true\n}"}
+{"key": "113cc2549c6edeb1e16b039beffc85c5119958744629f62e70f1eed80f86d2d2", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": true\n}"}
+{"key": "f3b1f930cc602cbeca178b6bda0871ccd424152d09e09203d405d088510e7edb", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "2a59e50be3396f492e1bf6c959b7def599d084d332de945080d0f60a0b303f21", "text": "{\n\"domain\": \"design-ui\",\n\"states_what\": true\n}"}
+{"key": "eeaa725decf411fc63f0ac3776aaceb2f1ccaf613225eedddda66e4c6e30a257", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "2cd7121e9bd2456e5d1eff1f2612dc90c1551a57bc7448a73f4b213ce6bf7251", "text": "{\n  \"domain\": \"design-ui\",\n  \"states_what\": true\n}"}
+{"key": "ab5529cfd7c17539d786d6c962f8b2dd84b38c70530ebde19ced8db120a1c2d6", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "bf3086c5d09b1d61969f076e15d8e4a1fe8c106c8eea16ac78c58505e881ba04", "text": "{\"domain\": \"design-ui\", \"states_what\": false}"}
+{"key": "5b4bc03ff6deb42e926f925f083d14e2d6081f3eaf03a71d4ccad70cd0f3704f", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": true\n}"}
+{"key": "36933635a8e768960c9b90a8003a8e10faf211855aef3a378bdd9bbd968c05fe", "text": "{\n  \"domain\": \"design-ui\",\n  \"states_what\": true\n}"}
+{"key": "0cfe5de2e7a70cbe381c0a15a5d3c4e11e5fe78e1d51917b92451325275c6a62", "text": "{\"domain\": \"business-strategy\", \"states_what\": true}"}
+{"key": "daf20baa6f983e8e74010ddfefbfe43386c829061c399df41af1a8485a013990", "text": "{\"domain\": \"business-strategy\", \"states_what\": true}"}
+{"key": "4a89ec32c68bd423fd1585dccc327a8b7cf01e569541caa20045f0900043e664", "text": "{\"domain\": \"web-automation\", \"states_what\": false}"}
+{"key": "3dab6fe333b9c967132b3ff08efd1056512e69873240dd20018a8850bde42483", "text": "{\"domain\": \"software-dev\", \"states_what\": false}"}
+{"key": "b3c57d2101eebbaa54b12a43f935ef7da50baf46a0ab9bbf92c52d31b9bdeef8", "text": "{\n\"domain\": \"marketing-seo\",\n\"states_what\": false\n}"}
+{"key": "8011e8381de695e82464b434e152767a73b3ca64f1885d88df5ba5bf883a9848", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "2610fd77aac915fefb35e93276211bb24f5e9b2b9887a2b38b376e23c80cbb27", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "3e6d577087400f26bad18a053a9d06bc91d8b17083725bcd3cd9269a20a647aa", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": true\n}"}
+{"key": "817ef1e050be99f5864fe7685aae33b415b506deee510e55b456636d3f327e60", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "b37d71c3f44e5176737216a07a1ab056384390ffe382826b65ec808466aa71c0", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "23881ff04849c64867f86c1e6f841c76dd4844d2aa144a3f168a540adfea0ab3", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "2e6d359edeee8f30d98f2e4222e0d338a7a699251acdcd0ef3fb33f9d601a8d8", "text": "{\n  \"domain\": \"productivity-collab\",\n  \"states_what\": true\n}"}
+{"key": "257c8799f58e96adb8d7db4186db269a7eed3c2de0f572e1417897672960dfaa", "text": "{\"domain\": \"business-strategy\", \"states_what\": true}"}
+{"key": "7d7c75bbc1b92024dc0a75d16b6523c54bd718a8a682465bdb0e2d60096bd0cf", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": false\n}"}
+{"key": "70c2cb8abb0a9e089056b28c024667de5220132e8050709f1abb9808f659dd9d", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": false\n}"}
+{"key": "947043c763980c9e2128f7331fd9b821b90bfc95a6c68cb6df516c809b4811e2", "text": "{\n\"domain\": \"design-ui\",\n\"states_what\": true\n}"}
+{"key": "7f7709f5b85f3b158d5a68743f96fbd8cc78532f41059d4c4eb2f47898b34eef", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": true\n}"}
+{"key": "183e6761f5f76ed9760282a3ff9c9e9be75e10f3f001f72c921a20ea76204771", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "a58590e3c52852f9df660e5df79d59d62f8a22281178eb48495fe2a073eac912", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "20fe8c38d318d2c7fecace712ae1533c0593bd52da2b76478a5a8deadb8eeb90", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "bab4debcbbaeeccb6f7b82549530477b6b6edb151826e5e43c9698ad521d0744", "text": "{\n  \"domain\": \"ai-agents\",\n  \"states_what\": true\n}"}
+{"key": "8f53f63c660e01079018cb2f2840948f470497873d3c52928539e02ba3451b36", "text": "{\n  \"domain\": \"ai-agents\",\n  \"states_what\": true\n}"}
+{"key": "72ece12717fc5d2b7ee93f7f46cc7ab53bfb7d67d7ca05622b978aa39a9106e7", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "f11e96628f02bb9ecc5afa5c9aa0b48900dbc2d827752a608331fb9f6cd39fec", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "3e3258ef5d6836b232f88d598d35dda6a6c3e70d2178d2340fecb7d297e4f974", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": false\n}"}
+{"key": "60c0fa8a920ef68efc6b00ae77fddab14c2a1992157f589512ea65b93bba6a50", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": true\n}"}
+{"key": "70f97d1b65412bd1bb3e7ce6c480f4593db251336569227c9dba8d93200311de", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": true\n}"}
+{"key": "646100a1084f5a4905bf06ec0aad4771b32ca9195d4e449ada9bb6235e23050a", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "2579e04d6b70c938d8d65d72ef457b4aead7394daf4103fe21aaa049e2019608", "text": "{\"domain\": \"documents-office\", \"states_what\": true}"}
+{"key": "8f01fa0d4c87113e6abc06452330f098e7e2ff63d0d034dd388cd90e4ad0e755", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "4df7c0c5d18aea819515a92e1de2de4d1b3a181e6eac13f8f84192295b0a9a8b", "text": "{\"domain\": \"web-automation\", \"states_what\": false}"}
+{"key": "e98451688b9bcb0dac6d72c2f24863e765bb6c34afe69342428dfa2e44b333c0", "text": "{\"domain\": \"software-dev\", \"states_what\": false}"}
+{"key": "acec94c985d7dba48fa1e123802b4d316a484055a17aad636873622e8f85a597", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": true\n}"}
+{"key": "9c1b294ebc8360e13515783c80945fbced08927508fbc82e5bfac0e194056a8a", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "7cd13d43e57244e72c4e01a0134bce80b03d73d404c40f98f0d3d96e7e8d25a6", "text": "{\n  \"domain\": \"documents-office\",\n  \"states_what\": true\n}"}
+{"key": "cd57d76ca684b5d4d90b7be7aeaa1839e90c5bfdab9145d887c71ba08151e818", "text": "{\n\"domain\": \"web-automation\",\n\"states_what\": true\n}"}
+{"key": "a737013dca68d0c0d9ab0df9bccf29c2040b27b523e08c9cc28a0ae7c1c025fc", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "f97123e119cf06c5329e6ddac64580785ec422b4833354de9423e49aa7b238b2", "text": "{\"domain\": \"web-automation\", \"states_what\": true}"}
+{"key": "c005a370677e7f9fa6b012d7a9f5c2f3ec444ad948f577c558af90bb2371a901", "text": "{\n  \"domain\": \"ai-agents\",\n  \"states_what\": true\n}"}
+{"key": "74af097390a2c22643378231703bc3e2eef794dea2ae2406dee09f53526e5f64", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": false\n}"}
+{"key": "4804784c7be4075e6724628b839fa8ba66f5874755f486a77ae12151b4a79ae0", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "0ff37e3299739d40da90daeff52df4ffe82fef64bf65ef89f7d7adf0f405a5df", "text": "{\"domain\": \"ai-agents\", \"states_what\": true}"}
+{"key": "594908003ce5f6f2d2a2455b74228cd413f12984045e955cc757018205aa0351", "text": "{\"domain\": \"business-strategy\", \"states_what\": true}"}
+{"key": "96740aa33ad19ce8f6c31ef8fce7a6e17a576494cdfc6dc7666aad53ec040540", "text": "{\"domain\": \"devops-cloud\", \"states_what\": false}"}
+{"key": "2b758d3f464756d28e49e903d5eb10609541c56a1c779855df6ea33da588577e", "text": "{\n  \"domain\": \"web-automation\",\n  \"states_what\": true\n}"}
+{"key": "acad45b028fc964187638072aa8e119a07e12b2caded1bf95bdbb5d07185a8ea", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": false\n}"}
+{"key": "36afde783492313c40295d31288bf81ed2cab58e78ed2c9ddfa6c392735ca3fe", "text": "{\"domain\": \"business-strategy\", \"states_what\": true}"}
+{"key": "205685eb7cc05dd7e8b55b2ac55855da5de4e1f8f3b1b0c2e85603f285377512", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": false\n}"}
+{"key": "1e3cb51b88ce8dc1c929c21b09daea407375777d64ef7838f08858c630fddd76", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "4e01c3900c778cb215c5ae07beea9197017332b40f69b9ce7ee671d7cb665479", "text": "{\n\"domain\": \"design-ui\",\n\"states_what\": true\n}"}
+{"key": "2c77c8e78bdd9f1967e22215ab7fabf30cb2a177fe20993ce9115d7a864a237a", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "fdec6d7ae2ba76efcae4de749b163f8f6cd0270518c32794d945ea2d28d7f84c", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "ac786ca7c589a476b403e8a4555a61d6d91faf1ea5d3c5b6b068fddb0f93ee17", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "bce96f864a0e6d0118cae3438420fc2dbe321a7e06d06cd391e33975ee30c10e", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "e0c419cd969d025380a6f1c386010c8100eca47ae6da0b5b9777bb135d3cd96e", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "af464312dc450e3f0a0a7d6a108e5ce989a342da821137e480fa90c21839f57a", "text": "{\"domain\": \"business-strategy\", \"states_what\": true}"}
+{"key": "7c38cf10334e7a4d968398490ce8ffef8dcb8c8c99394e510afa01b24d3a0850", "text": "{\n\"domain\": \"marketing-seo\",\n\"states_what\": true\n}"}
+{"key": "9ab2146b1db2445168133a50958f02131065fc5a805cd203838b4f78d8d6ef4e", "text": "{\n\"domain\": \"design-ui\",\n\"states_what\": true\n}"}
+{"key": "32b3266a8e08fc1c33626db17f905c51ea925fbb66bcfd496f7ebc270d5013b8", "text": "{\"domain\": \"marketing-seo\", \"states_what\": false}"}
+{"key": "18bfafe5d99d8ff5515c17450d736c49c9f701617f6d5b94227e6f724eb80957", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "73d7166a9a9638b9e46626dd68ed39a48886b389d541c17312ffa7e74de9e894", "text": "{\"domain\": \"software-dev\", \"states_what\": false}"}
+{"key": "13c7c9ff6e8a528d06d13af1881ee80009db6f1ce90249e503c1b7cea42acd14", "text": "{\n  \"domain\": \"devops-cloud\",\n  \"states_what\": true\n}"}
+{"key": "1f674a2e32600c23ee3e902ef0122dfff4ff7a98df3ca243e3b4c788f4b7126a", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "14b6697a7eddf2a0a390499f51df4b2725ce749db98cb894a1598eab04e048f3", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": true\n}"}
+{"key": "b1d4679d046d326f9f107f3534c915bd6b700f26a535e3153fd16ec0961426da", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "ca4862fd9d622d17fc57fb4b8d850b042f12b79be326bb6b4f946b5a88ecb1f4", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": true\n}"}
+{"key": "ad4a479e8c21257c812d96400b38f6c461dfad097d1ff388efcdcc9dc9d4c56b", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "db1921f2a9ba0d8316ff423b93d8f0fb5d79dd37849f2420a80c345729c59beb", "text": "{\n\"domain\": \"media-generation\",\n\"states_what\": true\n}"}
+{"key": "9e0d1e5773de3582d87a0060e4563bf9b7bf30adb8f0896799923b972a9c337a", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "a9a13701feda7d875004a108a412aa27d7ae2f282c0ce83347dc6db44680a1e4", "text": "{\"domain\": \"media-generation\", \"states_what\": true}"}
+{"key": "11abddce31160054cb6901246f5ffb00b4d3cbca165c93710b934ea2d165ce05", "text": "{\"domain\": \"business-strategy\", \"states_what\": true}"}
+{"key": "7cb16a1294e3ead29221c12eed1ede7741b0969931a70675dbb5243daaad3bfa", "text": "{\"domain\": \"marketing-seo\", \"states_what\": true}"}
+{"key": "35bc8bc6de9e2180b5f31137952bac321b4aa1ffed3286408ccea220bee0747a", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "06f5b6149bdb0a5c13271784846837bbd2d7231051fae0a3e717e68a525703de", "text": "{\"domain\": \"design-ui\", \"states_what\": true}"}
+{"key": "7a7eb4b94a09adcefad4d9d32f0303c659108dde28b5bd6747e6377515552a4c", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "3eb1c0206b036878928c581555b380f4e59d117f6fc65c221d13691027874010", "text": "{\"domain\": \"marketing-seo\", \"states_what\": false}"}
+{"key": "a79b69af95684d2e86b9607133790b3336d1a8968676daef160bf722f684f9a8", "text": "{\"domain\": \"data-analytics\", \"states_what\": true}"}
+{"key": "1da3cea49e5b601273ac2015c25e1cb6982a285bcf467d24ad9f9c432b0ba0f8", "text": "{\n\"domain\": \"devops-cloud\",\n\"states_what\": true\n}"}
+{"key": "147ef37dd0402bf48567141c418877fe5b6d4077fb8b9aece61363b07d8c63d1", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "721c5f102f0f6c8a4e27af39f2f32df6e13cdf4724f0251ad08f004853365b2c", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": true\n}"}
+{"key": "bd49e954fc29b6c44f8549e01b6bdcd39734b065f70a084caedbc7e6ab0cf7f0", "text": "{\n\"domain\": \"research-writing\",\n\"states_what\": true\n}"}
+{"key": "b6343e864a3ff17c612d007affa5d4ede25bc65747bee342c70eca401cea5ab8", "text": "{\"domain\": \"documents-office\", \"states_what\": true}"}
+{"key": "9a7c4c3972356d116b622dfb23a59b4b1a8f9c28c45d699bae06b1169cc64df0", "text": "{\n  \"domain\": \"productivity-collab\",\n  \"states_what\": true\n}"}
+{"key": "24a9fc3331d1b558275d71c3e6579efcc43699db857fe39e1ea7ca38cd88970d", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "92e33120a7df63295cc06cada1a1e55f13c350977943ed70c335f8f426cc745b", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "416c21e372979774d33f22bbb13de5ad851aa10247428abad8555a977aacf06c", "text": "{\n  \"domain\": \"productivity-collab\",\n  \"states_what\": true\n}"}
+{"key": "55a82a1b4bde7917b05970576f3a1bcbae89ecd07e74b132761e69af1c27b8cb", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": false\n}"}
+{"key": "c0071acfbea78495f831a29adbb712408ca17684bc8e3dd7e031dc462cc2eecb", "text": "{\n  \"domain\": \"software-dev\",\n  \"states_what\": true\n}"}
+{"key": "962da352e5db9af05130afc7470af8cd88b0c1aa501590a0d72a78ac1a6b5437", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": true\n}"}
+{"key": "3bef9fab3c0d4479e580ecb71a949c4df341397b6e6cde0a06cfd0e82dca6806", "text": "{\n  \"domain\": \"productivity-collab\",\n  \"states_what\": true\n}"}
+{"key": "8a1a49a2722d6a23ca09ef8bd06fed56c9c918967b8cf43fa7503f327e5d797a", "text": "{\n\"domain\": \"ai-agents\",\n\"states_what\": true\n}"}
+{"key": "ff14021500cd9a400e8250a9bac9efac3177aed8274d82c326cb91028c741d54", "text": "{\"domain\": \"devops-cloud\", \"states_what\": true}"}
+{"key": "720bafa93a16ab2f233a7e63f95c4d806c2aa5f243e34784d3bce5e052f99a30", "text": "{\n\"domain\": \"software-dev\",\n\"states_what\": true\n}"}
+{"key": "faed8c4e3b3603e57845a4b5d8fe324645ffbb884f3917ad322aec2988d4543a", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "6de34030fcbd809345b738d20265a0f46af339a967f789d502b52f0a1ed2c9a4", "text": "{\"domain\": \"marketing-seo\", \"states_what\": true}"}
+{"key": "c6550a5cbc6a4ed1eb25a2ba847ba51a51ca5b1e286a2b8201dd02aa34fdb924", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "a91f2776bc1c8de22bf87e482aadb2910917d25348c59a357f98358b1ecc28e3", "text": "{\n  \"domain\": \"productivity-collab\",\n  \"states_what\": true\n}"}
+{"key": "d7705418585a173027d7a467d211c83ff591db95b4f45241c0571a05e15f5148", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "7af3da3edc151d8f0fedce4ad02519581f8301760ce7d800a7479e13a67d08f8", "text": "{\n\"domain\": \"marketing-seo\",\n\"states_what\": true\n}"}
+{"key": "bc3a7e2966f2f9d2c1c5700703cf95a379e75e7fdc805f12e15d9a65aaff823e", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "c716aa42018525f601635eabd270865a0860b528560a1ffff7f60125612c6560", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "cd36d75e2197138d6a3f684e5c38b832e826cdfdbb6ec9beefc6131006970437", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "f734d12a8b8ecd7cab5c33dea40c8312e7a8b176998634d840c2595c6ed29d0f", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "7c5d529905ac0a771512de128f9830f8110c4b33bbbf2e16de02c22bc7198561", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "dffd92d006fb8e352dbde6b3d548e0ab6b2cd369320e09041cf56ea7068cda9a", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "4b5d5ed6f22c87f2633ef9111f440e87a983b20d6a8a0abc75e9d5d890160a75", "text": "{\"domain\": \"design-ui\", \"states_what\": false}"}
+{"key": "17f9c651395d6e7ba86f637423bcad04966658b768490e54a351eb82619883b7", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "e241d47d0092ad82b85d007a27a6748c6c43a58039fc81ec8c6aac15a90f3562", "text": "{\"domain\": \"documents-office\", \"states_what\": true}"}
+{"key": "f44809e72104340728fa9b20bf4eebe82f4d886c28fa5bdc4455c352d038d9d0", "text": "{\"domain\": \"software-dev\", \"states_what\": true}"}
+{"key": "bd9e7887d040cbed1e104eb370bedd4a4e544fc137aa153b2589fb16676bd420", "text": "{\"description\": \"Conducts a relentless interview to sharpen a plan or design. Use it when you need to rigorously test and refine your strategy.\"}"}
+{"key": "6605ead7621782deac8d1dfe6f25c4a5b470910ed39c29fd559edb3ee584d3c9", "text": "{\"description\": \"Discovers and installs agent skills from the open ecosystem by searching for tasks or domains. Use it when users ask how to perform a task, request a skill, or express interest in extending capabilities.\"}"}
+{"key": "8f70f08dc8a3d002e78399b6c0dcf1fbc96ec93326ba4ac35b8d95902c7b4b6d", "text": "{\"description\": \"Produces tests that verify behavior through public interfaces using a red-green-refactor loop. Use when building features or fixing bugs test-first, mentioning 'red-green-refactor', or wanting integration tests.\"}"}
+{"key": "4bb8d5e7544826a925bef6f6b81c542c65a1a3f45dd25a5ae5b343fbe9387264", "text": "{\"description\": \"Configures repo issue tracker, triage label vocabulary, and domain doc layout. Use once before first use of other engineering skills.\"}"}
+{"key": "96bc4097f92ed81b07ee3e8bd14287e63a39d90404dc30ba6f4970321e51ad98", "text": "{\"description\": \"Interviews the user relentlessly to build a decision design tree by asking numbered questions in rounds and dispatching sub-agents for facts. Use when the user wants to stress-test their thinking or uses any 'grill' trigger phrases.\"}"}
+{"key": "874227f07af5a369ef8f63cea3fdd290d3d38231c7f2fcb12ce4cd5930322011", "text": "{\"description\": \"Constructs a tight, reproducible feedback loop to diagnose hard bugs and performance regressions by creating automated tests or scripts that reliably trigger the specific failure. Use when the user reports something broken, failing, slow, or asks to debug.\"}"}
+{"key": "9ce427782d4f3d8ddde0b1b2b6c4d89920ba94d247728fcad3ebccad66c888b1", "text": "{\"description\": \"Reviews UI code for compliance with Web Interface Guidelines by fetching rules and checking specified files against them. Use when asked to review UI, check accessibility, audit design, or verify best practices.\"}"}
+{"key": "2019286f5f5f5613e3b39b9ff2356fb07a0fcc4aec61ed6c78b79f2f4eaeb407", "text": "{\"description\": \"Routes users to the appropriate skill or flow based on their situation by reading relevant SKILL.md files before making recommendations.\"}"}
+{"key": "9558c01a63622cb0781d4d690f2ee5ad62c3652d0fc8655aa8dfe115c904d8c3", "text": "{\"description\": \"Generates seek-safe 2D/3D keyframes for visual motion like zooms, pans, reframes, camera moves, masks, and crop transitions while preserving subject identity. Use when defining specific pose contracts or visual handoffs within a HyperFrames composition.\"}"}
+{"key": "08dccbaf4eefa17a45ad1832cbe754d1e251ba7b291d6c03f5c50a58b7368187", "text": "{\"description\": \"Manages Remotion project setup, video creation, rendering, maps, multimedia, captions, interactivity, and SaaS integration while preserving user code changes and opening Studio previews.\"}"}
+{"key": "cd673bdc4acb1a541d072abbdb7d7dd36bfe26539882cb59271b129058b2a8b9", "text": "{\"description\": \"Responds with terse technical answers that preserve all facts while removing filler and ceremony. Use when the user requests brief, token-efficient communication in caveman mode.\"}"}
+{"key": "2e2e0a2204b6ec6e84c320827ed7b826440246ba088d6bbe3404d1d88bb95c15", "text": "{\"description\": \"Debugs Azure production issues by analyzing logs, metrics, resource health, and recent changes to identify root causes for App Service, Functions, AKS, VM, and messaging failures. Use it when troubleshooting errors, connectivity problems, or performance degradation in Azure services.\"}"}
+{"key": "3c72486a09053998ca7d5fc0a81ff06b06a6e20d222e5fba647fffef18b79808", "text": "{\"description\": \"Configures Azure API Management as an AI Gateway for governing models, tools, and agents with policies for caching, token limits, content safety, load balancing, and metrics. Use it to add backends, apply governance rules, or test the gateway.\"}"}
+{"key": "63cd353f22a06588f60b6b6be711719c57e742cb852a621b978fb288a5ded29d", "text": "{\"description\": \"Diagnoses Azure Event Hubs and Service Bus SDK connection, authentication, and message processing issues including lock timeouts and session errors. Use it when troubleshooting SDK configuration failures or AMQP link detach problems.\"}"}
+{"key": "a228d18816c83ba5b51c642e8f9ec1da3cbbbd178e5c117a10bc3e747d4883b9", "text": "{\"description\": \"Generates an interactive bash wizard that guides humans through manual steps like provisioning infrastructure or migrating projects by opening URLs, capturing values, and writing them to .env or secrets. Use it for procedures requiring human interaction where the agent cannot perform the actions itself.\"}"}
+{"key": "cce9538cd1db19062498acd7382627f15835fe8691180569fb78ba9838b77ac4", "text": "{\"description\": \"Resolves narrow reproduction-critical gaps by extracting specific paper details like dataset splits or evaluation protocols while noting conflicts with existing README guidance. Use when the README leaves a gap for a concrete reproduction question and evidence is needed.\"}"}
+{"key": "bd6af9521d4fa76d79d669e7ac67b2b7882a665c8408d7c48e05b1fb06b080d6", "text": "{\"description\": \"Produces conservative environment setup notes, candidate conda commands, asset path plans, checkpoint and dataset source hints, and unresolved dependency risks for README-documented repositories before running commands. Use when preparing environment and asset assumptions prior to execution.\"}"}
+{"key": "d457335401914c9d865092fc420da782d438f6102ca4ea8e7785733e82dd682d", "text": "{\"description\": \"Re-pitches a message with context using ASD-STE100 Simplified Technical English and terms from GLOSSARY.md when the previous message was not understood.\"}"}
+{"key": "a9e17c5372635f778586278607e60e5124cb96e46d286b181707d06f22255a3f", "text": "{\"description\": \"Runs a stateful grilling session to create, edit, or delete workflow specs in workflows/*.md by interviewing the user about recurring life loops until an implementer agent can build the spec without asking questions.\"}"}
+{"key": "c4893e61f7098d765482a530652e462704c364deab7bbadf9367685fe4b770e6", "text": "{\"description\": \"Clarifies user intent and requirements before any creative work begins by asking open questions to uncover goals, context, and constraints. Use it when the request is non-trivial or missing details about what matters.\"}"}
+{"key": "2732d1e9c55992a30457963ae3778744f45a6c6683cdda52f74ae89382145826", "text": "{\"description\": \"Displays a quick-reference card for the three caveman skills and their commands when triggered by /caveman-help or 'caveman help'.\"}"}
+{"key": "def6a7b4ab9443c1b7a43fb218426047f052c0be91b3d8e304ae16ae09dd797d", "text": "{\"description\": \"Provides a deprecated compatibility name for prisma-postgres-setup with no setup recipes. Use only when a user or existing integration explicitly invokes prisma-postgres.\"}"}
+{"key": "b1d5278852af2430d828905ade5a1c420de76daffa6a58f4ab602405d0d6c7c8", "text": "{\"description\": \"Deploy and operate TypeScript apps on Prisma Compute using the Prisma 8 CLI, handling modules, services, versions, logs, domains, and rollbacks while replacing deprecated commands.\"}"}
+{"key": "bf859c39db0031f8f6b5c4a729933fa008d3f88b7116728211c89eb4dba29400", "text": "{\"description\": \"Provides a migration decision guide for MongoDB projects stuck on Prisma v6 with no upgrade path to v7, directing users to migrate to Prisma 8 Early Access or stay on v6 based on transaction needs and risk tolerance.\"}"}
+{"key": "9cbd2466037567bae98ea3fb080ec80c6ee170725625770fcb33fc610e6b10f2", "text": "{\"description\": \"Sets up AI Runway on an existing AKS cluster by verifying the cluster, installing the controller, assessing GPU compatibility, configuring an inference provider, and deploying a model. Use it when users need to onboard or deploy AI models from scratch on AKS.\"}"}
+{"key": "c086fb47b7070bdb923b141e522eb57da4cc9ed0fa40a5b45efc75aec4854339", "text": "{\"description\": \"Locate code definitions, perform surgical edits on up to two files, or review diffs for bugs with compressed structured output to save main context tokens. Use when you need concise results instead of verbose prose.\"}"}
+{"key": "354b1289566d6aeebde73c2618b90fe71d0e4396fa54c2cfd1bfb9810a03522c", "text": "{\"description\": \"Generates auditable deep learning research candidates with fair comparisons and idea gating on top of current_research. Use when the researcher explicitly authorizes candidate-only exploration after defining task, dataset, benchmark, evaluation method, and SOTA references.\"}"}
+{"key": "27239e04029a27e7f5d22549204355a032bd75a99eac65e4953488cc6236b2ba", "text": "{\"description\": \"Produces a read-only analysis of deep learning repositories including model structure, entrypoints, configs, and suspicious patterns. Use when understanding code or mapping relationships without modifying files or executing heavy jobs.\"}"}
+{"key": "71c0e80f46d9db2309020b9b7a8669814f72cf38d990d4f69827ee6d434a2c64", "text": "{\"description\": \"Produces a conservative diagnosis, root-cause analysis, and minimal patch plan for specific training or inference failures like tracebacks or CUDA errors. Use when the user provides an active error symptom requiring safe debugging before any code mutation.\"}"}
+{"key": "c3cca84046cfad25c47bd2c6c8bc5d40b8d4740c28995b7de80b65ad49893e78", "text": "{\"description\": \"Produces auditable candidate implementation records including changelogs, comparability reports, and status files for isolated exploratory code changes. Use when the researcher explicitly authorizes bounded module transplants or adaptations on an isolated branch.\"}"}
+{"key": "9a067be56b12044b2502539b6a1a75700808e5e61045f7e291a1a2dbbcc369d0", "text": "{\"description\": \"Plans bounded exploratory runs for small-subset validation, batch sweeps, or quick trials when explicitly authorized. Produces ranked candidate evidence in explore_outputs without certifying trusted success.\"}"}
+{"key": "6765355b5c63b55e1d1057297ea212ed0ab42e0afd9f80faa6e3915444b9c2d0", "text": "{\"description\": \"Investigates root causes of bugs, test failures, or unexpected behavior through systematic analysis before proposing fixes. Use when encountering any technical issue to avoid symptom-based solutions.\"}"}
+{"key": "7e31654c930c37b39bfb21b8d1b214259d819a1e8c7e71f0ef98053aed3f4564", "text": "{\"description\": \"Creates implementation plans for multi-step tasks based on specs or requirements, documenting file structure, task decomposition, and global constraints. Use when you have a spec or requirements for a multi-step task before touching code.\"}"}
+{"key": "e300b0b36d234a87b31293fc362c130b3572384618c9f9b4db4d07c344af40c3", "text": "{\"description\": \"Invokes relevant skills before any response including clarifying questions to establish how to find and use them\"}"}
+{"key": "4cd85b15b387213f3f3d1097ce6d6fa3344971d2e30d1ca09f36d11ad374c0b5", "text": "{\"description\": \"Dispatches a subagent to review code changes for critical and important issues before proceeding. Use after completing tasks, major features, or before merging.\"}"}
+{"key": "0c7ec6aeb5dbcb5a77c1ac59053cbbfe44d0f66fbf98b3dc9bfb2a5ef4958621", "text": "{\"description\": \"Runs verification commands and confirms output before making any claims that work is complete, fixed, or passing. Use this skill immediately before committing code, creating pull requests, or asserting task completion.\"}"}
+{"key": "7d8a0dd17c22a79ac53bc70c55e71f0d32713e80bb83d3bdeba0ce0d1a54f1b6", "text": "{\"description\": \"Execute a provided implementation plan task by task using TDD, making independent rulings on conflicts without pausing for human input, and performing a final whole-branch review. Use when your partner chose inline execution or no subagent tool is available.\"}"}
+{"key": "43020c26cca8368937b886972ab137ec65ef3627d7c9132346b780fa00626660", "text": "{\"description\": \"Execute implementation plans by dispatching fresh subagents per independent task with reviews after each and a final branch review. Use when tasks are mostly independent, partner chose inline or no subagent tool exists, and the plan is ready for execution without pausing.\"}"}
+{"key": "18860b223cba783b9da8c2766dbe75e5c8e6832043afe11c87388d849f94cac8", "text": "{\"description\": \"Receive and verify code review feedback by restating requirements, checking technical correctness against the codebase, clarifying unclear items, and pushing back with reasoning before implementing changes.\"}"}
+{"key": "0f98abb126936d9b50fd75afda740ed9bcbd1d22b5ec471e0a91e74d0ba352e3", "text": "{\"description\": \"Dispatches multiple independent agents in parallel to fix unrelated failures across different test files or subsystems without shared state dependencies.\"}"}
+{"key": "62171559ab39e564877e208ff610cb793f2197ed1de1053ae9c6767eba9cb7e1", "text": "{\"description\": \"Creates test-driven documentation for agent skills by defining pressure scenarios, documenting baseline failures, and verifying compliance. Use when creating new skills, editing existing skills, or verifying skills work before deployment.\"}"}
+{"key": "08d3f9d391526f71e2da4b848c0b4e5ae34fe2fe53573122a81246283a862506", "text": "{\"description\": \"Verifies tests, detects environment, determines base branch, presents integration options, and executes merge, push, or keep actions while cleaning up worktrees.\"}"}
+{"key": "59648c5b2fcc0cdc5049836362c7115a929e7686ac9c94065d3780732726f90d", "text": "{\"description\": \"Configures Firebase Authentication for user sign-in, management, and secure data access using providers like email/password or Google Sign-In. Use when the app requires authentication setup.\"}"}
+{"key": "9d6bdbc343969fd7df84db31b09b41f974c21c256d5d8634c6439177a2a8eb48", "text": "{\"description\": \"Applies psychological principles and mental models to marketing strategy, explaining why people buy and how to influence behavior ethically. Use this when users want to understand or leverage consumer decision-making in a marketing context.\"}"}
+{"key": "f06da64dd7edb956dcfe253ddff84bfaf0aa4b6c6d41659e1fb03ca839c8e222", "text": "{\"description\": \"Generates a structured PR body with summary diagrams, before/after evidence, and merge risk analysis. Use when writing a pull request description.\"}"}
+{"key": "3c76efd54595e45fce71c222d7c378399521873ea83d1d15064715c261e0d565", "text": "{\"description\": \"Creates SEO-optimized pages at scale using templates and data to rank for specific keywords or locations while avoiding thin content penalties. Use when building many similar pages targeting different search terms, locations, or comparisons.\"}"}
+{"key": "f8afd82812c4c3886e5a76de0e1139b6d7017fb024ef8f2d2bd7b255169321a9", "text": "{\"description\": \"Generates 3-5 relevant marketing strategies for SaaS products based on user context, stage, and resources. Use when users need inspiration, brainstorming, or initial growth ideas before executing specific channel tactics.\"}"}
+{"key": "6ae05d44da6cf4a60663580b721b55022b229986b21591ceed806e98566fe8b9", "text": "{\"description\": \"Discover and choose Cloudflare products for apps, APIs, AI agents, storage, networking, and security. Use when the user describes a need without naming a specific product or requires architecture guidance.\"}"}
+{"key": "63c673f5b7ef2d2343e515d7894f9b2b953c5c27e416003060d76d895d8f10f4", "text": "{\"description\": \"Plans website page hierarchy, navigation, URL structure, and internal linking to create intuitive site architecture. Use when users need to map, restructure, or organize their site's information flow.\"}"}
+{"key": "ec607cae898e67a9295487cbe46e9cf8c5372c315ccfbd88c04343ec0dc4384f", "text": "{\"description\": \"Builds cancel flows, dynamic save offers, exit surveys, and dunning strategies to reduce voluntary and involuntary churn. Use when users want to prevent subscriber loss or recover failed payments.\"}"}
+{"key": "0720e26e967dd4ffaa145435333975fb088d6cdd3ec78fdeae4b64cb1a95be68", "text": "{\"description\": \"Designs revenue operations systems connecting marketing, sales, and customer success including lead lifecycle stages, MQL definitions, handoff SLAs, and pipeline management. Use when optimizing processes that connect marketing to revenue or defining lead qualification criteria.\"}"}
+{"key": "dc57cb8230496a98cc08964bf392380854e8a27c4e40d65972e87a73aa048fba", "text": "{\"description\": \"Plans lead magnet strategy including format selection, distribution methods, and buyer stage alignment to capture emails. Use when creating or optimizing offers like checklists, ebooks, templates, or agent skills for lead generation.\"}"}
+{"key": "8186ef1b40c75565315ea4007688f1564656dfd2ed33bc7242204a00db646659", "text": "{\"description\": \"Reviews specified files or patterns against the latest Writing Guidelines by fetching rules and outputting compliance findings in file:line format. Use when asked to review docs, check writing style, audit prose, or verify voice and tone.\"}"}
+{"key": "6469c2f0a831325c4e7c7cc1666907ce62eafa2deca0fbfcfb37a1671e333aa2", "text": "{\"description\": \"Converts a Caveman report-only observation into an operator-chosen candidate with a paired baseline evaluation. Use when asked to inspect or evaluate a Caveman optimization report.\"}"}
+{"key": "7d86abec3112f760fd3e655bad998119136add9f2266323f32779ceaa02b507b", "text": "{\"description\": \"Gathers evidence, traces inputs and state transitions, ranks hypotheses by proof value, and reports the cause without making code changes until a credible mechanism is identified.\"}"}
+{"key": "43097e4904743a8a490035ab76b93b507dfa3a1df692952f2369c8c8f6da4ffe", "text": "{\"description\": \"Builds narrow feature outcomes with explicit stop conditions by deriving acceptance criteria, tracing entry points, reusing seams, and omitting non-essential modes or polish until acceptance passes.\"}"}
+{"key": "d5a74023a4707d389c6395d8d7ae8c83e9e1bf0165430cc900d17c3ea7841642", "text": "{\"description\": \"Analyzes marketing pages to provide actionable recommendations for improving conversion rates by evaluating value proposition, headlines, CTAs, trust signals, and friction points. Use when optimizing any page or form for conversions.\"}"}
+{"key": "fc06ad347b7be38406fe6641a7d1f7e850241ad0946ea6fb6ccd83e9c0102f15", "text": "{\"description\": \"Submits products to startup, SaaS, AI, and review directories for dofollow backlinks, domain rating, and discovery traffic. Use when building the foundation layer of a product launch or ongoing backlink campaign after destination pages are ready.\"}"}
+{"key": "2727db81effc1a79621c43e9b5d68f0fa5a4a51a3757440662db082a935024a7", "text": "{\"description\": \"Sets up, improves, or audits analytics tracking and measurement for marketing and product decisions. Use it when users ask about configuring tools like Google Analytics, Mixpanel, or Segment, verifying event firing, or defining tracking plans.\"}"}
+{"key": "686f519c14bf84423822fe1144133e7e76755dc4098c9d9cc6e414f26505f5cc", "text": "{\"description\": \"Creates and updates the product marketing context document at .agents/product-marketing.md to store foundational positioning, audience, and messaging details for all marketing tasks.\"}"}
+{"key": "29b688e7312335908881ed63eceaa420ef8d04142a8ce48f4fbb2a7699f7d893", "text": "{\"description\": \"Generates internal communications like 3P updates, newsletters, FAQs, and incident reports by loading specific formatting guidelines. Use this skill when asked to write any internal company communication.\"}"}
+{"key": "7ab9885657d226a232171faabfbf268df20fec58e3405e0a8871a27e9cea69e1", "text": "{\"description\": \"Identifies ideal co-marketing partners and plans joint campaigns by analyzing audience overlap, scoring partner fit, and sourcing opportunities from integrations or adjacent categories. Use when finding partners, brainstorming ideas, or evaluating partnership potential.\"}"}
+{"key": "047311d9fe75070320247b9665346591e7b56e7199d968166ac798759a39d354", "text": "{\"description\": \"Helps design SaaS pricing strategy including packaging, value metrics, price points, and monetization frameworks like Van Westendorp to capture customer willingness to pay.\"}"}
+{"key": "4e1713221656eeabd91f1a344e909e785200671e0417ae6ec6bb96ff683cd299", "text": "{\"description\": \"Designs multi-email automated flows including welcome, nurture, re-engagement, and lifecycle sequences with goals, timing, and email order. Use when creating or optimizing drip campaigns, onboarding programs, or trigger-based email workflows.\"}"}
+{"key": "9b09b76ed98350192f784921a75e0b136d3b0dafac489d31f00a1776c4d05573", "text": "{\"description\": \"Plans product launches, feature announcements, and release strategies using the ORB framework to build momentum across owned, rented, and borrowed channels. Use when preparing to release something publicly or discussing launch checklists and go-to-market plans.\"}"}
+{"key": "a9cffaf61e9fd9e125738279f0cca334f7504d6259e5c112b71b283f942c66ce", "text": "{\"description\": \"Implements accurate JSON-LD schema.org structured data to enable rich search results like products, articles, and FAQs. Use when users need enhanced Google search appearances or specific schema types for their page content.\"}"}
+{"key": "37a00ec64460f50ce23ee910fd1540a6304d1b0b612d21bfa46f683e53b60f38", "text": "{\"description\": \"Design statistically valid A/B tests and experiments by defining hypotheses, selecting metrics, and calculating sample sizes to measure performance differences between variants.\"}"}
+{"key": "9c4fa23eaffe8e064d54ae36c7dd8c7a46666f1e7c4e024b68959711f0d883b3", "text": "{\"description\": \"Analyzes App Store and Google Play listings against best practices to produce a prioritized action plan for optimization. Use when the user shares a store URL or asks to audit, optimize, compare, or improve their app listing.\"}"}
+{"key": "98b896f3265878bc809c9ca44bad7c5e2638ef43ed5cc120079f9f431aaa8876", "text": "{\"description\": \"Explores Nx workspaces to list projects, retrieve configurations, check targets, and analyze dependencies. Use it when answering questions about workspace structure or debugging task failures.\"}"}
+{"key": "09f3afbaf624aa1ed1c68106d46a8158a02b8f922f29bb2eb1a3aaef955c5f1e", "text": "{\"description\": \"Plans and evaluates free tools for marketing purposes like lead generation, SEO value, or brand awareness. Use when building calculators, generators, auditors, or interactive resources to attract leads without gating content.\"}"}
+{"key": "bfc9720f280910b71f77f255efa03cbc79fd55f038a857940374a367de644e44", "text": "{\"description\": \"Optimizes post-signup onboarding, user activation, first-run experience, and time-to-value by designing minimum paths to value and establishing habits. Use when users sign up but do not activate or complete setup.\"}"}
+{"key": "8438767b82557cea760b90e95de096fba761a8f409119db9b9a23c4aac3c0997", "text": "{\"description\": \"Control Herdr terminal multiplexer to inspect or manage workspaces, tabs, panes, agents, and commands when explicitly requested by the user and running inside a Herdr session.\"}"}
+{"key": "78319810ea3af1ef8f86769e68ca9d40ce1d59a9d3d28006103b5d0c6ab611f0", "text": "{\"description\": \"Generates a JSON object containing a skill description and usage guidelines based on provided SKILL.md content. Use this when you need to format agent capabilities for router consumption.\"}"}
+{"key": "171e805663a6db0b55103b925ff78abb118bfd938d001428f1191d64a4a3a1eb", "text": "{\"description\": \"Designs and optimizes customer referral, affiliate, and word-of-mouth programs by analyzing program type, current state, product fit, and viral potential to create effective growth loops.\"}"}
+{"key": "ee8b907c816b356d403ada3c37370def9598e83b19350b3552fd5c83626a12ca", "text": "{\"description\": \"Optimizes signup, registration, and trial activation flows to reduce friction and increase completion rates by minimizing required fields, showing value first, reducing perceived effort, and removing uncertainty.\"}"}
+{"key": "33e1646c190d1a58e8c54e91ee0044bd21da0ea6453ddc2f2bce074e0b62a48c", "text": "{\"description\": \"Provision third-party services like databases, auth, and hosting via Stripe Projects CLI or retrieve API keys. Use when users request infrastructure setup, service browsing, credential retrieval, or project management.\"}"}
+{"key": "a798c24df4024e64ef2e696cae9e594d18f578f35d5d0d2f1ebdae098a1eb6a7", "text": "{\"description\": \"Creates and optimizes popups, modals, overlays, slide-ins, and banners for conversion using timing, trigger strategies, and design best practices. Use when the user requests exit intent, lead capture, or any interrupt-style overlay element.\"}"}
+{"key": "031f8b10e128b76cb448fb4ad9c1fea90380a0c09c5ef30a66737df59494612c", "text": "{\"description\": \"Registers GSAP plugins like ScrollToPlugin, Flip, Draggable, and easing tools. Use when the user asks about plugin registration, scroll-to animations, FLIP layout transitions, draggable elements, SVG drawing, or physics.\"}"}
+{"key": "6862803a093dec6eda377e09a0e7dfed706ca37d590b2c840a23317c6f1bfd91", "text": "{\"description\": \"Audit and improve web accessibility following WCAG 2.2 guidelines using Lighthouse audits, accessibility tree snapshots, and manual keyboard testing to fix issues like missing alt text or low contrast.\"}"}
+{"key": "994c66afe4be41e32ae8a7a3715deb882c18a8db05b7c02068ffab84e230d211", "text": "{\"description\": \"Provides pure helper utilities for math, array handling, unit parsing, and value mapping without registration. Use when writing or reviewing code that uses gsap.utils for clamping, mapping ranges, normalizing, interpolating, randomizing, snapping, or converting arrays.\"}"}
+{"key": "829a0359930ae6bdce3df976647760be8cfba1c794633871f43467fcbd96c28b", "text": "{\"description\": \"Plans, builds, and optimizes compliant SMS, MMS, and WhatsApp marketing campaigns including welcome flows, abandoned cart texts, promotional sends, and transactional messages while ensuring TCPA adherence and channel selection.\"}"}
+{"key": "18fa8717a110bc6b2390d98033a53137f92ee94fe70eb9035f5c2c130b8851c1", "text": "{\"description\": \"Establishes the high-level motion law ensuring multi-scene videos feel like one continuous camera move by enforcing vector continuity, direction, and seam rules that supersede generic guidance. Use this gateway skill first to define motion behavior before composing any animation or video.\"}"}
+{"key": "8d12dabe77d259491b445e08a6d1c28bb8af39ae501bc2fc2ec9aa2411c89d3e", "text": "{\"description\": \"Applies drop/rail/embed caption model and overlay law to compose captions as an on-top layer without reserving space. Use when adding captions to talking-head or launch videos.\"}"}
+{"key": "ba974993eaff4564a80b40961da4a4d92339645b9a8a1fca20ab55b6b742f260", "text": "{\"description\": \"Manages InsForge backend and cloud infrastructure via CLI commands for projects, SQL, migrations, functions, storage, payments, analytics, organization membership, agent memory, and feedback. Use when tasks require backend setup or CLI operations on InsForge resources.\"}"}
+{"key": "5e82ef719b3020e2fc1fb12dc85eda8cadc4f27f424422c65c07a969a469184d", "text": "{\"description\": \"Builds a separate research persona to hide your real identity from platforms while investigating targets. Use when viewing logged-in accounts or monitored infrastructure to avoid detection.\"}"}
+{"key": "c155d32e15541865dfdca59ecbf31cab9a10e0dd8f622ff769f1472b2ce860b3", "text": "{\"description\": \"Delivers changes incrementally in thin, verifiable slices by implementing, testing, and verifying each piece before moving to the next. Use when implementing multi-file changes, building new features from task breakdowns, refactoring code, or when a task feels too large to land in one step.\"}"}
+{"key": "51d30789cacd212691713ec5bb2e59a4e3cc979b1b1fd4662a306f20efed2414", "text": "{\"description\": \"Structures git workflow practices including atomic commits, descriptive messages, and trunk-based development. Use when making any code change, committing, branching, resolving conflicts, splitting work, opening pull requests, pushing, cutting releases, or versioning.\"}"}
+{"key": "a6fdcae34465dc825fc7e478dead14b09c6127c0fc58e0f9c7cbf1cf1727a9c5", "text": "{\"description\": \"Diagnoses InsForge project problems using observability primitives like logs, metrics, DB health, and AI assist to identify reactive failures or perform proactive audits. Use it when diagnosing errors, conducting security reviews, checking system health, or starting troubleshooting without a clear path.\"}"}
+{"key": "7f1631bcca0f1e71f88610476011e589cca5e78617d8d489810babe03438a0b0", "text": "{\"description\": \"Generates a pre-launch checklist covering code quality, security, performance, accessibility, infrastructure, and documentation, plus feature flag and staged rollout strategies. Use when preparing to deploy to production or planning a safe release.\"}"}
+{"key": "47fa1b7ef0609b15138128ac48cc9d069e45ee927e4f078d7048faa414f2811a", "text": "{\"description\": \"Verifies implementation decisions against official documentation to ensure correctness and current best practices, citing authoritative sources for framework-specific code.\"}"}
+{"key": "6f0c7457c82725864576c39047be12c28b48fd929e56fc37d9d4e4b1564ee388", "text": "{\"description\": \"Generates earned media strategies, journalist pitches, press releases, crisis communications responses, and media kit assets for software products. Use when the user needs press coverage, podcast guest prep, or reactive newsjacking rather than directory submissions or cold outreach.\"}"}
+{"key": "7f0ea790bf9a0f3510212144e298bed9aae76536dfe9731cee42d2d76dc1150b", "text": "{\"description\": \"Subjects non-trivial decisions to a fresh-context adversarial review before they stand. Use when making architectural choices, committing complex code, or working in unfamiliar contexts where correctness matters more than speed.\"}"}
+{"key": "824f89483ece594b2e27766b04230cb6e27afa4078da22ed962d7af5103245ea", "text": "{\"description\": \"Performs SEO audits using Lighthouse and Google guidelines to verify crawlability, metadata, structured data, and URL structure. Use when asked to improve search engine visibility or fix technical SEO issues.\"}"}
+{"key": "24b3838b6460104e8fee18be7c0395e34d47cbdb9f7583aef1f5f991b15f7d50", "text": "{\"description\": \"Inspect local AI-agent activity including sessions, tokens, costs, and health across multiple platforms. Use when users request session data, cost analysis, setup diagnosis, or metrics exports.\"}"}
+{"key": "d3fd8d0e21b19fce90e31a8573da1b1a9cea6937a67cca74f4f04f2c8190a6ee", "text": "{\"description\": \"Creates layouts that adapt to available screen space using LayoutBuilder, MediaQuery, or Expanded/Flexible widgets based on constraints rather than device type. Use when the UI must adjust for different window sizes and form factors.\"}"}

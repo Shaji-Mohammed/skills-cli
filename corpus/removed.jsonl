@@ -1,0 +1,500 @@
+{"id": "addyosmani/web-quality-skills/core-web-vitals", "rule": "below_cap", "installs": 31179}
+{"id": "addyosmani/web-quality-skills/performance", "rule": "below_cap", "installs": 40444}
+{"id": "addyosmani/web-quality-skills/web-quality-audit", "rule": "below_cap", "installs": 31769}
+{"id": "amplitude/mcp-marketplace/add-analytics-instrumentation", "rule": "below_cap", "installs": 38481}
+{"id": "amplitude/mcp-marketplace/diff-intake", "rule": "below_cap", "installs": 38455}
+{"id": "amplitude/mcp-marketplace/discover-analytics-patterns", "rule": "below_cap", "installs": 38450}
+{"id": "amplitude/mcp-marketplace/discover-event-surfaces", "rule": "below_cap", "installs": 38444}
+{"id": "amplitude/mcp-marketplace/instrument-events", "rule": "below_cap", "installs": 38420}
+{"id": "amplitude/mcp-marketplace/taxonomy", "rule": "below_cap", "installs": 38390}
+{"id": "antfu/skills/vite", "rule": "below_cap", "installs": 38769}
+{"id": "antfu/skills/vue", "rule": "below_cap", "installs": 35550}
+{"id": "anysearch-ai/anysearch-skill/anysearch", "rule": "below_cap", "installs": 38409}
+{"id": "avdlee/swiftui-agent-skill/swiftui-expert-skill", "rule": "below_cap", "installs": 34672}
+{"id": "better-auth/skills/organization-best-practices", "rule": "below_cap", "installs": 36084}
+{"id": "better-auth/skills/two-factor-authentication-best-practices", "rule": "below_cap", "installs": 33915}
+{"id": "clerk/skills/clerk-cli", "rule": "below_cap", "installs": 33065}
+{"id": "cloudflare/security-audit-skill/security-audit", "rule": "below_cap", "installs": 40139}
+{"id": "cloudflare/skills/nextjs-on-cloudflare", "rule": "below_cap", "installs": 38262}
+{"id": "convex/agent-skills/convex-add", "rule": "below_cap", "installs": 34275}
+{"id": "convex/agent-skills/convex-advisor", "rule": "below_cap", "installs": 34305}
+{"id": "convex/agent-skills/convex-agent", "rule": "below_cap", "installs": 34269}
+{"id": "convex/agent-skills/convex-auth", "rule": "below_cap", "installs": 34556}
+{"id": "convex/agent-skills/convex-authz", "rule": "below_cap", "installs": 34469}
+{"id": "convex/agent-skills/convex-backup", "rule": "below_cap", "installs": 34245}
+{"id": "convex/agent-skills/convex-billing", "rule": "below_cap", "installs": 34212}
+{"id": "convex/agent-skills/convex-cost", "rule": "below_cap", "installs": 34250}
+{"id": "convex/agent-skills/convex-crons", "rule": "below_cap", "installs": 34326}
+{"id": "convex/agent-skills/convex-deploy-guard", "rule": "below_cap", "installs": 34378}
+{"id": "convex/agent-skills/convex-docs", "rule": "below_cap", "installs": 34439}
+{"id": "convex/agent-skills/convex-domains", "rule": "below_cap", "installs": 34216}
+{"id": "convex/agent-skills/convex-env", "rule": "below_cap", "installs": 34360}
+{"id": "convex/agent-skills/convex-expert", "rule": "below_cap", "installs": 34567}
+{"id": "convex/agent-skills/convex-explain-app", "rule": "below_cap", "installs": 34238}
+{"id": "convex/agent-skills/convex-improve-convex-plugin", "rule": "below_cap", "installs": 34190}
+{"id": "convex/agent-skills/convex-insights", "rule": "below_cap", "installs": 34256}
+{"id": "convex/agent-skills/convex-launch-readiness", "rule": "below_cap", "installs": 34235}
+{"id": "convex/agent-skills/convex-migrate", "rule": "below_cap", "installs": 34466}
+{"id": "convex/agent-skills/convex-migrate-rehearse", "rule": "below_cap", "installs": 34248}
+{"id": "convex/agent-skills/convex-monitor", "rule": "below_cap", "installs": 34206}
+{"id": "convex/agent-skills/convex-optimize", "rule": "below_cap", "installs": 34375}
+{"id": "convex/agent-skills/convex-reviewer", "rule": "below_cap", "installs": 34416}
+{"id": "convex/agent-skills/convex-seed", "rule": "below_cap", "installs": 34192}
+{"id": "convex/agent-skills/convex-self-heal", "rule": "below_cap", "installs": 34158}
+{"id": "convex/agent-skills/convex-sentinel", "rule": "below_cap", "installs": 34109}
+{"id": "convex/agent-skills/convex-suggest", "rule": "below_cap", "installs": 34169}
+{"id": "convex/agent-skills/convex-test", "rule": "below_cap", "installs": 34270}
+{"id": "convex/agent-skills/convex-verify", "rule": "below_cap", "installs": 34204}
+{"id": "coreyhaines31/marketingskills/attribution", "rule": "below_cap", "installs": 36072}
+{"id": "coreyhaines31/marketingskills/influencer-marketing", "rule": "below_cap", "installs": 36035}
+{"id": "dammyjay93/interface-design/interface-design", "rule": "below_cap", "installs": 30168}
+{"id": "dietrichgebert/ponytail/ponytail-audit", "rule": "below_cap", "installs": 41307}
+{"id": "dietrichgebert/ponytail/ponytail-debt", "rule": "below_cap", "installs": 38886}
+{"id": "dietrichgebert/ponytail/ponytail-gain", "rule": "below_cap", "installs": 37007}
+{"id": "dietrichgebert/ponytail/ponytail-help", "rule": "below_cap", "installs": 38974}
+{"id": "expo/skills/eas-update-insights", "rule": "below_cap", "installs": 35859}
+{"id": "expo/skills/expo-ui", "rule": "below_cap", "installs": 30391}
+{"id": "firecrawl/cli/firecrawl-monitor", "rule": "below_cap", "installs": 33096}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-company-directories", "rule": "below_cap", "installs": 31238}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-competitive-intel", "rule": "below_cap", "installs": 31276}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-dashboard-reporting", "rule": "below_cap", "installs": 31519}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-deep-research", "rule": "below_cap", "installs": 35261}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-demo-walkthrough", "rule": "below_cap", "installs": 31142}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-knowledge-base", "rule": "below_cap", "installs": 32455}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-knowledge-ingest", "rule": "below_cap", "installs": 31251}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-lead-gen", "rule": "below_cap", "installs": 31376}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-lead-research", "rule": "below_cap", "installs": 31330}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-market-research", "rule": "below_cap", "installs": 32297}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-qa", "rule": "below_cap", "installs": 31271}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-research-papers", "rule": "below_cap", "installs": 33591}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-seo-audit", "rule": "below_cap", "installs": 31915}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-shop", "rule": "below_cap", "installs": 31267}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-website-design-clone", "rule": "below_cap", "installs": 32993}
+{"id": "firecrawl/firecrawl-workflows/firecrawl-workflows", "rule": "below_cap", "installs": 32525}
+{"id": "flutter/agent-plugins/flutter-add-integration-test", "rule": "below_cap", "installs": 37220}
+{"id": "flutter/agent-plugins/flutter-add-widget-preview", "rule": "below_cap", "installs": 35780}
+{"id": "flutter/agent-plugins/flutter-add-widget-test", "rule": "below_cap", "installs": 38203}
+{"id": "flutter/agent-plugins/flutter-fix-layout-issues", "rule": "below_cap", "installs": 39017}
+{"id": "flutter/agent-plugins/flutter-implement-json-serialization", "rule": "below_cap", "installs": 36398}
+{"id": "flutter/agent-plugins/flutter-setup-declarative-routing", "rule": "below_cap", "installs": 36852}
+{"id": "flutter/agent-plugins/flutter-setup-localization", "rule": "below_cap", "installs": 35872}
+{"id": "flutter/agent-plugins/flutter-use-http-package", "rule": "below_cap", "installs": 35250}
+{"id": "github/awesome-copilot/excalidraw-diagram-generator", "rule": "below_cap", "installs": 31476}
+{"id": "google-labs-code/stitch-skills/remotion", "rule": "below_cap", "installs": 41027}
+{"id": "googlechrome/modern-web-guidance/modern-web-guidance", "rule": "below_cap", "installs": 33713}
+{"id": "googleworkspace/cli/gws-admin-reports", "rule": "below_cap", "installs": 30428}
+{"id": "googleworkspace/cli/gws-chat", "rule": "below_cap", "installs": 32888}
+{"id": "googleworkspace/cli/gws-chat-send", "rule": "below_cap", "installs": 31710}
+{"id": "googleworkspace/cli/gws-events", "rule": "below_cap", "installs": 31212}
+{"id": "googleworkspace/cli/gws-events-renew", "rule": "below_cap", "installs": 30564}
+{"id": "googleworkspace/cli/gws-events-subscribe", "rule": "below_cap", "installs": 30552}
+{"id": "googleworkspace/cli/gws-forms", "rule": "below_cap", "installs": 40843}
+{"id": "googleworkspace/cli/gws-gmail-forward", "rule": "below_cap", "installs": 33495}
+{"id": "googleworkspace/cli/gws-gmail-read", "rule": "below_cap", "installs": 40779}
+{"id": "googleworkspace/cli/gws-gmail-reply-all", "rule": "below_cap", "installs": 32724}
+{"id": "googleworkspace/cli/gws-gmail-watch", "rule": "below_cap", "installs": 36949}
+{"id": "googleworkspace/cli/gws-people", "rule": "below_cap", "installs": 32657}
+{"id": "googleworkspace/cli/gws-workflow", "rule": "below_cap", "installs": 33249}
+{"id": "googleworkspace/cli/gws-workflow-email-to-task", "rule": "below_cap", "installs": 32280}
+{"id": "googleworkspace/cli/gws-workflow-file-announce", "rule": "below_cap", "installs": 30598}
+{"id": "googleworkspace/cli/gws-workflow-meeting-prep", "rule": "below_cap", "installs": 31667}
+{"id": "googleworkspace/cli/gws-workflow-standup-report", "rule": "below_cap", "installs": 31381}
+{"id": "googleworkspace/cli/gws-workflow-weekly-digest", "rule": "below_cap", "installs": 31400}
+{"id": "googleworkspace/cli/persona-content-creator", "rule": "below_cap", "installs": 30518}
+{"id": "googleworkspace/cli/persona-exec-assistant", "rule": "below_cap", "installs": 30719}
+{"id": "googleworkspace/cli/persona-project-manager", "rule": "below_cap", "installs": 31368}
+{"id": "googleworkspace/cli/persona-researcher", "rule": "below_cap", "installs": 31056}
+{"id": "googleworkspace/cli/persona-team-lead", "rule": "below_cap", "installs": 30125}
+{"id": "googleworkspace/cli/recipe-backup-sheet-as-csv", "rule": "below_cap", "installs": 30853}
+{"id": "googleworkspace/cli/recipe-block-focus-time", "rule": "below_cap", "installs": 30174}
+{"id": "googleworkspace/cli/recipe-bulk-download-folder", "rule": "below_cap", "installs": 30525}
+{"id": "googleworkspace/cli/recipe-compare-sheet-tabs", "rule": "below_cap", "installs": 30595}
+{"id": "googleworkspace/cli/recipe-create-doc-from-template", "rule": "below_cap", "installs": 30521}
+{"id": "googleworkspace/cli/recipe-create-gmail-filter", "rule": "below_cap", "installs": 31105}
+{"id": "googleworkspace/cli/recipe-create-presentation", "rule": "below_cap", "installs": 32210}
+{"id": "googleworkspace/cli/recipe-create-shared-drive", "rule": "below_cap", "installs": 30137}
+{"id": "googleworkspace/cli/recipe-draft-email-from-doc", "rule": "below_cap", "installs": 31379}
+{"id": "googleworkspace/cli/recipe-email-drive-link", "rule": "below_cap", "installs": 31259}
+{"id": "googleworkspace/cli/recipe-find-free-time", "rule": "below_cap", "installs": 30669}
+{"id": "googleworkspace/cli/recipe-generate-report-from-sheet", "rule": "below_cap", "installs": 30337}
+{"id": "googleworkspace/cli/recipe-label-and-archive-emails", "rule": "below_cap", "installs": 30208}
+{"id": "googleworkspace/cli/recipe-organize-drive-folder", "rule": "below_cap", "installs": 30808}
+{"id": "googleworkspace/cli/recipe-plan-weekly-schedule", "rule": "below_cap", "installs": 30544}
+{"id": "googleworkspace/cli/recipe-reschedule-meeting", "rule": "below_cap", "installs": 30209}
+{"id": "googleworkspace/cli/recipe-save-email-attachments", "rule": "below_cap", "installs": 30867}
+{"id": "googleworkspace/cli/recipe-save-email-to-doc", "rule": "below_cap", "installs": 30186}
+{"id": "googleworkspace/cli/recipe-share-doc-and-notify", "rule": "below_cap", "installs": 30049}
+{"id": "googleworkspace/cli/recipe-sync-contacts-to-sheet", "rule": "below_cap", "installs": 30473}
+{"id": "googleworkspace/cli/recipe-watch-drive-changes", "rule": "below_cap", "installs": 30141}
+{"id": "hugmouse/skills/value", "rule": "below_cap", "installs": 35531}
+{"id": "humanlayer/skills/show-me", "rule": "below_cap", "installs": 31116}
+{"id": "jakubkrehel/skills/better-colors", "rule": "below_cap", "installs": 30952}
+{"id": "jakubkrehel/skills/better-typography", "rule": "below_cap", "installs": 32510}
+{"id": "jakubkrehel/skills/better-ui", "rule": "below_cap", "installs": 37246}
+{"id": "jimliu/baoyu-skills/baoyu-article-illustrator", "rule": "below_cap", "installs": 31793}
+{"id": "jimliu/baoyu-skills/baoyu-cover-image", "rule": "below_cap", "installs": 31962}
+{"id": "jimliu/baoyu-skills/baoyu-image-gen", "rule": "below_cap", "installs": 33444}
+{"id": "jimliu/baoyu-skills/baoyu-infographic", "rule": "below_cap", "installs": 32631}
+{"id": "jimliu/baoyu-skills/baoyu-markdown-to-html", "rule": "below_cap", "installs": 32110}
+{"id": "jimliu/baoyu-skills/baoyu-post-to-wechat", "rule": "below_cap", "installs": 34296}
+{"id": "jimliu/baoyu-skills/baoyu-slide-deck", "rule": "below_cap", "installs": 31013}
+{"id": "jimliu/baoyu-skills/baoyu-url-to-markdown", "rule": "below_cap", "installs": 30207}
+{"id": "jimliu/baoyu-skills/baoyu-xhs-images", "rule": "below_cap", "installs": 31224}
+{"id": "kadajett/agent-nestjs-skills/nestjs-best-practices", "rule": "below_cap", "installs": 30047}
+{"id": "limrun-inc/skills/limrun-android-emulator", "rule": "below_cap", "installs": 33436}
+{"id": "limrun-inc/skills/limrun-detox-testing", "rule": "below_cap", "installs": 37832}
+{"id": "limrun-inc/skills/limrun-expo-development", "rule": "below_cap", "installs": 37830}
+{"id": "limrun-inc/skills/limrun-gradle", "rule": "below_cap", "installs": 34732}
+{"id": "limrun-inc/skills/limrun-ios-simulator", "rule": "below_cap", "installs": 37851}
+{"id": "limrun-inc/skills/limrun-maestro-testing", "rule": "below_cap", "installs": 35870}
+{"id": "limrun-inc/skills/limrun-xcode", "rule": "below_cap", "installs": 37834}
+{"id": "limrun-inc/skills/limrun-xcode-bazel", "rule": "below_cap", "installs": 37817}
+{"id": "mcp-use/mcp-use/mcp-apps-builder", "rule": "below_cap", "installs": 32041}
+{"id": "microsoft/azure-skills/discover-azure-skills", "rule": "below_cap", "installs": 39303}
+{"id": "minimax-ai/cli/mmx-cli", "rule": "below_cap", "installs": 31703}
+{"id": "nextlevelbuilder/ui-ux-pro-max-skill/banner-design", "rule": "below_cap", "installs": 36900}
+{"id": "nextlevelbuilder/ui-ux-pro-max-skill/brand", "rule": "below_cap", "installs": 37286}
+{"id": "nextlevelbuilder/ui-ux-pro-max-skill/design", "rule": "below_cap", "installs": 38655}
+{"id": "nextlevelbuilder/ui-ux-pro-max-skill/design-system", "rule": "below_cap", "installs": 39970}
+{"id": "nextlevelbuilder/ui-ux-pro-max-skill/slides", "rule": "below_cap", "installs": 36281}
+{"id": "nextlevelbuilder/ui-ux-pro-max-skill/ui-styling", "rule": "below_cap", "installs": 38055}
+{"id": "pexoai/pexo-skills/pexo-agent", "rule": "below_cap", "installs": 40368}
+{"id": "replicas-group/skill/replicas-agent", "rule": "below_cap", "installs": 36680}
+{"id": "samber/cc-skills-golang/golang-benchmark", "rule": "below_cap", "installs": 38711}
+{"id": "samber/cc-skills-golang/golang-cli", "rule": "below_cap", "installs": 38651}
+{"id": "samber/cc-skills-golang/golang-concurrency", "rule": "below_cap", "installs": 40853}
+{"id": "samber/cc-skills-golang/golang-context", "rule": "below_cap", "installs": 40138}
+{"id": "samber/cc-skills-golang/golang-continuous-integration", "rule": "below_cap", "installs": 38539}
+{"id": "samber/cc-skills-golang/golang-data-structures", "rule": "below_cap", "installs": 39508}
+{"id": "samber/cc-skills-golang/golang-database", "rule": "below_cap", "installs": 39966}
+{"id": "samber/cc-skills-golang/golang-dependency-injection", "rule": "below_cap", "installs": 38701}
+{"id": "samber/cc-skills-golang/golang-dependency-management", "rule": "below_cap", "installs": 39003}
+{"id": "samber/cc-skills-golang/golang-design-patterns", "rule": "below_cap", "installs": 41239}
+{"id": "samber/cc-skills-golang/golang-documentation", "rule": "below_cap", "installs": 39587}
+{"id": "samber/cc-skills-golang/golang-google-wire", "rule": "below_cap", "installs": 36117}
+{"id": "samber/cc-skills-golang/golang-graphql", "rule": "below_cap", "installs": 36235}
+{"id": "samber/cc-skills-golang/golang-grpc", "rule": "below_cap", "installs": 38447}
+{"id": "samber/cc-skills-golang/golang-how-to", "rule": "below_cap", "installs": 35577}
+{"id": "samber/cc-skills-golang/golang-lint", "rule": "below_cap", "installs": 39425}
+{"id": "samber/cc-skills-golang/golang-modernize", "rule": "below_cap", "installs": 39529}
+{"id": "samber/cc-skills-golang/golang-naming", "rule": "below_cap", "installs": 40006}
+{"id": "samber/cc-skills-golang/golang-observability", "rule": "below_cap", "installs": 39137}
+{"id": "samber/cc-skills-golang/golang-performance", "rule": "below_cap", "installs": 41092}
+{"id": "samber/cc-skills-golang/golang-popular-libraries", "rule": "below_cap", "installs": 38699}
+{"id": "samber/cc-skills-golang/golang-project-layout", "rule": "below_cap", "installs": 39596}
+{"id": "samber/cc-skills-golang/golang-safety", "rule": "below_cap", "installs": 39723}
+{"id": "samber/cc-skills-golang/golang-samber-do", "rule": "below_cap", "installs": 37601}
+{"id": "samber/cc-skills-golang/golang-samber-hot", "rule": "below_cap", "installs": 37451}
+{"id": "samber/cc-skills-golang/golang-samber-lo", "rule": "below_cap", "installs": 37744}
+{"id": "samber/cc-skills-golang/golang-samber-mo", "rule": "below_cap", "installs": 37460}
+{"id": "samber/cc-skills-golang/golang-samber-oops", "rule": "below_cap", "installs": 37473}
+{"id": "samber/cc-skills-golang/golang-samber-ro", "rule": "below_cap", "installs": 37395}
+{"id": "samber/cc-skills-golang/golang-samber-slog", "rule": "below_cap", "installs": 37567}
+{"id": "samber/cc-skills-golang/golang-spf13-cobra", "rule": "below_cap", "installs": 36350}
+{"id": "samber/cc-skills-golang/golang-spf13-viper", "rule": "below_cap", "installs": 36085}
+{"id": "samber/cc-skills-golang/golang-stay-updated", "rule": "below_cap", "installs": 37739}
+{"id": "samber/cc-skills-golang/golang-stretchr-testify", "rule": "below_cap", "installs": 38588}
+{"id": "samber/cc-skills-golang/golang-structs-interfaces", "rule": "below_cap", "installs": 38942}
+{"id": "samber/cc-skills-golang/golang-swagger", "rule": "below_cap", "installs": 36354}
+{"id": "samber/cc-skills-golang/golang-troubleshooting", "rule": "below_cap", "installs": 39152}
+{"id": "samber/cc-skills-golang/golang-uber-dig", "rule": "below_cap", "installs": 35824}
+{"id": "samber/cc-skills-golang/golang-uber-fx", "rule": "below_cap", "installs": 35891}
+{"id": "sanity-io/agent-toolkit/sanity-best-practices", "rule": "below_cap", "installs": 31074}
+{"id": "shadcn/improve/improve", "rule": "below_cap", "installs": 36483}
+{"id": "tavily-ai/skills/tavily-search", "rule": "below_cap", "installs": 35578}
+{"id": "twostraws/swiftui-agent-skill/swiftui-pro", "rule": "below_cap", "installs": 34241}
+{"id": "wshobson/agents/api-design-principles", "rule": "below_cap", "installs": 30152}
+{"id": "wshobson/agents/brand-landingpage", "rule": "below_cap", "installs": 39376}
+{"id": "wshobson/agents/nextjs-app-router-patterns", "rule": "below_cap", "installs": 32341}
+{"id": "wshobson/agents/python-performance-optimization", "rule": "below_cap", "installs": 35484}
+{"id": "wshobson/agents/python-testing-patterns", "rule": "below_cap", "installs": 36530}
+{"id": "zhaono1/agent-playbook/self-improving-agent", "rule": "below_cap", "installs": 34860}
+{"source": "axelfreeman/marketing-mindset", "skill_id": "marketing-mindset", "rank": 682, "installs": 50138, "reason": "clone_failed", "id": "axelfreeman/marketing-mindset/marketing-mindset", "rule": "clone_failed"}
+{"source": "sentry/dev", "skill_id": "sentry-cli", "rank": 328, "installs": 167122, "reason": "clone_failed", "id": "sentry/dev/sentry-cli", "rule": "clone_failed"}
+{"id": "convex/agent-skills/convex-design", "rule": "indistinguishable", "installs": 34395, "kept_id": "convex/agent-skills/convex", "cosine": 0.8793, "reason": "Both describe building full-stack Convex backends; B is a concise summary of A's capabilities."}
+{"id": "101-skills/superpowers/agent-tools", "rule": "near_duplicate", "installs": 103113, "kept_id": "101-skills/superpowers/infsh-cli", "cosine": 1.0}
+{"id": "cloudflare/skills/sandbox-migrate-to-next", "rule": "near_duplicate", "installs": 63146, "kept_id": "cloudflare/skills/sandbox-stable", "cosine": 0.9495}
+{"id": "cloudflare/skills/sandbox-next", "rule": "near_duplicate", "installs": 63239, "kept_id": "cloudflare/skills/sandbox-stable", "cosine": 0.9697}
+{"id": "googleworkspace/cli/gws-gmail-reply", "rule": "near_duplicate", "installs": 34913, "kept_id": "googleworkspace/cli/gws-gmail-reply-all", "cosine": 0.9787}
+{"id": "prime-skills/runcomfy-agent-skills/gpt-image-2", "rule": "near_duplicate", "installs": 81740, "kept_id": "prime-skills/runcomfy-agent-skills/gpt-image-edit", "cosine": 0.9574}
+{"id": "prisma/skills/prisma-database-setup", "rule": "near_duplicate", "installs": 375830, "kept_id": "prisma/skills/prisma-postgres", "cosine": 0.9424}
+{"id": "larksuite/cli/lark-apps", "rule": "non_english", "installs": 311879, "non_latin_ratio": 0.629}
+{"id": "larksuite/cli/lark-base", "rule": "non_english", "installs": 472131, "non_latin_ratio": 0.468}
+{"id": "larksuite/cli/lark-contact", "rule": "non_english", "installs": 462587, "non_latin_ratio": 0.686}
+{"id": "larksuite/cli/lark-doc", "rule": "non_english", "installs": 474514, "non_latin_ratio": 0.587}
+{"id": "larksuite/cli/lark-drive", "rule": "non_english", "installs": 468905, "non_latin_ratio": 0.481}
+{"id": "larksuite/cli/lark-mail", "rule": "non_english", "installs": 463518, "non_latin_ratio": 0.372}
+{"id": "larksuite/cli/lark-markdown", "rule": "non_english", "installs": 381600, "non_latin_ratio": 0.708}
+{"id": "larksuite/cli/lark-meeting", "rule": "non_english", "installs": 49933, "non_latin_ratio": 0.569}
+{"id": "larksuite/cli/lark-minutes", "rule": "non_english", "installs": 463113, "non_latin_ratio": 0.556}
+{"id": "larksuite/cli/lark-note", "rule": "non_english", "installs": 238330, "non_latin_ratio": 0.588}
+{"id": "larksuite/cli/lark-okr", "rule": "non_english", "installs": 400184, "non_latin_ratio": 0.759}
+{"id": "larksuite/cli/lark-openapi-explorer", "rule": "non_english", "installs": 460894, "non_latin_ratio": 0.56}
+{"id": "larksuite/cli/lark-sheets", "rule": "non_english", "installs": 468295, "non_latin_ratio": 0.707}
+{"id": "larksuite/cli/lark-skill-maker", "rule": "non_english", "installs": 460578, "non_latin_ratio": 0.631}
+{"id": "larksuite/cli/lark-slides", "rule": "non_english", "installs": 416992, "non_latin_ratio": 0.679}
+{"id": "larksuite/cli/lark-vc", "rule": "non_english", "installs": 462912, "non_latin_ratio": 0.612}
+{"id": "larksuite/cli/lark-vc-agent", "rule": "non_english", "installs": 351283, "non_latin_ratio": 0.545}
+{"id": "larksuite/cli/lark-whiteboard", "rule": "non_english", "installs": 466166, "non_latin_ratio": 0.736}
+{"id": "larksuite/cli/lark-wiki", "rule": "non_english", "installs": 467727, "non_latin_ratio": 0.678}
+{"id": "larksuite/cli/lark-workflow-standup-report", "rule": "non_english", "installs": 461069, "non_latin_ratio": 0.564}
+{"id": "wind-alice/alicemarket/wind-find-finance-skill", "rule": "non_english", "installs": 45160, "non_latin_ratio": 0.866}
+{"source": "agent.qq.com", "skill_id": "agently-mail", "rank": 538, "installs": 67488, "reason": "not_github_source", "id": "agent.qq.com/agently-mail", "rule": "not_github_source"}
+{"source": "code.deepline.com", "skill_id": "build-tam", "rank": 845, "installs": 35600, "reason": "not_github_source", "id": "code.deepline.com/build-tam", "rule": "not_github_source"}
+{"source": "code.deepline.com", "skill_id": "clay-to-deepline", "rank": 852, "installs": 35488, "reason": "not_github_source", "id": "code.deepline.com/clay-to-deepline", "rule": "not_github_source"}
+{"source": "code.deepline.com", "skill_id": "deepline-analytics", "rank": 996, "installs": 30137, "reason": "not_github_source", "id": "code.deepline.com/deepline-analytics", "rule": "not_github_source"}
+{"source": "code.deepline.com", "skill_id": "deepline-feedback", "rank": 851, "installs": 35503, "reason": "not_github_source", "id": "code.deepline.com/deepline-feedback", "rule": "not_github_source"}
+{"source": "code.deepline.com", "skill_id": "deepline-gtm", "rank": 858, "installs": 35242, "reason": "not_github_source", "id": "code.deepline.com/deepline-gtm", "rule": "not_github_source"}
+{"source": "code.deepline.com", "skill_id": "deepline-quickstart", "rank": 855, "installs": 35265, "reason": "not_github_source", "id": "code.deepline.com/deepline-quickstart", "rule": "not_github_source"}
+{"source": "code.deepline.com", "skill_id": "linkedin-url-lookup", "rank": 854, "installs": 35466, "reason": "not_github_source", "id": "code.deepline.com/linkedin-url-lookup", "rule": "not_github_source"}
+{"source": "code.deepline.com", "skill_id": "niche-signal-discovery", "rank": 844, "installs": 35605, "reason": "not_github_source", "id": "code.deepline.com/niche-signal-discovery", "rule": "not_github_source"}
+{"source": "code.deepline.com", "skill_id": "portfolio-prospecting", "rank": 850, "installs": 35512, "reason": "not_github_source", "id": "code.deepline.com/portfolio-prospecting", "rule": "not_github_source"}
+{"source": "docs.stripe.com", "skill_id": "stripe-directory", "rank": 986, "installs": 30248, "reason": "not_github_source", "id": "docs.stripe.com/stripe-directory", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-approval", "rank": 37, "installs": 790432, "reason": "not_github_source", "id": "open.feishu.cn/lark-approval", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-apps", "rank": 61, "installs": 700586, "reason": "not_github_source", "id": "open.feishu.cn/lark-apps", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-attendance", "rank": 47, "installs": 788830, "reason": "not_github_source", "id": "open.feishu.cn/lark-attendance", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-base", "rank": 32, "installs": 791788, "reason": "not_github_source", "id": "open.feishu.cn/lark-base", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-calendar", "rank": 36, "installs": 790540, "reason": "not_github_source", "id": "open.feishu.cn/lark-calendar", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-contact", "rank": 40, "installs": 789630, "reason": "not_github_source", "id": "open.feishu.cn/lark-contact", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-doc", "rank": 31, "installs": 792322, "reason": "not_github_source", "id": "open.feishu.cn/lark-doc", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-drive", "rank": 33, "installs": 791740, "reason": "not_github_source", "id": "open.feishu.cn/lark-drive", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-event", "rank": 45, "installs": 789112, "reason": "not_github_source", "id": "open.feishu.cn/lark-event", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-im", "rank": 35, "installs": 790896, "reason": "not_github_source", "id": "open.feishu.cn/lark-im", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-mail", "rank": 43, "installs": 789319, "reason": "not_github_source", "id": "open.feishu.cn/lark-mail", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-markdown", "rank": 57, "installs": 755540, "reason": "not_github_source", "id": "open.feishu.cn/lark-markdown", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-meeting", "rank": 312, "installs": 189527, "reason": "not_github_source", "id": "open.feishu.cn/lark-meeting", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-minutes", "rank": 49, "installs": 788429, "reason": "not_github_source", "id": "open.feishu.cn/lark-minutes", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-note", "rank": 76, "installs": 572591, "reason": "not_github_source", "id": "open.feishu.cn/lark-note", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-okr", "rank": 54, "installs": 769742, "reason": "not_github_source", "id": "open.feishu.cn/lark-okr", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-openapi-explorer", "rank": 46, "installs": 788892, "reason": "not_github_source", "id": "open.feishu.cn/lark-openapi-explorer", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-shared", "rank": 34, "installs": 791436, "reason": "not_github_source", "id": "open.feishu.cn/lark-shared", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-sheets", "rank": 38, "installs": 790385, "reason": "not_github_source", "id": "open.feishu.cn/lark-sheets", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-skill-maker", "rank": 48, "installs": 788465, "reason": "not_github_source", "id": "open.feishu.cn/lark-skill-maker", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-slides", "rank": 42, "installs": 789365, "reason": "not_github_source", "id": "open.feishu.cn/lark-slides", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-task", "rank": 41, "installs": 789454, "reason": "not_github_source", "id": "open.feishu.cn/lark-task", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-vc", "rank": 52, "installs": 787708, "reason": "not_github_source", "id": "open.feishu.cn/lark-vc", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-vc-agent", "rank": 60, "installs": 732343, "reason": "not_github_source", "id": "open.feishu.cn/lark-vc-agent", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-whiteboard", "rank": 44, "installs": 789203, "reason": "not_github_source", "id": "open.feishu.cn/lark-whiteboard", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-wiki", "rank": 39, "installs": 790239, "reason": "not_github_source", "id": "open.feishu.cn/lark-wiki", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-workflow-meeting-summary", "rank": 50, "installs": 788305, "reason": "not_github_source", "id": "open.feishu.cn/lark-workflow-meeting-summary", "rule": "not_github_source"}
+{"source": "open.feishu.cn", "skill_id": "lark-workflow-standup-report", "rank": 51, "installs": 788051, "reason": "not_github_source", "id": "open.feishu.cn/lark-workflow-standup-report", "rule": "not_github_source"}
+{"source": "proseify.xyz", "skill_id": "anti-prose-slop", "rank": 693, "installs": 48825, "reason": "not_github_source", "id": "proseify.xyz/anti-prose-slop", "rule": "not_github_source"}
+{"source": "skills.volces.com", "skill_id": "byted-web-search", "rank": 689, "installs": 49468, "reason": "not_github_source", "id": "skills.volces.com/byted-web-search", "rule": "not_github_source"}
+{"source": "uizze.sh", "skill_id": "ios-design", "rank": 191, "installs": 386556, "reason": "not_github_source", "id": "uizze.sh/ios-design", "rule": "not_github_source"}
+{"source": "uizze.sh", "skill_id": "ui-taste", "rank": 70, "installs": 683061, "reason": "not_github_source", "id": "uizze.sh/ui-taste", "rule": "not_github_source"}
+{"source": "cloudflare/skills", "skill_id": "sandbox-sdk", "rank": 908, "installs": 32873, "reason": "skill_md_not_found", "id": "cloudflare/skills/sandbox-sdk", "rule": "not_in_current_repo"}
+{"source": "convex/agent-skills", "skill_id": "convex-migration-helper", "rank": 438, "installs": 93834, "reason": "skill_md_not_found", "id": "convex/agent-skills/convex-migration-helper", "rule": "not_in_current_repo"}
+{"source": "convex/agent-skills", "skill_id": "convex-performance-audit", "rank": 435, "installs": 94263, "reason": "skill_md_not_found", "id": "convex/agent-skills/convex-performance-audit", "rule": "not_in_current_repo"}
+{"source": "convex/agent-skills", "skill_id": "convex-setup-auth", "rank": 437, "installs": 93853, "reason": "skill_md_not_found", "id": "convex/agent-skills/convex-setup-auth", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "ab-test-setup", "rank": 669, "installs": 52125, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/ab-test-setup", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "analytics-tracking", "rank": 609, "installs": 57817, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/analytics-tracking", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "competitor-alternatives", "rank": 635, "installs": 54154, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/competitor-alternatives", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "email-sequence", "rank": 624, "installs": 55135, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/email-sequence", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "form-cro", "rank": 654, "installs": 52599, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/form-cro", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "free-tool-strategy", "rank": 661, "installs": 52335, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/free-tool-strategy", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "launch-strategy", "rank": 616, "installs": 56040, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/launch-strategy", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "onboarding-cro", "rank": 639, "installs": 53642, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/onboarding-cro", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "page-cro", "rank": 613, "installs": 57463, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/page-cro", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "paid-ads", "rank": 627, "installs": 54680, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/paid-ads", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "paywall-upgrade-cro", "rank": 673, "installs": 51438, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/paywall-upgrade-cro", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "popup-cro", "rank": 675, "installs": 51119, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/popup-cro", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "pricing-strategy", "rank": 579, "installs": 61162, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/pricing-strategy", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "product-marketing-context", "rank": 578, "installs": 61190, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/product-marketing-context", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "referral-program", "rank": 664, "installs": 52294, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/referral-program", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "schema-markup", "rank": 620, "installs": 55479, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/schema-markup", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "signup-flow-cro", "rank": 671, "installs": 51842, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/signup-flow-cro", "rule": "not_in_current_repo"}
+{"source": "coreyhaines31/marketingskills", "skill_id": "social-content", "rank": 540, "installs": 67002, "reason": "skill_md_not_found", "id": "coreyhaines31/marketingskills/social-content", "rule": "not_in_current_repo"}
+{"source": "expo/skills", "skill_id": "building-native-ui", "rank": 605, "installs": 58096, "reason": "skill_md_not_found", "id": "expo/skills/building-native-ui", "rule": "not_in_current_repo"}
+{"source": "expo/skills", "skill_id": "expo-api-routes", "rank": 818, "installs": 37203, "reason": "skill_md_not_found", "id": "expo/skills/expo-api-routes", "rule": "not_in_current_repo"}
+{"source": "expo/skills", "skill_id": "expo-cicd-workflows", "rank": 773, "installs": 39233, "reason": "skill_md_not_found", "id": "expo/skills/expo-cicd-workflows", "rule": "not_in_current_repo"}
+{"source": "expo/skills", "skill_id": "expo-deployment", "rank": 759, "installs": 40174, "reason": "skill_md_not_found", "id": "expo/skills/expo-deployment", "rule": "not_in_current_repo"}
+{"source": "expo/skills", "skill_id": "expo-tailwind-setup", "rank": 641, "installs": 53558, "reason": "skill_md_not_found", "id": "expo/skills/expo-tailwind-setup", "rule": "not_in_current_repo"}
+{"source": "expo/skills", "skill_id": "native-data-fetching", "rank": 700, "installs": 46367, "reason": "skill_md_not_found", "id": "expo/skills/native-data-fetching", "rule": "not_in_current_repo"}
+{"source": "expo/skills", "skill_id": "upgrading-expo", "rank": 740, "installs": 42162, "reason": "skill_md_not_found", "id": "expo/skills/upgrading-expo", "rule": "not_in_current_repo"}
+{"source": "expo/skills", "skill_id": "use-dom", "rank": 985, "installs": 30337, "reason": "skill_md_not_found", "id": "expo/skills/use-dom", "rule": "not_in_current_repo"}
+{"source": "firebase/agent-skills", "skill_id": "developing-genkit-dart", "rank": 573, "installs": 62197, "reason": "skill_md_not_found", "id": "firebase/agent-skills/developing-genkit-dart", "rule": "not_in_current_repo"}
+{"source": "firebase/agent-skills", "skill_id": "developing-genkit-go", "rank": 688, "installs": 49492, "reason": "skill_md_not_found", "id": "firebase/agent-skills/developing-genkit-go", "rule": "not_in_current_repo"}
+{"source": "firebase/agent-skills", "skill_id": "developing-genkit-js", "rank": 572, "installs": 62497, "reason": "skill_md_not_found", "id": "firebase/agent-skills/developing-genkit-js", "rule": "not_in_current_repo"}
+{"source": "firebase/agent-skills", "skill_id": "developing-genkit-python", "rank": 898, "installs": 33597, "reason": "skill_md_not_found", "id": "firebase/agent-skills/developing-genkit-python", "rule": "not_in_current_repo"}
+{"source": "firebase/agent-skills", "skill_id": "firebase-ai-logic", "rank": 865, "installs": 34546, "reason": "skill_md_not_found", "id": "firebase/agent-skills/firebase-ai-logic", "rule": "not_in_current_repo"}
+{"source": "firebase/agent-skills", "skill_id": "firebase-firestore-enterprise-native-mode", "rank": 837, "installs": 36001, "reason": "skill_md_not_found", "id": "firebase/agent-skills/firebase-firestore-enterprise-native-mode", "rule": "not_in_current_repo"}
+{"source": "firebase/agent-skills", "skill_id": "firebase-firestore-standard", "rank": 819, "installs": 37045, "reason": "skill_md_not_found", "id": "firebase/agent-skills/firebase-firestore-standard", "rule": "not_in_current_repo"}
+{"source": "google-labs-code/stitch-skills", "skill_id": "react:components", "rank": 680, "installs": 50432, "reason": "skill_md_not_found", "id": "google-labs-code/stitch-skills/react:components", "rule": "not_in_current_repo"}
+{"source": "heygen-com/hyperframes", "skill_id": "animejs", "rank": 525, "installs": 70010, "reason": "skill_md_not_found", "id": "heygen-com/hyperframes/animejs", "rule": "not_in_current_repo"}
+{"source": "heygen-com/hyperframes", "skill_id": "contribute-catalog", "rank": 619, "installs": 55491, "reason": "skill_md_not_found", "id": "heygen-com/hyperframes/contribute-catalog", "rule": "not_in_current_repo"}
+{"source": "heygen-com/hyperframes", "skill_id": "css-animations", "rank": 515, "installs": 72304, "reason": "skill_md_not_found", "id": "heygen-com/hyperframes/css-animations", "rule": "not_in_current_repo"}
+{"source": "heygen-com/hyperframes", "skill_id": "gsap", "rank": 442, "installs": 92060, "reason": "skill_md_not_found", "id": "heygen-com/hyperframes/gsap", "rule": "not_in_current_repo"}
+{"source": "heygen-com/hyperframes", "skill_id": "hyperframes-media", "rank": 351, "installs": 141731, "reason": "skill_md_not_found", "id": "heygen-com/hyperframes/hyperframes-media", "rule": "not_in_current_repo"}
+{"source": "heygen-com/hyperframes", "skill_id": "lottie", "rank": 530, "installs": 69051, "reason": "skill_md_not_found", "id": "heygen-com/hyperframes/lottie", "rule": "not_in_current_repo"}
+{"source": "heygen-com/hyperframes", "skill_id": "tailwind", "rank": 522, "installs": 70553, "reason": "skill_md_not_found", "id": "heygen-com/hyperframes/tailwind", "rule": "not_in_current_repo"}
+{"source": "heygen-com/hyperframes", "skill_id": "three", "rank": 529, "installs": 69319, "reason": "skill_md_not_found", "id": "heygen-com/hyperframes/three", "rule": "not_in_current_repo"}
+{"source": "heygen-com/hyperframes", "skill_id": "typegpu", "rank": 676, "installs": 50961, "reason": "skill_md_not_found", "id": "heygen-com/hyperframes/typegpu", "rule": "not_in_current_repo"}
+{"source": "heygen-com/hyperframes", "skill_id": "waapi", "rank": 533, "installs": 68692, "reason": "skill_md_not_found", "id": "heygen-com/hyperframes/waapi", "rule": "not_in_current_repo"}
+{"source": "heygen-com/hyperframes", "skill_id": "website-to-hyperframes", "rank": 448, "installs": 89314, "reason": "skill_md_not_found", "id": "heygen-com/hyperframes/website-to-hyperframes", "rule": "not_in_current_repo"}
+{"source": "heygen-com/hyperframes", "skill_id": "website-to-video", "rank": 420, "installs": 97353, "reason": "skill_md_not_found", "id": "heygen-com/hyperframes/website-to-video", "rule": "not_in_current_repo"}
+{"source": "juliusbrussee/caveman", "skill_id": "compress", "rank": 704, "installs": 45774, "reason": "skill_md_not_found", "id": "juliusbrussee/caveman/compress", "rule": "not_in_current_repo"}
+{"source": "leonxlnx/taste-skill", "skill_id": "brandkit", "rank": 189, "installs": 390653, "reason": "skill_md_not_found", "id": "leonxlnx/taste-skill/brandkit", "rule": "not_in_current_repo"}
+{"source": "leonxlnx/taste-skill", "skill_id": "design-taste-frontend-v1", "rank": 247, "installs": 330323, "reason": "skill_md_not_found", "id": "leonxlnx/taste-skill/design-taste-frontend-v1", "rule": "not_in_current_repo"}
+{"source": "leonxlnx/taste-skill", "skill_id": "full-output-enforcement", "rank": 180, "installs": 401017, "reason": "skill_md_not_found", "id": "leonxlnx/taste-skill/full-output-enforcement", "rule": "not_in_current_repo"}
+{"source": "leonxlnx/taste-skill", "skill_id": "gpt-taste", "rank": 182, "installs": 399484, "reason": "skill_md_not_found", "id": "leonxlnx/taste-skill/gpt-taste", "rule": "not_in_current_repo"}
+{"source": "leonxlnx/taste-skill", "skill_id": "high-end-visual-design", "rank": 143, "installs": 458795, "reason": "skill_md_not_found", "id": "leonxlnx/taste-skill/high-end-visual-design", "rule": "not_in_current_repo"}
+{"source": "leonxlnx/taste-skill", "skill_id": "image-to-code", "rank": 192, "installs": 385849, "reason": "skill_md_not_found", "id": "leonxlnx/taste-skill/image-to-code", "rule": "not_in_current_repo"}
+{"source": "leonxlnx/taste-skill", "skill_id": "imagegen-frontend-mobile", "rank": 212, "installs": 373742, "reason": "skill_md_not_found", "id": "leonxlnx/taste-skill/imagegen-frontend-mobile", "rule": "not_in_current_repo"}
+{"source": "leonxlnx/taste-skill", "skill_id": "imagegen-frontend-web", "rank": 196, "installs": 380098, "reason": "skill_md_not_found", "id": "leonxlnx/taste-skill/imagegen-frontend-web", "rule": "not_in_current_repo"}
+{"source": "leonxlnx/taste-skill", "skill_id": "industrial-brutalist-ui", "rank": 185, "installs": 396893, "reason": "skill_md_not_found", "id": "leonxlnx/taste-skill/industrial-brutalist-ui", "rule": "not_in_current_repo"}
+{"source": "leonxlnx/taste-skill", "skill_id": "minimalist-ui", "rank": 167, "installs": 425076, "reason": "skill_md_not_found", "id": "leonxlnx/taste-skill/minimalist-ui", "rule": "not_in_current_repo"}
+{"source": "leonxlnx/taste-skill", "skill_id": "redesign-existing-projects", "rank": 144, "installs": 458660, "reason": "skill_md_not_found", "id": "leonxlnx/taste-skill/redesign-existing-projects", "rule": "not_in_current_repo"}
+{"source": "leonxlnx/taste-skill", "skill_id": "stitch-design-taste", "rank": 188, "installs": 394850, "reason": "skill_md_not_found", "id": "leonxlnx/taste-skill/stitch-design-taste", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "batch-grill-me", "rank": 576, "installs": 61377, "reason": "skill_md_not_found", "id": "mattpocock/skills/batch-grill-me", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "caveman", "rank": 290, "installs": 214561, "reason": "skill_md_not_found", "id": "mattpocock/skills/caveman", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "decision-mapping", "rank": 736, "installs": 42231, "reason": "skill_md_not_found", "id": "mattpocock/skills/decision-mapping", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "design-an-interface", "rank": 297, "installs": 208835, "reason": "skill_md_not_found", "id": "mattpocock/skills/design-an-interface", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "diagnose", "rank": 281, "installs": 227594, "reason": "skill_md_not_found", "id": "mattpocock/skills/diagnose", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "edit-article", "rank": 309, "installs": 191780, "reason": "skill_md_not_found", "id": "mattpocock/skills/edit-article", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "obsidian-vault", "rank": 307, "installs": 195513, "reason": "skill_md_not_found", "id": "mattpocock/skills/obsidian-vault", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "qa", "rank": 302, "installs": 198678, "reason": "skill_md_not_found", "id": "mattpocock/skills/qa", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "request-refactor-plan", "rank": 299, "installs": 202433, "reason": "skill_md_not_found", "id": "mattpocock/skills/request-refactor-plan", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "resolving-merge-conflicts", "rank": 92, "installs": 551082, "reason": "skill_md_not_found", "id": "mattpocock/skills/resolving-merge-conflicts", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "review", "rank": 447, "installs": 89883, "reason": "skill_md_not_found", "id": "mattpocock/skills/review", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "to-issues", "rank": 239, "installs": 339103, "reason": "skill_md_not_found", "id": "mattpocock/skills/to-issues", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "to-prd", "rank": 236, "installs": 351579, "reason": "skill_md_not_found", "id": "mattpocock/skills/to-prd", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "ubiquitous-language", "rank": 306, "installs": 197200, "reason": "skill_md_not_found", "id": "mattpocock/skills/ubiquitous-language", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "write-a-skill", "rank": 284, "installs": 219744, "reason": "skill_md_not_found", "id": "mattpocock/skills/write-a-skill", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "writing-great-skills", "rank": 257, "installs": 306544, "reason": "skill_md_not_found", "id": "mattpocock/skills/writing-great-skills", "rule": "not_in_current_repo"}
+{"source": "mattpocock/skills", "skill_id": "zoom-out", "rank": 285, "installs": 219147, "reason": "skill_md_not_found", "id": "mattpocock/skills/zoom-out", "rule": "not_in_current_repo"}
+{"source": "microsoft/azure-skills", "skill_id": "azure-cost", "rank": 218, "installs": 362649, "reason": "skill_md_not_found", "id": "microsoft/azure-skills/azure-cost", "rule": "not_in_current_repo"}
+{"source": "microsoft/azure-skills", "skill_id": "azure-cost-optimization", "rank": 341, "installs": 155407, "reason": "skill_md_not_found", "id": "microsoft/azure-skills/azure-cost-optimization", "rule": "not_in_current_repo"}
+{"source": "microsoft/azure-skills", "skill_id": "azure-hosted-copilot-sdk", "rank": 228, "installs": 355277, "reason": "skill_md_not_found", "id": "microsoft/azure-skills/azure-hosted-copilot-sdk", "rule": "not_in_current_repo"}
+{"source": "microsoft/azure-skills", "skill_id": "azure-observability", "rank": 454, "installs": 86214, "reason": "skill_md_not_found", "id": "microsoft/azure-skills/azure-observability", "rule": "not_in_current_repo"}
+{"source": "microsoft/azure-skills", "skill_id": "azure-rbac", "rank": 187, "installs": 396677, "reason": "skill_md_not_found", "id": "microsoft/azure-skills/azure-rbac", "rule": "not_in_current_repo"}
+{"source": "nextlevelbuilder/ui-ux-pro-max-skill", "skill_id": "ckm:banner-design", "rank": 925, "installs": 31969, "reason": "skill_md_not_found", "id": "nextlevelbuilder/ui-ux-pro-max-skill/ckm:banner-design", "rule": "not_in_current_repo"}
+{"source": "nextlevelbuilder/ui-ux-pro-max-skill", "skill_id": "ckm:brand", "rank": 924, "installs": 31996, "reason": "skill_md_not_found", "id": "nextlevelbuilder/ui-ux-pro-max-skill/ckm:brand", "rule": "not_in_current_repo"}
+{"source": "nextlevelbuilder/ui-ux-pro-max-skill", "skill_id": "ckm:design", "rank": 915, "installs": 32495, "reason": "skill_md_not_found", "id": "nextlevelbuilder/ui-ux-pro-max-skill/ckm:design", "rule": "not_in_current_repo"}
+{"source": "nextlevelbuilder/ui-ux-pro-max-skill", "skill_id": "ckm:design-system", "rank": 909, "installs": 32796, "reason": "skill_md_not_found", "id": "nextlevelbuilder/ui-ux-pro-max-skill/ckm:design-system", "rule": "not_in_current_repo"}
+{"source": "nextlevelbuilder/ui-ux-pro-max-skill", "skill_id": "ckm:slides", "rank": 928, "installs": 31879, "reason": "skill_md_not_found", "id": "nextlevelbuilder/ui-ux-pro-max-skill/ckm:slides", "rule": "not_in_current_repo"}
+{"source": "nextlevelbuilder/ui-ux-pro-max-skill", "skill_id": "ckm:ui-styling", "rank": 917, "installs": 32431, "reason": "skill_md_not_found", "id": "nextlevelbuilder/ui-ux-pro-max-skill/ckm:ui-styling", "rule": "not_in_current_repo"}
+{"source": "nozomio-labs/nia-skill", "skill_id": "nia", "rank": 615, "installs": 56165, "reason": "skill_md_not_found", "id": "nozomio-labs/nia-skill/nia", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "adapt", "rank": 473, "installs": 81720, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/adapt", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "animate", "rank": 472, "installs": 81731, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/animate", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "arrange", "rank": 776, "installs": 39112, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/arrange", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "bolder", "rank": 484, "installs": 80007, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/bolder", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "clarify", "rank": 478, "installs": 81211, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/clarify", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "colorize", "rank": 481, "installs": 80875, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/colorize", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "critique", "rank": 469, "installs": 82636, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/critique", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "delight", "rank": 486, "installs": 79845, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/delight", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "distill", "rank": 489, "installs": 79456, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/distill", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "extract", "rank": 644, "installs": 53221, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/extract", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "frontend-design", "rank": 645, "installs": 53177, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/frontend-design", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "harden", "rank": 649, "installs": 52985, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/harden", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "normalize", "rank": 631, "installs": 54317, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/normalize", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "onboard", "rank": 647, "installs": 53082, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/onboard", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "optimize", "rank": 480, "installs": 81054, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/optimize", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "overdrive", "rank": 570, "installs": 62764, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/overdrive", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "polish", "rank": 460, "installs": 85170, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/polish", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "quieter", "rank": 491, "installs": 78653, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/quieter", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "shape", "rank": 1000, "installs": 30033, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/shape", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "teach-impeccable", "rank": 683, "installs": 50025, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/teach-impeccable", "rule": "not_in_current_repo"}
+{"source": "pbakaus/impeccable", "skill_id": "typeset", "rank": 552, "installs": 64670, "reason": "skill_md_not_found", "id": "pbakaus/impeccable/typeset", "rule": "not_in_current_repo"}
+{"id": "101-skills/superpowers/agent-browser", "rule": "same_name", "installs": 154837, "kept_id": "vercel-labs/agent-browser/agent-browser"}
+{"id": "101-skills/superpowers/ai-avatar-video", "rule": "same_name", "installs": 819022, "kept_id": "prime-skills/runcomfy-agent-skills/ai-avatar-video"}
+{"id": "101-skills/superpowers/ai-image-generation", "rule": "same_name", "installs": 819527, "kept_id": "prime-skills/runcomfy-agent-skills/ai-image-generation"}
+{"id": "101-skills/superpowers/ai-video-generation", "rule": "same_name", "installs": 820516, "kept_id": "prime-skills/runcomfy-agent-skills/ai-video-generation"}
+{"id": "101-skills/superpowers/image-to-video", "rule": "same_name", "installs": 52193, "kept_id": "prime-skills/runcomfy-agent-skills/image-to-video"}
+{"id": "anthropics/claude-code/frontend-design", "rule": "same_name", "installs": 63242, "kept_id": "anthropics/skills/frontend-design"}
+{"id": "bankai-skills/superpowers/agent-browser", "rule": "same_name", "installs": 62994, "kept_id": "vercel-labs/agent-browser/agent-browser"}
+{"id": "bankai-skills/superpowers/agent-tools", "rule": "same_name", "installs": 42171, "kept_id": "101-skills/superpowers/agent-tools"}
+{"id": "bankai-skills/superpowers/ai-avatar-video", "rule": "same_name", "installs": 337243, "kept_id": "prime-skills/runcomfy-agent-skills/ai-avatar-video"}
+{"id": "bankai-skills/superpowers/ai-image-generation", "rule": "same_name", "installs": 337292, "kept_id": "prime-skills/runcomfy-agent-skills/ai-image-generation"}
+{"id": "bankai-skills/superpowers/ai-video-generation", "rule": "same_name", "installs": 337179, "kept_id": "prime-skills/runcomfy-agent-skills/ai-video-generation"}
+{"id": "bankai-skills/superpowers/infsh-cli", "rule": "same_name", "installs": 42174, "kept_id": "101-skills/superpowers/infsh-cli"}
+{"id": "bankai-skills/superpowers/python-executor", "rule": "same_name", "installs": 42551, "kept_id": "101-skills/superpowers/python-executor"}
+{"id": "bankai-skills/superpowers/remotion-render", "rule": "same_name", "installs": 42092, "kept_id": "101-skills/superpowers/remotion-render"}
+{"id": "bankai-skills/superpowers/twitter-automation", "rule": "same_name", "installs": 337174, "kept_id": "101-skills/superpowers/twitter-automation"}
+{"id": "bankai-skills/superpowers/web-search", "rule": "same_name", "installs": 42188, "kept_id": "101-skills/superpowers/web-search"}
+{"id": "gencraft-labs/skills/ai-image-generation", "rule": "same_name", "installs": 198373, "kept_id": "prime-skills/runcomfy-agent-skills/ai-image-generation"}
+{"id": "gencraft-labs/skills/ai-music", "rule": "same_name", "installs": 199017, "kept_id": "prime-skills/runcomfy-agent-skills/ai-music"}
+{"id": "gencraft-labs/skills/ai-video-generation", "rule": "same_name", "installs": 198308, "kept_id": "prime-skills/runcomfy-agent-skills/ai-video-generation"}
+{"id": "gencraft-labs/skills/image-to-video", "rule": "same_name", "installs": 198180, "kept_id": "prime-skills/runcomfy-agent-skills/image-to-video"}
+{"id": "gencraft-labs/skills/video-edit", "rule": "same_name", "installs": 198684, "kept_id": "prime-skills/runcomfy-agent-skills/video-edit"}
+{"id": "its-a-skill-issue/superpowers/agent-browser", "rule": "same_name", "installs": 66184, "kept_id": "vercel-labs/agent-browser/agent-browser"}
+{"id": "its-a-skill-issue/superpowers/agent-tools", "rule": "same_name", "installs": 44200, "kept_id": "101-skills/superpowers/agent-tools"}
+{"id": "its-a-skill-issue/superpowers/ai-avatar-video", "rule": "same_name", "installs": 352164, "kept_id": "prime-skills/runcomfy-agent-skills/ai-avatar-video"}
+{"id": "its-a-skill-issue/superpowers/ai-image-generation", "rule": "same_name", "installs": 352297, "kept_id": "prime-skills/runcomfy-agent-skills/ai-image-generation"}
+{"id": "its-a-skill-issue/superpowers/ai-video-generation", "rule": "same_name", "installs": 351948, "kept_id": "prime-skills/runcomfy-agent-skills/ai-video-generation"}
+{"id": "its-a-skill-issue/superpowers/infsh-cli", "rule": "same_name", "installs": 44094, "kept_id": "101-skills/superpowers/infsh-cli"}
+{"id": "its-a-skill-issue/superpowers/python-executor", "rule": "same_name", "installs": 44198, "kept_id": "101-skills/superpowers/python-executor"}
+{"id": "its-a-skill-issue/superpowers/remotion-render", "rule": "same_name", "installs": 44270, "kept_id": "101-skills/superpowers/remotion-render"}
+{"id": "its-a-skill-issue/superpowers/twitter-automation", "rule": "same_name", "installs": 352204, "kept_id": "101-skills/superpowers/twitter-automation"}
+{"id": "its-a-skill-issue/superpowers/web-search", "rule": "same_name", "installs": 44249, "kept_id": "101-skills/superpowers/web-search"}
+{"id": "magentosh/superpowers/agent-browser", "rule": "same_name", "installs": 128438, "kept_id": "vercel-labs/agent-browser/agent-browser"}
+{"id": "magentosh/superpowers/agent-tools", "rule": "same_name", "installs": 85586, "kept_id": "101-skills/superpowers/agent-tools"}
+{"id": "magentosh/superpowers/ai-avatar-video", "rule": "same_name", "installs": 684456, "kept_id": "prime-skills/runcomfy-agent-skills/ai-avatar-video"}
+{"id": "magentosh/superpowers/ai-image-generation", "rule": "same_name", "installs": 684871, "kept_id": "prime-skills/runcomfy-agent-skills/ai-image-generation"}
+{"id": "magentosh/superpowers/ai-video-generation", "rule": "same_name", "installs": 684529, "kept_id": "prime-skills/runcomfy-agent-skills/ai-video-generation"}
+{"id": "magentosh/superpowers/app-store-screenshots", "rule": "same_name", "installs": 43299, "kept_id": "101-skills/superpowers/app-store-screenshots"}
+{"id": "magentosh/superpowers/character-design-sheet", "rule": "same_name", "installs": 43266, "kept_id": "101-skills/superpowers/character-design-sheet"}
+{"id": "magentosh/superpowers/competitor-teardown", "rule": "same_name", "installs": 43290, "kept_id": "101-skills/superpowers/competitor-teardown"}
+{"id": "magentosh/superpowers/image-to-video", "rule": "same_name", "installs": 43321, "kept_id": "prime-skills/runcomfy-agent-skills/image-to-video"}
+{"id": "magentosh/superpowers/infsh-cli", "rule": "same_name", "installs": 85415, "kept_id": "101-skills/superpowers/infsh-cli"}
+{"id": "magentosh/superpowers/landing-page-design", "rule": "same_name", "installs": 43332, "kept_id": "101-skills/superpowers/landing-page-design"}
+{"id": "magentosh/superpowers/product-hunt-launch", "rule": "same_name", "installs": 43277, "kept_id": "101-skills/superpowers/product-hunt-launch"}
+{"id": "magentosh/superpowers/product-photography", "rule": "same_name", "installs": 43316, "kept_id": "101-skills/superpowers/product-photography"}
+{"id": "magentosh/superpowers/python-executor", "rule": "same_name", "installs": 85568, "kept_id": "101-skills/superpowers/python-executor"}
+{"id": "magentosh/superpowers/remotion-render", "rule": "same_name", "installs": 85580, "kept_id": "101-skills/superpowers/remotion-render"}
+{"id": "magentosh/superpowers/storyboard-creation", "rule": "same_name", "installs": 43248, "kept_id": "101-skills/superpowers/storyboard-creation"}
+{"id": "magentosh/superpowers/twitter-automation", "rule": "same_name", "installs": 684338, "kept_id": "101-skills/superpowers/twitter-automation"}
+{"id": "magentosh/superpowers/video-ad-specs", "rule": "same_name", "installs": 43272, "kept_id": "101-skills/superpowers/video-ad-specs"}
+{"id": "magentosh/superpowers/web-search", "rule": "same_name", "installs": 85619, "kept_id": "101-skills/superpowers/web-search"}
+{"id": "magentosh/superpowers/youtube-thumbnail-design", "rule": "same_name", "installs": 43354, "kept_id": "101-skills/superpowers/youtube-thumbnail-design"}
+{"id": "mattpocock/skills/prototype", "rule": "same_name", "installs": 969285, "kept_id": "emilkowalski/skills/prototype"}
+{"id": "obra/superpowers/test-driven-development", "rule": "same_name", "installs": 255738, "kept_id": "addyosmani/agent-skills/test-driven-development"}
+{"id": "qu-skills/superpowers/agent-browser", "rule": "same_name", "installs": 95262, "kept_id": "vercel-labs/agent-browser/agent-browser"}
+{"id": "qu-skills/superpowers/agent-tools", "rule": "same_name", "installs": 63457, "kept_id": "101-skills/superpowers/agent-tools"}
+{"id": "qu-skills/superpowers/ai-avatar-video", "rule": "same_name", "installs": 503751, "kept_id": "prime-skills/runcomfy-agent-skills/ai-avatar-video"}
+{"id": "qu-skills/superpowers/ai-image-generation", "rule": "same_name", "installs": 503203, "kept_id": "prime-skills/runcomfy-agent-skills/ai-image-generation"}
+{"id": "qu-skills/superpowers/ai-video-generation", "rule": "same_name", "installs": 503227, "kept_id": "prime-skills/runcomfy-agent-skills/ai-video-generation"}
+{"id": "qu-skills/superpowers/app-store-screenshots", "rule": "same_name", "installs": 31448, "kept_id": "101-skills/superpowers/app-store-screenshots"}
+{"id": "qu-skills/superpowers/character-design-sheet", "rule": "same_name", "installs": 31539, "kept_id": "101-skills/superpowers/character-design-sheet"}
+{"id": "qu-skills/superpowers/competitor-teardown", "rule": "same_name", "installs": 31497, "kept_id": "101-skills/superpowers/competitor-teardown"}
+{"id": "qu-skills/superpowers/image-to-video", "rule": "same_name", "installs": 31410, "kept_id": "prime-skills/runcomfy-agent-skills/image-to-video"}
+{"id": "qu-skills/superpowers/infsh-cli", "rule": "same_name", "installs": 63462, "kept_id": "101-skills/superpowers/infsh-cli"}
+{"id": "qu-skills/superpowers/landing-page-design", "rule": "same_name", "installs": 31409, "kept_id": "101-skills/superpowers/landing-page-design"}
+{"id": "qu-skills/superpowers/product-hunt-launch", "rule": "same_name", "installs": 31455, "kept_id": "101-skills/superpowers/product-hunt-launch"}
+{"id": "qu-skills/superpowers/product-photography", "rule": "same_name", "installs": 31558, "kept_id": "101-skills/superpowers/product-photography"}
+{"id": "qu-skills/superpowers/python-executor", "rule": "same_name", "installs": 63339, "kept_id": "101-skills/superpowers/python-executor"}
+{"id": "qu-skills/superpowers/remotion-render", "rule": "same_name", "installs": 63382, "kept_id": "101-skills/superpowers/remotion-render"}
+{"id": "qu-skills/superpowers/storyboard-creation", "rule": "same_name", "installs": 31528, "kept_id": "101-skills/superpowers/storyboard-creation"}
+{"id": "qu-skills/superpowers/twitter-automation", "rule": "same_name", "installs": 503364, "kept_id": "101-skills/superpowers/twitter-automation"}
+{"id": "qu-skills/superpowers/video-ad-specs", "rule": "same_name", "installs": 31318, "kept_id": "101-skills/superpowers/video-ad-specs"}
+{"id": "qu-skills/superpowers/web-search", "rule": "same_name", "installs": 63369, "kept_id": "101-skills/superpowers/web-search"}
+{"id": "qu-skills/superpowers/youtube-thumbnail-design", "rule": "same_name", "installs": 31471, "kept_id": "101-skills/superpowers/youtube-thumbnail-design"}
+{"id": "shadcn-ui/ui/shadcn", "rule": "same_name", "installs": 116620, "kept_id": "shadcn/ui/shadcn"}
+{"id": "skills-shell/superpowers/agent-browser", "rule": "same_name", "installs": 67485, "kept_id": "vercel-labs/agent-browser/agent-browser"}
+{"id": "skills-shell/superpowers/agent-tools", "rule": "same_name", "installs": 45331, "kept_id": "101-skills/superpowers/agent-tools"}
+{"id": "skills-shell/superpowers/ai-avatar-video", "rule": "same_name", "installs": 358494, "kept_id": "prime-skills/runcomfy-agent-skills/ai-avatar-video"}
+{"id": "skills-shell/superpowers/ai-image-generation", "rule": "same_name", "installs": 358732, "kept_id": "prime-skills/runcomfy-agent-skills/ai-image-generation"}
+{"id": "skills-shell/superpowers/ai-video-generation", "rule": "same_name", "installs": 358807, "kept_id": "prime-skills/runcomfy-agent-skills/ai-video-generation"}
+{"id": "skills-shell/superpowers/infsh-cli", "rule": "same_name", "installs": 45380, "kept_id": "101-skills/superpowers/infsh-cli"}
+{"id": "skills-shell/superpowers/python-executor", "rule": "same_name", "installs": 45463, "kept_id": "101-skills/superpowers/python-executor"}
+{"id": "skills-shell/superpowers/remotion-render", "rule": "same_name", "installs": 45385, "kept_id": "101-skills/superpowers/remotion-render"}
+{"id": "skills-shell/superpowers/twitter-automation", "rule": "same_name", "installs": 358781, "kept_id": "101-skills/superpowers/twitter-automation"}
+{"id": "skills-shell/superpowers/web-search", "rule": "same_name", "installs": 45261, "kept_id": "101-skills/superpowers/web-search"}
+{"id": "alchaincyf/huashu-design/huashu-design", "rule": "short_description", "installs": 49312, "words": 3}
+{"id": "googleworkspace/cli/gws-gmail-send", "rule": "short_description", "installs": 74366, "words": 4}
+{"id": "googleworkspace/cli/gws-keep", "rule": "short_description", "installs": 38107, "words": 4}
+{"id": "googleworkspace/cli/gws-meet", "rule": "short_description", "installs": 40520, "words": 4}
+{"id": "larksuite/cli/lark-approval", "rule": "short_description", "installs": 436391, "words": 2}
+{"id": "larksuite/cli/lark-attendance", "rule": "short_description", "installs": 414000, "words": 1}
+{"id": "larksuite/cli/lark-calendar", "rule": "short_description", "installs": 465093, "words": 3}
+{"id": "larksuite/cli/lark-im", "rule": "short_description", "installs": 468961, "words": 4}
+{"id": "larksuite/cli/lark-task", "rule": "short_description", "installs": 466001, "words": 1}
+{"id": "larksuite/cli/lark-workflow-meeting-summary", "rule": "short_description", "installs": 461908, "words": 1}
+{"id": "op7418/humanizer-zh/humanizer-zh", "rule": "short_description", "installs": 53819, "words": 3}
+{"id": "pbakaus/impeccable/audit", "rule": "short_description", "installs": 81858, "words": 4}
+{"id": "remotion-dev/skills/remotion-docs", "rule": "short_description", "installs": 171343, "words": 3}
+{"id": "remotion-dev/skills/remotion-maps", "rule": "short_description", "installs": 156687, "words": 4}
+{"id": "remotion-dev/skills/remotion-multimedia", "rule": "short_description", "installs": 158029, "words": 3}
+{"id": "remotion-dev/skills/remotion-render", "rule": "short_description", "installs": 185652, "words": 4}
+{"id": "remotion-dev/skills/remotion-studio", "rule": "short_description", "installs": 148139, "words": 4}
+{"id": "tencent/wechatreading/weread-skills", "rule": "short_description", "installs": 50771, "words": 3}
+{"id": "wind-alice/alicemarket/wind-mcp-skill", "rule": "short_description", "installs": 211302, "words": 3}

@@ -1,0 +1,319 @@
+{
+  "leaderboard_entries": 1000,
+  "final_skills": 500,
+  "steps": [
+    {
+      "rule": "not_github_source",
+      "removed": 43,
+      "remaining": 957
+    },
+    {
+      "rule": "clone_failed",
+      "removed": 2,
+      "remaining": 955
+    },
+    {
+      "rule": "not_in_current_repo",
+      "removed": 113,
+      "remaining": 842
+    },
+    {
+      "rule": "short_description",
+      "removed": 19,
+      "remaining": 823
+    },
+    {
+      "rule": "non_english",
+      "removed": 21,
+      "remaining": 802
+    },
+    {
+      "rule": "same_name",
+      "removed": 84,
+      "remaining": 718
+    },
+    {
+      "rule": "near_duplicate",
+      "removed": 6,
+      "remaining": 712
+    },
+    {
+      "rule": "indistinguishable",
+      "removed": 1,
+      "remaining": 711
+    },
+    {
+      "rule": "below_cap",
+      "removed": 211,
+      "remaining": 500
+    }
+  ],
+  "nearest_neighbour_cosine_after_near_duplicate": {
+    "p50": 0.789,
+    "p75": 0.833,
+    "p90": 0.866,
+    "p95": 0.889,
+    "p99": 0.907
+  },
+  "pairs_judged": 96,
+  "pair_verdicts": {
+    "distinct": 60,
+    "overlap": 35,
+    "same": 1
+  },
+  "overlap_pairs_kept": 28,
+  "flagged_trigger_only": 95,
+  "rewritten_descriptions": 95,
+  "parse_failures": {
+    "pairs": 0,
+    "classify": 0,
+    "rewrite": 0
+  },
+  "domains": {
+    "software-dev": 112,
+    "devops-cloud": 79,
+    "ai-agents": 73,
+    "media-generation": 70,
+    "design-ui": 41,
+    "marketing-seo": 38,
+    "web-automation": 32,
+    "business-strategy": 21,
+    "documents-office": 14,
+    "productivity-collab": 11,
+    "research-writing": 6,
+    "data-analytics": 3
+  },
+  "max_domain_share": 0.224,
+  "max_domain_share_ok": true,
+  "licenses": {
+    "MIT": 310,
+    "Apache-2.0": 118,
+    "unknown": 49,
+    "Complete terms in LICENSE.txt": 11,
+    "Proprietary. LICENSE.txt has complete terms": 4,
+    "ISC": 4,
+    "BSD-3-Clause": 2,
+    "other": 1,
+    "See LICENSE file in repository root": 1
+  },
+  "sources": 90,
+  "prefix_clusters": [
+    {
+      "prefix": "google",
+      "size": 7,
+      "mean_cosine": 0.853,
+      "max_cosine": 0.911
+    },
+    {
+      "prefix": "gsap",
+      "size": 8,
+      "mean_cosine": 0.782,
+      "max_cosine": 0.858
+    },
+    {
+      "prefix": "hyperframes",
+      "size": 9,
+      "mean_cosine": 0.776,
+      "max_cosine": 0.844
+    },
+    {
+      "prefix": "seo",
+      "size": 3,
+      "mean_cosine": 0.773,
+      "max_cosine": 0.821
+    },
+    {
+      "prefix": "golang",
+      "size": 4,
+      "mean_cosine": 0.766,
+      "max_cosine": 0.804
+    },
+    {
+      "prefix": "obsidian",
+      "size": 3,
+      "mean_cosine": 0.76,
+      "max_cosine": 0.783
+    },
+    {
+      "prefix": "higgsfield",
+      "size": 8,
+      "mean_cosine": 0.755,
+      "max_cosine": 0.862
+    },
+    {
+      "prefix": "insforge",
+      "size": 4,
+      "mean_cosine": 0.751,
+      "max_cosine": 0.831
+    },
+    {
+      "prefix": "prisma",
+      "size": 9,
+      "mean_cosine": 0.739,
+      "max_cosine": 0.871
+    },
+    {
+      "prefix": "image",
+      "size": 6,
+      "mean_cosine": 0.728,
+      "max_cosine": 0.864
+    },
+    {
+      "prefix": "momentic",
+      "size": 3,
+      "mean_cosine": 0.725,
+      "max_cosine": 0.8
+    },
+    {
+      "prefix": "code",
+      "size": 3,
+      "mean_cosine": 0.714,
+      "max_cosine": 0.78
+    },
+    {
+      "prefix": "video",
+      "size": 6,
+      "mean_cosine": 0.704,
+      "max_cosine": 0.888
+    },
+    {
+      "prefix": "firebase",
+      "size": 10,
+      "mean_cosine": 0.704,
+      "max_cosine": 0.881
+    },
+    {
+      "prefix": "cloudflare",
+      "size": 4,
+      "mean_cosine": 0.702,
+      "max_cosine": 0.79
+    },
+    {
+      "prefix": "marketing",
+      "size": 5,
+      "mean_cosine": 0.702,
+      "max_cosine": 0.748
+    },
+    {
+      "prefix": "playwright",
+      "size": 3,
+      "mean_cosine": 0.7,
+      "max_cosine": 0.764
+    },
+    {
+      "prefix": "browser",
+      "size": 6,
+      "mean_cosine": 0.698,
+      "max_cosine": 0.776
+    },
+    {
+      "prefix": "product",
+      "size": 4,
+      "mean_cosine": 0.696,
+      "max_cosine": 0.74
+    },
+    {
+      "prefix": "remotion",
+      "size": 9,
+      "mean_cosine": 0.696,
+      "max_cosine": 0.83
+    },
+    {
+      "prefix": "convex",
+      "size": 3,
+      "mean_cosine": 0.696,
+      "max_cosine": 0.767
+    },
+    {
+      "prefix": "ai",
+      "size": 8,
+      "mean_cosine": 0.696,
+      "max_cosine": 0.89
+    },
+    {
+      "prefix": "git",
+      "size": 3,
+      "mean_cosine": 0.692,
+      "max_cosine": 0.74
+    },
+    {
+      "prefix": "firecrawl",
+      "size": 13,
+      "mean_cosine": 0.666,
+      "max_cosine": 0.869
+    },
+    {
+      "prefix": "gws",
+      "size": 15,
+      "mean_cosine": 0.659,
+      "max_cosine": 0.884
+    },
+    {
+      "prefix": "azure",
+      "size": 21,
+      "mean_cosine": 0.658,
+      "max_cosine": 0.89
+    },
+    {
+      "prefix": "vercel",
+      "size": 6,
+      "mean_cosine": 0.644,
+      "max_cosine": 0.754
+    },
+    {
+      "prefix": "caveman",
+      "size": 13,
+      "mean_cosine": 0.64,
+      "max_cosine": 0.761
+    },
+    {
+      "prefix": "clerk",
+      "size": 7,
+      "mean_cosine": 0.634,
+      "max_cosine": 0.687
+    },
+    {
+      "prefix": "using",
+      "size": 3,
+      "mean_cosine": 0.624,
+      "max_cosine": 0.73
+    },
+    {
+      "prefix": "design",
+      "size": 4,
+      "mean_cosine": 0.618,
+      "max_cosine": 0.663
+    },
+    {
+      "prefix": "writing",
+      "size": 7,
+      "mean_cosine": 0.618,
+      "max_cosine": 0.779
+    },
+    {
+      "prefix": "web",
+      "size": 4,
+      "mean_cosine": 0.59,
+      "max_cosine": 0.652
+    },
+    {
+      "prefix": "setup",
+      "size": 3,
+      "mean_cosine": 0.579,
+      "max_cosine": 0.62
+    },
+    {
+      "prefix": "to",
+      "size": 3,
+      "mean_cosine": 0.576,
+      "max_cosine": 0.629
+    },
+    {
+      "prefix": "find",
+      "size": 3,
+      "mean_cosine": 0.559,
+      "max_cosine": 0.584
+    }
+  ],
+  "corpus_version": "983a3f68d688fd310d662f9e1b3e456013c45ef315c2fbf4ca6c05e4d5e34751"
+}

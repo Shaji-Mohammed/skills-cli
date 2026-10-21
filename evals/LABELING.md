@@ -85,7 +85,7 @@ slice (which overlaps the first two).
 | Bucket | Definition | Target | Source |
 | --- | --- | ---: | --- |
 | explicit | Names the format, tool or platform | 200 (50%) | model_drafted |
-| implied | Describes only the goal; no format, tool or platform named | 120 (30%) | 50 hand_written, 70 model_drafted |
+| implied | Describes only the goal; no format, tool or platform named | 120 (30%) | 25 hand_written, 95 model_drafted |
 | no-skill | Answerable without any skill, or out of scope for the corpus | 80 (20%) | model_drafted |
 | *multi-skill (slice)* | Gold set of 2 or 3 skills | ≥ 100 (≥ 25%) | both |
 
@@ -120,13 +120,16 @@ job. This applies to hand-written prompts and qwen's implied drafts alike.
 - Coverage: each skill appears in at most 3 gold sets, and at least 250 distinct skills appear
   in some gold set, so a few vendors can't dominate the score.
 - Multi-skill combinations must occur together in real workflows. They come from cross-references
-  in skill text (for example "for email sequences, see emails") and a hand-curated pair list
-  you approve. They're never sampled at random.
+  in skill text, kept only if qwen judges that one realistic task needs both. They're never
+  sampled at random.
+- Hand-written implied prompts: 25 slots (18 singles, 7 pairs) chosen by a seeded draw from the
+  live main slots of `evals/handwritten/implied_slots.csv` (`use = yes`); the rest are
+  `unused`.
 
 ## 4. Generation (model-drafted prompts)
 
-- **Input:** the gold skill's SKILL.md body (frontmatter removed). Never the rewritten
-  description. I'd also avoid the original description; see open question 1.
+- **Input:** the gold skill's SKILL.md body (frontmatter removed). Never the original or the
+  rewritten description.
 - **Model:** qwen3.5:9b, with a fixed seed and temperature 0, and responses cached and committed.
 - **Every prompt records** its `source` (`model_drafted` or `hand_written`), bucket, gold set,
   the skill it was drafted from and its `review_status`.
@@ -137,7 +140,7 @@ The split (section 7) happens first, then review:
 
 - **test:** every item is reviewed in full (prompt, gold, HELPFUL exclusions) before the test
   file is locked. `review_status = full`.
-- **dev:** every multi-skill item, plus a random 30% of the rest (fixed seed), is reviewed.
+- **dev:** every multi-skill item, plus a random 15% of the rest (fixed seed), is reviewed.
   `review_status = sampled` for these, `unreviewed` for the others. The README reports the
   counts of each status.
 
@@ -171,7 +174,7 @@ None of these criteria look at router output.
 - All prompts, including the hand-written ones, are pooled after the D1–D4 filters, then split
   with a fixed seed into `dev` (250) and `test` (150), stratified by bucket × source ×
   multi-skill.
-- Expected test sizes per bucket: about 75 explicit, 45 implied (about 19 hand-written and 26
+- Expected test sizes per bucket: about 75 explicit, 45 implied (about 9 hand-written and 36
   model-drafted), 30 no-skill and 38 or more multi-skill. Intervals per bucket will be wide:
   with 45 items, a Wilson 95% interval around 80% runs from about 66% to 89%.
 - After the test review, `evals/test.jsonl` is written once. Its SHA-256 goes in the README,

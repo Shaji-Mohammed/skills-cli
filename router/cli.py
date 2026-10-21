@@ -174,6 +174,25 @@ def redraw_handwritten(
     )
 
 
+@evals_app.command("select-handwritten")
+def select_handwritten(
+    singles: int = typer.Option(18, help="Single-skill slots to write"),
+    pairs: int = typer.Option(7, help="Pair slots to write"),
+    allow_dirty: bool = typer.Option(
+        False, "--allow-dirty", help="Run from uncommitted code (the run can't be quoted)"
+    ),
+) -> None:
+    """Mark which slots to write (use=yes); the rest become unused."""
+    try:
+        run_path = slots.select(singles, pairs, allow_dirty=allow_dirty)
+    except DirtyTree as e:
+        typer.echo(f"Stopped: {e}", err=True)
+        raise typer.Exit(1) from e
+    typer.echo(
+        f"Updated {slots.SHEET.relative_to(REPO_ROOT)} (run {run_path.relative_to(REPO_ROOT)})"
+    )
+
+
 @evals_app.command("check-handwritten")
 def check_handwritten() -> None:
     """Run filled hand-written prompts through the D1-D4 filters and label checks."""

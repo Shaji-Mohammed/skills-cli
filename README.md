@@ -49,7 +49,7 @@ you reuse its skills.
   hand-written and model-drafted prompts (qwen3.5:9b drafts prompts and is also the fallback).
 - The test set is locked until the final evaluation. Its SHA-256 will be recorded here when it's
   created in Phase 2.
-- Planned test split: 150 prompts, about 75 explicit, 45 implied (about 19 hand-written), 30
+- Planned test split: 150 prompts, about 75 explicit, 45 implied (about 9 hand-written), 30
   no-skill and at least 38 multi-skill. Per-bucket intervals will be wide: with 45 items, an
   80% score has a 95% interval of about 66–89%. Labeling rules: [evals/LABELING.md](evals/LABELING.md).
 - All paid API calls go through a spend tracker with a hard $5 cap: `uv run router spend`.

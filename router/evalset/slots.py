@@ -36,6 +36,7 @@ COLUMNS = [
     "swapped",  # yes: the writer replaced this slot; see swap_reason
     "swap_reason",
     "draw",  # initial | redraw1 | ...
+    "use",  # yes: write a prompt for this slot; unused: not needed (see select())
     "kind",
     "source",
     "bucket",
@@ -184,6 +185,7 @@ def make_row(
         "swapped": "no",
         "swap_reason": "",
         "draw": draw,
+        "use": "",
         "kind": kind,
         "source": "hand_written",
         "bucket": "implied",
@@ -398,6 +400,57 @@ def redraw(
             "pairs_accepted": len(accepted),
             "cross_repo_pairs_accepted": sum(_repo(p["a"]) != _repo(p["b"]) for p in accepted),
             "singles_drawn": len(new_singles),
+            "sheet_sha256": file_sha256(SHEET),
+        }
+    )
+    return run.path
+
+
+SELECT_SEED = SEED + 100
+
+
+def select(n_singles: int, n_pairs: int, allow_dirty: bool = False) -> Path:
+    """Pick the slots to write: a seeded sample of live main slots (not reserves, not swapped)
+    first, topped up from live reserves only if main slots run short. Everything else is
+    marked unused. No LLM calls."""
+    with SHEET.open(newline="") as f:
+        rows: list[dict[str, Any]] = list(csv.DictReader(f))
+    run = start_run(
+        "handwritten_select",
+        config={"seed": SELECT_SEED, "singles": n_singles, "pairs": n_pairs},
+        corpus_path=SKILLS,
+        evalset_path=None,
+        allow_dirty=allow_dirty,
+    )
+    locked = load_product_locked()
+    if not locked:
+        raise ValueError("Freeze corpus/product_locked.json first: locked skills can't be implied")
+    rng = random.Random(SELECT_SEED)
+    chosen: set[str] = set()
+    for kind, n in (("single", n_singles), ("pair", n_pairs)):
+        live = [
+            r
+            for r in rows
+            if r["kind"] == kind and r["swapped"] == "no" and not set(r["gold"].split(";")) & locked
+        ]
+        main = [r["slot"] for r in live if r["reserve"] == "no"]
+        reserves = [r["slot"] for r in live if r["reserve"] == "yes"]
+        picked = rng.sample(main, min(n, len(main)))
+        picked += reserves[: n - len(picked)]  # reserves in sheet order, only if needed
+        if len(picked) < n:
+            raise ValueError(f"Only {len(picked)} live {kind} slots for {n}")
+        chosen.update(picked)
+    for r in rows:
+        r["use"] = "yes" if r["slot"] in chosen else "unused"
+    write_sheet(rows)
+    used = [r for r in rows if r["use"] == "yes"]
+    run.write_metrics(
+        {
+            "selected": len(used),
+            "by_kind": dict(Counter(r["kind"] for r in used)),
+            "from_reserves": sum(r["reserve"] == "yes" for r in used),
+            "repos": len({_repo(g) for r in used for g in r["gold"].split(";")}),
+            "selected_slots": sorted((r["slot"] for r in used), key=int),
             "sheet_sha256": file_sha256(SHEET),
         }
     )

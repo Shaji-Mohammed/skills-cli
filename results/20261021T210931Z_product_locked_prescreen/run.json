@@ -1,0 +1,20 @@
+{
+  "name": "product_locked_prescreen",
+  "started_at": "2026-10-21T21:09:31.847969+00:00",
+  "config": {
+    "llm_model": "qwen3.5:9b",
+    "prompt": "You classify one AI-agent skill.\n\nA skill is PRODUCT-LOCKED if the product or hosted service it uses is the means by which the\ncapability is delivered, so a user would only pick this skill by naming that product. Examples:\ngenerating video through RunComfy or Kling, images through Higgsfield, web search through\nTavily or Exa, scraping through Firecrawl, or a vendor's own agent tool like Caveman or Agentix.\nOther tools could deliver the same result; this skill is tied to one of them.\n\nA skill is NOT product-locked if the product is the user's existing environment that the work\ntargets: a framework, cloud, database or app the user already has (for example \"our Vue app\",\n\"our Azure subscription\", \"we use Clerk\", \"our Notion workspace\"), or if the skill is generic\nand names no product.\n\nReply with only a JSON object, no other text:\n{\"product_locked\": true | false, \"product\": \"<product name or empty>\",\n \"reason\": \"<at most 15 words>\"}"
+  },
+  "corpus_path": "/Users/shajimohammed/Desktop/Projects/skills_router_cli/corpus/skills.jsonl",
+  "corpus_version": "269860b82ceae5b47856aecb8f619a9d9efb5ff0f91f9e718cfc91f14b535859",
+  "evalset_path": null,
+  "evalset_version": null,
+  "git_commit": "5b535c03526a5523ec1eeafb91b79338306e0469",
+  "git_dirty": false,
+  "python": "3.12.15",
+  "packages": {
+    "skill-router": "0.1.0",
+    "httpx": "0.28.1",
+    "typer": "0.27.3"
+  }
+}

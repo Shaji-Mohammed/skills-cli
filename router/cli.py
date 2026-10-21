@@ -101,11 +101,22 @@ def equivalence_candidates(
 
 
 @evals_app.command("freeze-equivalence")
-def freeze_equivalence() -> None:
+def freeze_equivalence(
+    allow_dirty: bool = typer.Option(
+        False, "--allow-dirty", help="Run from uncommitted code (the run can't be quoted)"
+    ),
+) -> None:
     """Merge accepted pairs from the reviewed CSV into evals/equivalence.json."""
-    data = equivalence.freeze()
+    try:
+        data, run_path = equivalence.freeze(allow_dirty=allow_dirty)
+    except DirtyTree as e:
+        typer.echo(f"Stopped: {e}", err=True)
+        raise typer.Exit(1) from e
     sizes = [len(s["members"]) for s in data["sets"]]
-    typer.echo(f"Froze {len(sizes)} sets covering {sum(sizes)} skills")
+    typer.echo(
+        f"Froze {len(sizes)} sets covering {sum(sizes)} skills "
+        f"(run {run_path.relative_to(REPO_ROOT)})"
+    )
 
 
 if __name__ == "__main__":

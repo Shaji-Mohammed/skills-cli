@@ -5,7 +5,13 @@ from typing import Any
 import numpy as np
 import pytest
 
-from router.evalset.equivalence import build_sets, candidate_pool, load_equivalence
+from router.evalset.equivalence import (
+    build_sets,
+    candidate_pool,
+    load_equivalence,
+    prescreen_agreement,
+    set_pair_audit,
+)
 
 
 def skill(id: str, repo: str, desc: str = "does things") -> dict[str, Any]:
@@ -63,6 +69,49 @@ def test_build_sets_respects_reviewer_canonical_and_rejects_conflicts() -> None:
 def test_build_sets_requires_a_decision_on_every_row() -> None:
     with pytest.raises(ValueError, match="accept/reject"):
         build_sets([row(1, "tdd", "pdf", "")], INSTALLS)
+
+
+def test_audit_flags_transitive_and_conflicting_pairs() -> None:
+    rows = [
+        row(1, "tdd", "test-driven-development", "accept"),
+        row(2, "test-driven-development", "tdd-lite", "accept"),
+        row(3, "tdd", "tdd-lite", "reject"),
+    ]
+    sets = build_sets(rows, INSTALLS)
+    assert set_pair_audit(sets, rows) == [
+        {
+            "set": "eq:test-driven-development",
+            "a": "tdd",
+            "b": "tdd-lite",
+            "status": "rejected_but_merged",
+            "row": "3",
+        }
+    ]
+    assert set_pair_audit(sets, rows[:2]) == [
+        {
+            "set": "eq:test-driven-development",
+            "a": "tdd",
+            "b": "tdd-lite",
+            "status": "never_reviewed",
+        }
+    ]
+
+
+def test_prescreen_agreement_table() -> None:
+    rows = [
+        {"origin": "cross_vendor", "qwen_verdict": "same", "decision": "accept"},
+        {"origin": "cross_vendor", "qwen_verdict": "same", "decision": "reject"},
+        {"origin": "umbrella", "qwen_verdict": "", "decision": "reject"},
+        {
+            "origin": "cross_vendor:distinct_spot_check",
+            "qwen_verdict": "distinct",
+            "decision": "reject",
+        },
+    ]
+    out = prescreen_agreement(rows)
+    assert out["table"]["same"] == {"accept": 1, "reject": 1}
+    assert out["table"]["not_screened"] == {"reject": 1}
+    assert out["accept_rate_by_verdict"]["distinct (spot check)"]["accept"] == 0
 
 
 def test_load_equivalence_maps_members_to_set(tmp_path: Path) -> None:

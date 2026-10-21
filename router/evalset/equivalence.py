@@ -21,6 +21,7 @@ from router.corpus.curate_llm import judge_pairs
 from router.embed import DEFAULT_MODEL, embed
 from router.llm import LLMClient
 from router.runs import file_sha256, start_run
+from router.stats import wilson
 
 Skill = dict[str, Any]
 Candidate = dict[str, Any]
@@ -302,8 +303,73 @@ def generate(client: LLMClient, allow_dirty: bool = False) -> Path:
     return run.path
 
 
-def freeze() -> dict[str, Any]:
-    """Turn the reviewed CSV into evals/equivalence.json."""
+def set_pair_audit(sets: list[dict[str, Any]], rows: list[dict[str, str]]) -> list[dict[str, Any]]:
+    """Every member pair inside a set that a reviewer didn't accept directly: either never
+    reviewed (merged only through other accepts) or reviewed and rejected (a conflict)."""
+    decided = {frozenset((r["a"], r["b"])): r for r in rows}
+    out = []
+    for s in sets:
+        members = s["members"]
+        for i, a in enumerate(members):
+            for b in members[i + 1 :]:
+                row = decided.get(frozenset((a, b)))
+                if row is None:
+                    out.append({"set": s["id"], "a": a, "b": b, "status": "never_reviewed"})
+                elif row["decision"].strip() == "reject":
+                    out.append(
+                        {
+                            "set": s["id"],
+                            "a": a,
+                            "b": b,
+                            "status": "rejected_but_merged",
+                            "row": row["row"],
+                        }
+                    )
+    return out
+
+
+def prescreen_agreement(rows: list[dict[str, str]]) -> dict[str, Any]:
+    """qwen's verdict against the reviewer's decision, for rows qwen actually judged.
+    Curation-overlap rows carry the curation judge's verdict; alias and umbrella rows were
+    never screened."""
+    table: dict[str, Counter[str]] = {}
+    for r in rows:
+        verdict = r["qwen_verdict"].strip() or "not_screened"
+        if r["origin"].endswith(":distinct_spot_check"):
+            verdict = "distinct (spot check)"
+        table.setdefault(verdict, Counter())[r["decision"].strip()] += 1
+
+    def accept_rate(verdict: str) -> dict[str, Any] | None:
+        c = table.get(verdict)
+        if not c:
+            return None
+        n = c["accept"] + c["reject"]
+        lo, hi = wilson(c["accept"], n)
+        return {
+            "accept": c["accept"],
+            "n": n,
+            "rate": round(c["accept"] / n, 4),
+            "wilson95": [round(lo, 4), round(hi, 4)],
+        }
+
+    return {
+        "table": {v: dict(c) for v, c in sorted(table.items())},
+        "accept_rate_by_verdict": {v: accept_rate(v) for v in sorted(table)},
+    }
+
+
+def freeze(allow_dirty: bool = False) -> tuple[dict[str, Any], Path]:
+    """Turn the reviewed CSV into evals/equivalence.json and record the freeze in results/."""
+    run = start_run(
+        "equivalence_freeze",
+        config={
+            "review_csv": str(REVIEW_CSV.relative_to(REPO_ROOT)),
+            "review_csv_sha256": file_sha256(REVIEW_CSV),
+        },
+        corpus_path=SKILLS,
+        evalset_path=None,
+        allow_dirty=allow_dirty,
+    )
     with REVIEW_CSV.open(newline="") as f:
         rows = list(csv.DictReader(f))
     skills = [json.loads(line) for line in SKILLS.read_text().splitlines() if line.strip()]
@@ -315,7 +381,19 @@ def freeze() -> dict[str, Any]:
         "sets": sets,
     }
     EQUIVALENCE.write_text(json.dumps(data, indent=2) + "\n")
-    return data
+    audit = set_pair_audit(sets, rows)
+    run.write_metrics(
+        {
+            "review_decisions": dict(Counter(r["decision"].strip() for r in rows)),
+            "sets": len(sets),
+            "skills_in_sets": sum(len(s["members"]) for s in sets),
+            "set_sizes": dict(Counter(len(s["members"]) for s in sets)),
+            "set_pair_audit": audit,
+            "prescreen_agreement": prescreen_agreement(rows),
+            "equivalence_sha256": file_sha256(EQUIVALENCE),
+        }
+    )
+    return data, run.path
 
 
 def load_equivalence(path: Path) -> dict[str, str]:

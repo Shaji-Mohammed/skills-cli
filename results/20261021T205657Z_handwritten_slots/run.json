@@ -1,0 +1,29 @@
+{
+  "name": "handwritten_slots",
+  "started_at": "2026-10-21T20:56:57.434275+00:00",
+  "config": {
+    "seed": 20261022,
+    "singles": 35,
+    "single_reserves": 5,
+    "pairs": 15,
+    "pair_reserves": 5,
+    "min_cross_repo_pairs": 5,
+    "max_pairs_per_repo": 2,
+    "pair_source": "cross-references in description_original or SKILL.md",
+    "pair_check": "qwen cooccur prompt",
+    "llm_model": "qwen3.5:9b",
+    "equivalence_sha256": "9e764e07f6c5843a26249f3ea7c0736ed385771146a851f5b4e1055141d3b997"
+  },
+  "corpus_path": "/Users/shajimohammed/Desktop/Projects/skills_router_cli/corpus/skills.jsonl",
+  "corpus_version": "269860b82ceae5b47856aecb8f619a9d9efb5ff0f91f9e718cfc91f14b535859",
+  "evalset_path": null,
+  "evalset_version": null,
+  "git_commit": "c5e6b8e93189ba62a300f8c4aabee355ef456bdd",
+  "git_dirty": false,
+  "python": "3.12.15",
+  "packages": {
+    "skill-router": "0.1.0",
+    "httpx": "0.28.1",
+    "typer": "0.27.3"
+  }
+}

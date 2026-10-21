@@ -1,0 +1,23 @@
+{
+  "cross_reference_pairs": 648,
+  "pairs_judged": 37,
+  "pairs_accepted": 20,
+  "cross_repo_pairs_accepted": 5,
+  "slots": 50,
+  "reserves": 10,
+  "single_domains": {
+    "software-dev": 8,
+    "devops-cloud": 5,
+    "ai-agents": 5,
+    "documents-office": 1,
+    "business-strategy": 2,
+    "media-generation": 4,
+    "marketing-seo": 3,
+    "web-automation": 2,
+    "design-ui": 3,
+    "research-writing": 1,
+    "productivity-collab": 1
+  },
+  "repos_in_main_slots": 29,
+  "sheet_sha256": "e1981cf779daf15ecc9f336fcf9c2c3d5e3d6c0a780ff8d9147bdc68884fe873"
+}

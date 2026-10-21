@@ -95,5 +95,13 @@ choices. The 19 review rows marked "Design-quality cluster" in
 `emilkowalski/skills/animate`, `emilkowalski/skills/improve-animations`,
 `emilkowalski/skills/review-animations`, `designed-by-ai/skills/design-mobile-apps` and
 `greensock/gsap-skills/gsap-plugins`. Expect the router to return several of these for one
-design prompt. Phase 3 onward should report over-routing on prompts whose gold set contains one
+design prompt.
+
+**Hand-written slots are drawn by script, before any qwen draft exists.** The writer doesn't
+pick target skills, so they can't drift toward familiar ones, and qwen's prompt phrasing can't
+leak into the hand-written prompts (`router evals handwritten-slots`). Two choices to note:
+singles are drawn in proportion to the coarse domain labels. This is a sampling-spread use,
+like the 35% check, not a taxonomy reuse, and can be replaced by a per-repo draw if vetoed.
+Pairs come from cross-references in skill text, and qwen keeps a pair only if one task needs
+both. qwen judges pairs; it never writes prompt text at this stage. Phase 3 onward should report over-routing on prompts whose gold set contains one
 of them, so the cost of this policy is measured rather than assumed.

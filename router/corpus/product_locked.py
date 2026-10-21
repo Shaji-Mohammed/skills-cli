@@ -26,16 +26,23 @@ LLM_CACHE = REPO_ROOT / "corpus" / "raw" / "llm_cache.jsonl"
 
 SYSTEM = """You classify one AI-agent skill.
 
-A skill is PRODUCT-LOCKED if the product or hosted service it uses is the means by which the
-capability is delivered, so a user would only pick this skill by naming that product. Examples:
-generating video through RunComfy or Kling, images through Higgsfield, web search through
-Tavily or Exa, scraping through Firecrawl, or a vendor's own agent tool like Caveman or Agentix.
-Other tools could deliver the same result; this skill is tied to one of them.
+A skill is PRODUCT-LOCKED if picking it means picking one specific product, model or library
+among interchangeable alternatives, and the user's environment would not settle that choice.
+Locked examples:
+- single-model skills: generate video with Kling 3.0, images with Nano Banana 2
+- single-provider skills: web search through Tavily or Exa, Stripe Projects
+- single-library migrations: migrate tests to shoehorn
+- skills that operate a vendor's own product: manage, set up or view stats for Caveman Cloud,
+  run the Agentix CEO agent
 
-A skill is NOT product-locked if the product is the user's existing environment that the work
-targets: a framework, cloud, database or app the user already has (for example "our Vue app",
-"our Azure subscription", "we use Clerk", "our Notion workspace"), or if the skill is generic
-and names no product.
+A skill is NOT product-locked if:
+- it works inside a platform, framework or service the user already uses: Azure, Vue,
+  HyperFrames, a RunComfy account, Clerk, Firebase, Notion, Google Workspace and similar; or
+- it is a generic process skill that happens to live in a vendor's repo (for example lean
+  builds or code review from the Caveman repo); or
+- it names no product at all.
+
+When in doubt, answer false.
 
 Reply with only a JSON object, no other text:
 {"product_locked": true | false, "product": "<product name or empty>",
@@ -78,7 +85,8 @@ def prescreen(client: LLMClient, allow_dirty: bool = False) -> Path:
             "qwen_locked": "yes" if locked is True else "no" if locked is False else "parse_failed",
             "qwen_product": str(data.get("product", "")),
             "qwen_reason": str(data.get("reason", "")),
-            "decision": "",
+            # Default not_locked: the reviewer only checks rows qwen flags.
+            "decision": "not_locked",
             "note": "",
         }
 

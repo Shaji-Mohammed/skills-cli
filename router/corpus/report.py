@@ -68,7 +68,8 @@ def render(run_dir: Path) -> str:
         "",
         "## Similar pairs",
         "",
-        "After step 8, each skill's nearest-neighbour description cosine had percentiles "
+        "After step 7 (`near_duplicate`), each skill's nearest-neighbour description cosine "
+        "had percentiles "
         + ", ".join(f"{k} = {v}" for k, v in nn.items())
         + f". {metrics['pairs_judged']} pairs fell in "
         f"[{cfg['pair_judge_min_cosine']}, {cfg['near_duplicate_cosine']}) and were judged by "
@@ -76,10 +77,11 @@ def render(run_dir: Path) -> str:
         + ", ".join(f"{v} `{k}`" for k, v in sorted(verdicts.items()))
         + ".",
         "",
-        f"`same` pairs drive step 9. {metrics['overlap_pairs_kept']} `overlap` pairs where both "
-        "skills survived are saved in `corpus/overlaps.jsonl` as candidate equivalence sets for "
-        "the Phase 2 eval. A reply that couldn't be parsed counts as `parse_failed` and never "
-        "removes a skill. All verdicts are in `corpus/raw/pair_judgments.jsonl`.",
+        "`same` pairs drive step 8 (`indistinguishable`). "
+        f"{metrics['overlap_pairs_kept']} `overlap` pairs where both skills survived are saved "
+        "in `corpus/overlaps.jsonl` as candidate equivalence sets for the Phase 2 eval. "
+        "A reply that couldn't be parsed counts as `parse_failed` and never removes a skill. "
+        "All verdicts are in `corpus/raw/pair_judgments.jsonl`.",
         "",
         "## Description rewrites",
         "",

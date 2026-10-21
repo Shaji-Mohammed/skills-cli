@@ -4,15 +4,27 @@ Given a natural-language prompt, return every skill it needs from a curated corp
 skills. Three-stage cascade: graph-expanded hybrid retrieval, then calibrated scoring, then an LLM
 fallback for uncertain candidates only. See [ROADMAP.md](ROADMAP.md) for the plan.
 
-**Status:** Phase 0 (setup). No results yet.
+**Status:** Phase 1 done: a curated corpus of 500 skills ([corpus/CURATION.md](corpus/CURATION.md)).
+No routing results yet.
 
 ## Setup
 
 ```sh
 uv sync
-cp .env.example .env   # add OPENROUTER_API_KEY
+cp .env.example .env
 uv run pre-commit install
 uv run router --help
+```
+
+The LLM steps run locally on [Ollama](https://ollama.com) with `qwen3.5:9b`
+(`ollama pull qwen3.5:9b`). Rebuilding the corpus replays the committed response cache, so
+Ollama is only needed when the inputs change:
+
+```sh
+uv run router corpus fetch-leaderboard   # snapshot skills.sh (already committed)
+uv run router corpus collect             # clone source repos into .cache/
+uv run router corpus curate              # apply the curation rules -> corpus/skills.jsonl
+uv run router corpus report              # write corpus/CURATION.md from the latest run
 ```
 
 ## Results policy

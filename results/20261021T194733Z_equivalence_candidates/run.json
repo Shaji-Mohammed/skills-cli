@@ -1,0 +1,28 @@
+{
+  "name": "equivalence_candidates",
+  "started_at": "2026-10-21T19:47:33.004254+00:00",
+  "config": {
+    "cross_vendor_k": 3,
+    "cross_vendor_min_cosine": 0.65,
+    "same_repo_min_cosine": 0.65,
+    "name_similarity": 0.6,
+    "repo_common_token_min": 3,
+    "distinct_spot_check": 20,
+    "seed": 20261021,
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "embedding_text": "name: description_original",
+    "llm_model": "qwen3.5:9b"
+  },
+  "corpus_path": "/Users/shajimohammed/Desktop/Projects/skills_router_cli/corpus/skills.jsonl",
+  "corpus_version": "269860b82ceae5b47856aecb8f619a9d9efb5ff0f91f9e718cfc91f14b535859",
+  "evalset_path": null,
+  "evalset_version": null,
+  "git_commit": "7c16630442780048bd3f69d24818e2cf6b75d4ff",
+  "git_dirty": false,
+  "python": "3.12.15",
+  "packages": {
+    "skill-router": "0.1.0",
+    "httpx": "0.28.1",
+    "typer": "0.27.3"
+  }
+}

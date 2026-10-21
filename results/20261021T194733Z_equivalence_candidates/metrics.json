@@ -1,0 +1,23 @@
+{
+  "pool_by_origin": {
+    "cross_vendor": 1127,
+    "same_repo_name": 32,
+    "umbrella": 51,
+    "alias": 1
+  },
+  "prescreen_verdicts": {
+    "overlap": 150,
+    "distinct": 1000,
+    "same": 9,
+    "not_screened": 52
+  },
+  "review_rows": 254,
+  "review_rows_by_origin": {
+    "curation_overlap": 28,
+    "alias": 1,
+    "umbrella": 49,
+    "same_repo_name": 2,
+    "cross_vendor": 154,
+    "cross_vendor:distinct_spot_check": 20
+  }
+}

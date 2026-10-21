@@ -1,0 +1,68 @@
+{
+  "name": "drafts",
+  "started_at": "2026-10-21T22:03:11.585441+00:00",
+  "config": {
+    "seed": 20261023,
+    "temperature": 0.7,
+    "oversample": 1.15,
+    "targets": {
+      "explicit/single": 130,
+      "explicit/pair": 52,
+      "explicit/triple": 18,
+      "implied/single": 70,
+      "implied/pair": 25,
+      "no_skill/none": 80
+    },
+    "body_chars": {
+      "1": 2500,
+      "2": 1800,
+      "3": 1300
+    },
+    "draft_system": "You write one realistic request that a user might send to an AI assistant.\n\n{need}\n{bucket_rule}\nIf a skill is a working method (debugging, test-first development, planning, reviewing), the\nrequest must explicitly ask for that method, described in plain words.\nWrite in the user's own words, 1 to 3 sentences. Don't copy phrases from the skill text, and\ndon't mention skills or any skill's name.\n\nReply with only a JSON object, no other text: {{\"prompt\": \"<the request>\"}}",
+    "draft_rules": {
+      "explicit": "The request must name the file format, tool, platform, product or service involved, the way a real user would.",
+      "implied": "The request must describe only the goal or situation. It may mention what the user already has (their app, cloud account, workspace or framework), but it must not name the file format, tool, product or service that would do the job."
+    },
+    "no_skill_system": "You write one realistic message that a user might send to an AI assistant.\n\nIt must need no specialized tool, file format, platform or integration: it can be answered from\ngeneral knowledge or simple reasoning, or it asks for something outside software altogether.\nTopic: {topic}. Write in the user's own words, 1 to 3 sentences.\n\nReply with only a JSON object, no other text: {{\"prompt\": \"<the message>\"}}",
+    "no_skill_topics": [
+      "a general programming concept",
+      "a math question",
+      "a history question",
+      "cooking advice",
+      "travel planning advice",
+      "a personal finance concept",
+      "a grammar or word-usage question",
+      "trivia",
+      "general health information",
+      "a unit conversion",
+      "casual small talk",
+      "explaining a joke or idiom",
+      "a philosophy question",
+      "career advice",
+      "a book or film recommendation",
+      "a science concept",
+      "an everyday errand outside software (booking, buying, calling someone)",
+      "a riddle or logic puzzle",
+      "relationship or etiquette advice",
+      "a quick factual comparison of two everyday things"
+    ],
+    "triple_system": "You judge whether three AI-agent skills are used together.\n\nAnswer true only if one realistic user task would REQUIRE all three skills, each supplying a\ndistinct part of the work. Answer false if any one is optional, an alternative to another, or\na general version of another.\n\nReply with only a JSON object, no other text:\n{\"cooccur\": true | false, \"reason\": \"<at most 20 words>\"}",
+    "max_gold_sets_per_skill": 3,
+    "llm_model": "qwen3.5:9b",
+    "equivalence_sha256": "9e764e07f6c5843a26249f3ea7c0736ed385771146a851f5b4e1055141d3b997",
+    "product_locked_sha256": "c869ff46639001a89651a7aefa24f732c7f60890ebfc1427e1074076ca4dc0bf",
+    "handwritten_sheet_sha256": "04ab341870d627355d35622d2b5f691dfb980689eaee40fcc4a0b272c6b5b25e"
+  },
+  "corpus_path": "/Users/shajimohammed/Desktop/Projects/skills_router_cli/corpus/skills.jsonl",
+  "corpus_version": "269860b82ceae5b47856aecb8f619a9d9efb5ff0f91f9e718cfc91f14b535859",
+  "evalset_path": null,
+  "evalset_version": null,
+  "git_commit": "c51350ddfee2298123cb74ea7d705294b2c6d267",
+  "git_dirty": false,
+  "python": "3.12.15",
+  "packages": {
+    "skill-router": "0.1.0",
+    "httpx": "0.28.1",
+    "typer": "0.27.3"
+  }
+}

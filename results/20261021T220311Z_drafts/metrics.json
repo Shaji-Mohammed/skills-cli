@@ -1,0 +1,26 @@
+{
+  "pairs_judged": 142,
+  "triples_judged": 38,
+  "slots_planned": 433,
+  "drafted_ok": 398,
+  "dropped_by_filters": 35,
+  "drop_reasons": {
+    "D2": 31,
+    "D3": 8
+  },
+  "kept": 369,
+  "kept_by_stratum": {
+    "explicit/single": 130,
+    "explicit/pair": 47,
+    "explicit/triple": 17,
+    "implied/single": 70,
+    "implied/pair": 25,
+    "no_skill/none": 80
+  },
+  "short_strata": {
+    "explicit/pair": 5,
+    "explicit/triple": 1
+  },
+  "distinct_gold_skills": 323,
+  "drafts_sha256": "57e316e2e2cdd370357437073e228fb94d63ae1d40ef502b47a3012e35f4d053"
+}

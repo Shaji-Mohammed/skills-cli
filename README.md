@@ -27,6 +27,20 @@ uv run router corpus curate              # apply the curation rules -> corpus/sk
 uv run router corpus report              # write corpus/CURATION.md from the latest run
 ```
 
+## Corpus
+
+500 skills chosen from the skills.sh all-time install leaderboard, then curated (see
+[corpus/CURATION.md](corpus/CURATION.md)). "Popular" here means most installed, not highest
+quality: install counts can be inflated, and nothing in the ranking checks whether a skill
+works.
+
+**Licensing.** Skills keep their authors' licenses: 310 are MIT, 118 Apache-2.0, and the rest are
+listed in CURATION.md (49 have no license file; 4 Anthropic document skills are proprietary).
+This repo stores only each skill's name, description, path, source commit and license, plus
+short rewritten descriptions for 55 skills. It doesn't store any SKILL.md bodies; the collector
+reads them from local clones in `.cache/` (git-ignored). Follow each source repo's license if
+you reuse its skills.
+
 ## Results policy
 
 - Every number in this README comes from a saved run in `results/` whose `run.json` records the

@@ -3,86 +3,54 @@ from pathlib import Path
 from typing import Any
 
 import httpx
-import pytest
 
-from router.llm import LLMClient, ResponseCache
-from router.spend import SpendLimitExceeded, SpendTracker
+from router.llm import LLMClient, ResponseCache, extract_json
 
-MODEL = "openai/gpt-4o-mini"
 MESSAGES = [{"role": "user", "content": "hello"}]
 
 
-def fake_http(response: dict[str, Any], status: int = 200) -> tuple[httpx.Client, list[Any]]:
+def fake_http(reply: str) -> tuple[httpx.Client, list[Any]]:
     seen: list[Any] = []
 
     def handler(request: httpx.Request) -> httpx.Response:
         seen.append(json.loads(request.content))
-        return httpx.Response(status, json=response)
+        body = {"message": {"content": reply}, "prompt_eval_count": 7, "eval_count": 3}
+        return httpx.Response(200, json=body)
 
     return httpx.Client(transport=httpx.MockTransport(handler)), seen
 
 
-def ok_response(usage: dict[str, Any]) -> dict[str, Any]:
-    return {"choices": [{"message": {"content": "hi"}}], "usage": usage}
+def test_chat_sends_deterministic_non_thinking_request() -> None:
+    http, seen = fake_http("hi")
+    result = LLMClient("qwen3.5:9b", http=http).chat(MESSAGES, max_tokens=50)
+    assert (result.text, result.input_tokens, result.output_tokens) == ("hi", 7, 3)
+    assert seen[0]["think"] is False
+    assert seen[0]["options"] == {"temperature": 0, "num_predict": 50}
+    assert seen[0]["stream"] is False
 
 
-def test_chat_settles_reported_cost(tmp_path: Path) -> None:
-    tracker = SpendTracker(tmp_path / "ledger.jsonl", 5.0)
-    http, seen = fake_http(
-        ok_response({"prompt_tokens": 10, "completion_tokens": 2, "cost": 0.001})
-    )
-    result = LLMClient("key", tracker, http).chat(MODEL, MESSAGES, purpose="test")
-    assert result.text == "hi"
-    assert tracker.total() == pytest.approx(0.001)
-    assert seen[0]["usage"] == {"include": True}
-
-
-def test_chat_falls_back_to_price_table(tmp_path: Path) -> None:
-    tracker = SpendTracker(tmp_path / "ledger.jsonl", 5.0)
-    http, _ = fake_http(ok_response({"prompt_tokens": 1_000_000, "completion_tokens": 0}))
-    LLMClient("key", tracker, http).chat(MODEL, MESSAGES, purpose="test")
-    assert tracker.total() == pytest.approx(0.15)
-
-
-def test_http_error_keeps_reservation(tmp_path: Path) -> None:
-    tracker = SpendTracker(tmp_path / "ledger.jsonl", 5.0)
-    http, _ = fake_http({"error": "boom"}, status=500)
-    with pytest.raises(httpx.HTTPStatusError):
-        LLMClient("key", tracker, http).chat(MODEL, MESSAGES, purpose="test")
-    assert tracker.total() > 0
-
-
-def test_refused_call_never_hits_network(tmp_path: Path) -> None:
-    tracker = SpendTracker(tmp_path / "ledger.jsonl", 0.0)
-    http, seen = fake_http(ok_response({}))
-    with pytest.raises(SpendLimitExceeded):
-        LLMClient("key", tracker, http).chat(MODEL, MESSAGES, purpose="test")
-    assert seen == []
-
-
-def test_unpriced_model_rejected(tmp_path: Path) -> None:
-    tracker = SpendTracker(tmp_path / "ledger.jsonl", 5.0)
-    http, seen = fake_http(ok_response({}))
-    with pytest.raises(ValueError):
-        LLMClient("key", tracker, http).chat("some/other-model", MESSAGES, purpose="test")
-    assert seen == []
-
-
-def test_cache_hit_is_free_and_offline(tmp_path: Path) -> None:
-    tracker = SpendTracker(tmp_path / "ledger.jsonl", 5.0)
-    http, seen = fake_http(ok_response({"prompt_tokens": 1, "completion_tokens": 1, "cost": 0.01}))
-    cache = ResponseCache(tmp_path / "cache.jsonl")
-    client = LLMClient("key", tracker, http, cache)
-    first = client.chat(MODEL, MESSAGES, purpose="test")
+def test_cache_hit_skips_the_model(tmp_path: Path) -> None:
+    http, seen = fake_http("hi")
+    LLMClient("m", http=http, cache=ResponseCache(tmp_path / "c.jsonl")).chat(MESSAGES)
     # A fresh cache instance reads the same file, as a later run would.
-    client2 = LLMClient("key", tracker, http, ResponseCache(tmp_path / "cache.jsonl"))
-    second = client2.chat(MODEL, MESSAGES, purpose="test")
-    assert (first.cached, second.cached) == (False, True)
+    second = LLMClient("m", http=http, cache=ResponseCache(tmp_path / "c.jsonl")).chat(MESSAGES)
+    assert second.cached
     assert second.text == "hi"
     assert len(seen) == 1
-    assert tracker.total() == pytest.approx(0.01)
 
 
-def test_missing_key_rejected(tmp_path: Path) -> None:
-    with pytest.raises(ValueError):
-        LLMClient("", SpendTracker(tmp_path / "ledger.jsonl", 5.0))
+def test_cache_key_depends_on_model(tmp_path: Path) -> None:
+    http, seen = fake_http("hi")
+    cache = ResponseCache(tmp_path / "c.jsonl")
+    LLMClient("m1", http=http, cache=cache).chat(MESSAGES)
+    LLMClient("m2", http=http, cache=cache).chat(MESSAGES)
+    assert len(seen) == 2
+
+
+def test_extract_json() -> None:
+    assert extract_json('{"a": 1}') == {"a": 1}
+    assert extract_json('```json\n{"a": 1}\n```') == {"a": 1}
+    assert extract_json('Sure! {"a": {"b": 2}} done') == {"a": {"b": 2}}
+    assert extract_json("no json here") is None
+    assert extract_json("{broken") is None
+    assert extract_json("[1, 2]") is None

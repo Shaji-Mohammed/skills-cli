@@ -1,25 +1,23 @@
-"""OpenRouter chat client: the only module that makes paid calls, all through SpendTracker."""
+"""Local LLM client (Ollama). Free to call, so it doesn't go through the spend tracker."""
 
 import hashlib
 import json
+import re
 import threading
+import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
 import httpx
 
-from router.spend import PRICES, SpendTracker, estimate_tokens
-
-OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
-
 
 @dataclass(frozen=True)
 class ChatResult:
     text: str
-    cost_usd: float
     input_tokens: int
     output_tokens: int
+    latency_s: float
     cached: bool = False
 
 
@@ -27,7 +25,7 @@ class ResponseCache:
     """Append-only JSONL of request-hash -> response text.
 
     Committed alongside the data it produced, so rebuilding the corpus replays the same LLM
-    outputs for free instead of re-paying (and getting slightly different answers).
+    outputs instead of re-running the model (and getting slightly different answers).
     """
 
     def __init__(self, path: Path) -> None:
@@ -56,91 +54,57 @@ class ResponseCache:
                 f.write(json.dumps({"key": key, "text": text}, ensure_ascii=False) + "\n")
 
 
-def request_body(
-    model: str,
-    messages: list[dict[str, str]],
-    max_tokens: int,
-    temperature: float,
-    response_format: dict[str, Any] | None,
-) -> dict[str, Any]:
-    body: dict[str, Any] = {
-        "model": model,
-        "messages": messages,
-        "max_tokens": max_tokens,
-        "temperature": temperature,
-    }
-    if response_format is not None:
-        body["response_format"] = response_format
-    return body
+def extract_json(text: str) -> dict[str, Any] | None:
+    """Parse the first JSON object in a reply. qwen3.5 on Ollama has no structured-output mode,
+    so replies can arrive wrapped in code fences or with stray text around the object."""
+    m = re.search(r"\{.*\}", text, re.DOTALL)
+    if not m:
+        return None
+    try:
+        data = json.loads(m.group(0))
+    except json.JSONDecodeError:
+        return None
+    return data if isinstance(data, dict) else None
 
 
 class LLMClient:
     def __init__(
         self,
-        api_key: str,
-        tracker: SpendTracker,
+        model: str,
+        base_url: str = "http://localhost:11434",
         http: httpx.Client | None = None,
         cache: ResponseCache | None = None,
     ) -> None:
-        if not api_key:
-            raise ValueError("OPENROUTER_API_KEY is not set (see .env.example)")
-        self.api_key = api_key
-        self.tracker = tracker
-        self.http = http or httpx.Client(timeout=60)
+        self.model = model
+        self.url = f"{base_url.rstrip('/')}/api/chat"
+        self.http = http or httpx.Client(timeout=300)
         self.cache = cache
 
-    def estimate(self, model: str, messages: list[dict[str, str]], max_tokens: int) -> float:
-        prompt_tokens = sum(estimate_tokens(m["content"]) for m in messages)
-        return PRICES[model].cost(prompt_tokens, max_tokens)
-
-    def is_cached(self, body: dict[str, Any]) -> bool:
-        return self.cache is not None and self.cache.get(ResponseCache.key(body)) is not None
-
-    def chat(
-        self,
-        model: str,
-        messages: list[dict[str, str]],
-        purpose: str,
-        max_tokens: int = 512,
-        temperature: float = 0.0,
-        response_format: dict[str, Any] | None = None,
-    ) -> ChatResult:
-        if model not in PRICES:
-            raise ValueError(f"No price for {model}; add it to spend.PRICES before calling it")
-        body = request_body(model, messages, max_tokens, temperature, response_format)
+    def chat(self, messages: list[dict[str, str]], max_tokens: int = 256) -> ChatResult:
+        body: dict[str, Any] = {
+            "model": self.model,
+            "messages": messages,
+            "stream": False,
+            # qwen3.5 thinks by default (~25 s for a one-line reply); these are short judgments.
+            "think": False,
+            "options": {"temperature": 0, "num_predict": max_tokens},
+        }
         key = ResponseCache.key(body)
         if self.cache is not None and (hit := self.cache.get(key)) is not None:
-            return ChatResult(text=hit, cost_usd=0.0, input_tokens=0, output_tokens=0, cached=True)
+            return ChatResult(text=hit, input_tokens=0, output_tokens=0, latency_s=0.0, cached=True)
 
-        call_id = self.tracker.reserve(model, self.estimate(model, messages, max_tokens), purpose)
-        # Ask OpenRouter to report the billed cost in the response.
-        body = {**body, "usage": {"include": True}}
-        resp = self.http.post(
-            OPENROUTER_URL,
-            json=body,
-            headers={"Authorization": f"Bearer {self.api_key}"},
-        )
-        # On an HTTP error the reservation stays unsettled and keeps counting (conservative).
+        start = time.perf_counter()
+        resp = self.http.post(self.url, json=body)
         resp.raise_for_status()
         data = resp.json()
+        latency = time.perf_counter() - start
 
-        usage = data.get("usage", {})
-        input_tokens = int(usage.get("prompt_tokens", 0))
-        output_tokens = int(usage.get("completion_tokens", 0))
-        cost = usage.get("cost")
-        if cost is None:
-            cost = PRICES[model].cost(input_tokens, output_tokens)
-        self.tracker.settle(
-            call_id,
-            float(cost),
-            {"input_tokens": input_tokens, "output_tokens": output_tokens},
-        )
-        text = data["choices"][0]["message"]["content"]
+        text = data["message"]["content"]
         if self.cache is not None:
             self.cache.put(key, text)
         return ChatResult(
             text=text,
-            cost_usd=float(cost),
-            input_tokens=input_tokens,
-            output_tokens=output_tokens,
+            input_tokens=int(data.get("prompt_eval_count", 0)),
+            output_tokens=int(data.get("eval_count", 0)),
+            latency_s=latency,
         )

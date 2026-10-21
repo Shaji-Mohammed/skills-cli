@@ -14,7 +14,8 @@ SPEND_LEDGER = RESULTS_DIR / "spend_ledger.jsonl"
 
 @dataclass(frozen=True)
 class Settings:
-    openrouter_api_key: str
+    ollama_url: str
+    ollama_model: str
     spend_limit_usd: float
     spend_confirm_usd: float
 
@@ -22,7 +23,8 @@ class Settings:
 def load_settings() -> Settings:
     load_dotenv(REPO_ROOT / ".env")
     return Settings(
-        openrouter_api_key=os.environ.get("OPENROUTER_API_KEY", ""),
+        ollama_url=os.environ.get("OLLAMA_URL", "http://localhost:11434"),
+        ollama_model=os.environ.get("OLLAMA_MODEL", "qwen3.5:9b"),
         spend_limit_usd=float(os.environ.get("SPEND_LIMIT_USD", "5.00")),
         spend_confirm_usd=float(os.environ.get("SPEND_CONFIRM_USD", "0.50")),
     )

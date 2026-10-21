@@ -3,8 +3,8 @@ from pathlib import Path
 import pytest
 
 from router.spend import (
-    PRICES,
     ConfirmationRequired,
+    Price,
     SpendLimitExceeded,
     SpendTracker,
 )
@@ -64,5 +64,5 @@ def test_run_budget_refuses_past_limit_even_if_confirmed(tmp_path: Path) -> None
 
 
 def test_price_cost() -> None:
-    price = PRICES["openai/gpt-4o-mini"]
+    price = Price(input_per_mtok=0.15, output_per_mtok=0.60)
     assert price.cost(1_000_000, 1_000_000) == pytest.approx(0.75)

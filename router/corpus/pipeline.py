@@ -15,7 +15,6 @@ from router.corpus.curate import CurationParams, Removed, Skill
 from router.embed import DEFAULT_MODEL, embed
 from router.llm import LLMClient
 from router.runs import file_sha256, start_run
-from router.spend import SpendTracker
 
 CORPUS_DIR = REPO_ROOT / "corpus"
 SNAPSHOT = CORPUS_DIR / "sources" / "skills_sh_alltime.json"
@@ -85,13 +84,7 @@ def prefix_cluster_density(
     return sorted(rows, key=lambda r: -r["mean_cosine"])
 
 
-def run_curation(
-    client: LLMClient,
-    tracker: SpendTracker,
-    confirm_usd: float,
-    confirmed: bool,
-    params: CurationParams | None = None,
-) -> Path:
+def run_curation(client: LLMClient, params: CurationParams | None = None) -> Path:
     params = params or CurationParams()
     snapshot_size = len(json.loads(SNAPSHOT.read_text())["skills"])
     skills = read_jsonl(RAW)
@@ -140,34 +133,25 @@ def run_curation(
         )
     }
 
-    # Budget gate before any paid call. Rewrites are bounded by assuming every capped skill
-    # needs one, so the real cost can only come in lower.
     pairs = curate_llm.candidate_pairs(
         skills, vectors, PAIR_JUDGE_MIN_COSINE, params.near_duplicate_cosine
     )
-    top = sorted(skills, key=lambda s: -s["installs"])[: params.cap]
-    planned = (
-        [curate_llm.pair_request(a, b) for _, a, b in pairs]
-        + [curate_llm.classify_request(s) for s in top]
-        + [curate_llm.rewrite_request(s, read_body(s)) for s in top]
-    )
-    estimate = curate_llm.estimate_cost(client, planned)
-    tracker.check_run_budget(estimate, confirm_usd, confirmed)
-    spend_before = tracker.total()
-
+    print(f"Judging {len(pairs)} similar pairs with {client.model}")
     judgments = curate_llm.judge_pairs(client, pairs)
     write_jsonl(PAIR_JUDGMENTS, judgments)
     skills = step("indistinguishable", curate_llm.rule_indistinguishable(skills, judgments))
     skills = step("below_cap", curate.rule_cap(skills, params.cap))
 
+    print(f"Classifying {len(skills)} skills")
     labels = curate_llm.classify(client, skills)
     needs_rewrite = [s for s in skills if not labels[s["id"]]["states_what"]]
+    print(f"Rewriting {len(needs_rewrite)} trigger-only descriptions")
     rewrites = curate_llm.rewrite(client, needs_rewrite, read_body)
     for s in skills:
         s["domain"] = labels[s["id"]]["domain"]
-        if s["id"] in rewrites:
+        if (new := rewrites.get(s["id"])) is not None:
             s["description_original"] = s["description"]
-            s["description"] = rewrites[s["id"]]
+            s["description"] = new
 
     kept_ids = {s["id"] for s in skills}
     overlaps = [j for j in judgments if j["verdict"] == "overlap" and {j["a"], j["b"]} <= kept_ids]
@@ -187,15 +171,19 @@ def run_curation(
         "pairs_judged": len(pairs),
         "pair_verdicts": dict(Counter(str(j["verdict"]) for j in judgments)),
         "overlap_pairs_kept": len(overlaps),
-        "rewritten_descriptions": len(rewrites),
+        "flagged_trigger_only": len(needs_rewrite),
+        "rewritten_descriptions": sum(v is not None for v in rewrites.values()),
+        "parse_failures": {
+            "pairs": sum(j["verdict"] == "parse_failed" for j in judgments),
+            "classify": sum(v["domain"] == "parse_failed" for v in labels.values()),
+            "rewrite": sum(v is None for v in rewrites.values()),
+        },
         "domains": dict(domains.most_common()),
         "max_domain_share": round(max(domains.values()) / len(skills), 4),
         "max_domain_share_ok": max(domains.values()) / len(skills) <= MAX_DOMAIN_SHARE,
         "licenses": dict(Counter(s["license"] for s in skills).most_common()),
         "sources": len({s["source_repo"] for s in skills}),
         "prefix_clusters": prefix_cluster_density(skills, final_vectors),
-        "estimated_cost_usd": round(estimate, 4),
-        "actual_cost_usd": round(tracker.total() - spend_before, 4),
         "corpus_version": file_sha256(SKILLS),
     }
     run = start_run(
@@ -205,7 +193,7 @@ def run_curation(
             "pair_judge_min_cosine": PAIR_JUDGE_MIN_COSINE,
             "max_domain_share": MAX_DOMAIN_SHARE,
             "embedding_model": DEFAULT_MODEL,
-            "llm_model": curate_llm.MODEL,
+            "llm_model": client.model,
             "snapshot_version": file_sha256(SNAPSHOT),
             "raw_version": file_sha256(RAW),
         },

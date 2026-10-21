@@ -36,10 +36,9 @@ class Price:
         ) / 1_000_000
 
 
-# OpenRouter list prices. Only models listed here may be called, so every call has an estimate.
-PRICES: dict[str, Price] = {
-    "openai/gpt-4o-mini": Price(input_per_mtok=0.15, output_per_mtok=0.60),
-}
+# Prices of paid models, so every paid call can be estimated before it's made. Empty for now:
+# the LLM runs locally (free). Jev's pricing goes here once we have access and its docs.
+PRICES: dict[str, Price] = {}
 
 
 def estimate_tokens(text: str) -> int:

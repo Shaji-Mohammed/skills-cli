@@ -1,0 +1,12 @@
+{"kind": "reserve", "call_id": "2563f8708bd64555bb749a9a413e65f0", "model": "openai/gpt-4o-mini", "estimate_usd": 0.0001383, "purpose": "curate:pair", "ts": "2026-10-20T22:42:05.908943+00:00"}
+{"kind": "reserve", "call_id": "3cb53d146c6a41c0b82cd1dd620ff782", "model": "openai/gpt-4o-mini", "estimate_usd": 0.00018419999999999998, "purpose": "curate:pair", "ts": "2026-10-20T22:42:05.912580+00:00"}
+{"kind": "reserve", "call_id": "112033f59b5c4426b3266f5eb8592636", "model": "openai/gpt-4o-mini", "estimate_usd": 0.00014939999999999997, "purpose": "curate:pair", "ts": "2026-10-20T22:42:05.912872+00:00"}
+{"kind": "reserve", "call_id": "99fa24808ad846529759c0a76916113c", "model": "openai/gpt-4o-mini", "estimate_usd": 0.0001491, "purpose": "curate:pair", "ts": "2026-10-20T22:42:05.913146+00:00"}
+{"kind": "reserve", "call_id": "98c68d2cc19549bab3baec900437b0a8", "model": "openai/gpt-4o-mini", "estimate_usd": 9.585e-05, "purpose": "curate:pair", "ts": "2026-10-20T22:42:05.913392+00:00"}
+{"kind": "reserve", "call_id": "a03b64c5c1344bf496f7f7e9013eba25", "model": "openai/gpt-4o-mini", "estimate_usd": 0.00013485, "purpose": "curate:pair", "ts": "2026-10-20T22:42:05.913557+00:00"}
+{"kind": "reserve", "call_id": "a15cab694585431780651fc91f3478ce", "model": "openai/gpt-4o-mini", "estimate_usd": 0.00018165, "purpose": "curate:pair", "ts": "2026-10-20T22:42:05.913709+00:00"}
+{"kind": "reserve", "call_id": "601bb135f71343a2b663d61406f62263", "model": "openai/gpt-4o-mini", "estimate_usd": 9.659999999999999e-05, "purpose": "curate:pair", "ts": "2026-10-20T22:42:05.913875+00:00"}
+{"kind": "reserve", "call_id": "b1b0d70fc4a445b28ab69ea9606b9134", "model": "openai/gpt-4o-mini", "estimate_usd": 0.0001557, "purpose": "curate:pair", "ts": "2026-10-20T22:42:06.015622+00:00"}
+{"kind": "reserve", "call_id": "1a319d84f33745779724cec773fa9f9a", "model": "openai/gpt-4o-mini", "estimate_usd": 0.0001341, "purpose": "curate:pair", "ts": "2026-10-20T22:42:06.320965+00:00"}
+{"kind": "reserve", "call_id": "3e0d254fb2ef4dfca764d18d0a741c21", "model": "openai/gpt-4o-mini", "estimate_usd": 0.00016319999999999998, "purpose": "curate:pair", "ts": "2026-10-20T22:42:06.322546+00:00"}
+{"kind": "reserve", "call_id": "ec7394e4239546d78bae51a33fbf9128", "model": "openai/gpt-4o-mini", "estimate_usd": 0.0001506, "purpose": "curate:pair", "ts": "2026-10-20T22:42:06.408984+00:00"}

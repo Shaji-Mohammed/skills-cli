@@ -1,11 +1,10 @@
-"""Curation steps that need judgment, done with gpt-4o-mini through the spend-tracked client.
+"""Curation steps that need judgment, done with the local LLM (see router/llm.py).
 
 All three steps work from skill text only (names, descriptions, SKILL.md bodies), never from
-eval prompts. Each step has a `*_request` builder used both to make the call and to estimate
-its cost up front, so the estimate always matches what is actually sent.
+eval prompts. If a reply can't be parsed, each step falls back to the conservative choice:
+keep the skill, keep its description. Parse failures are counted in the run metrics.
 """
 
-import json
 from collections.abc import Callable
 from concurrent.futures import ThreadPoolExecutor
 from typing import Any
@@ -13,11 +12,10 @@ from typing import Any
 import numpy as np
 
 from router.corpus.curate import Removed, Skill, _removed, preference
-from router.llm import LLMClient, request_body
+from router.llm import LLMClient, extract_json
 
-MODEL = "openai/gpt-4o-mini"
-JSON = {"type": "json_object"}
-WORKERS = 8
+# Ollama serves a few requests in parallel; more workers just queue on a 16 GB laptop.
+WORKERS = 2
 
 Request = tuple[list[dict[str, str]], int]  # (messages, max_tokens)
 
@@ -45,22 +43,9 @@ def _system_user(system: str, user: str) -> list[dict[str, str]]:
     return [{"role": "system", "content": system}, {"role": "user", "content": user}]
 
 
-def _call(client: LLMClient, req: Request, purpose: str) -> dict[str, Any]:
+def _call(client: LLMClient, req: Request) -> dict[str, Any] | None:
     messages, max_tokens = req
-    result = client.chat(
-        MODEL, messages, purpose=purpose, max_tokens=max_tokens, response_format=JSON
-    )
-    data: dict[str, Any] = json.loads(result.text)
-    return data
-
-
-def estimate_cost(client: LLMClient, requests: list[Request]) -> float:
-    """Upper-bound cost of the requests that aren't already cached."""
-    return sum(
-        client.estimate(MODEL, messages, max_tokens)
-        for messages, max_tokens in requests
-        if not client.is_cached(request_body(MODEL, messages, max_tokens, 0.0, JSON))
-    )
+    return extract_json(client.chat(messages, max_tokens=max_tokens).text)
 
 
 # --- 1. Pair judging: are two similar skills distinguishable? ---------------------------------
@@ -75,8 +60,10 @@ Compare skill A and skill B and answer with one verdict:
   (for example, one is a general router or superset of the other).
 - "distinct": a typical request clearly needs one rather than the other.
 
-Reply in JSON: {"verdict": "same" | "overlap" | "distinct", "reason": "<at most 20 words>"}"""
+Reply with only a JSON object, no other text:
+{"verdict": "same" | "overlap" | "distinct", "reason": "<at most 20 words>"}"""
 
+VERDICTS = {"same", "overlap", "distinct"}
 Pair = tuple[float, Skill, Skill]
 
 
@@ -102,13 +89,15 @@ def candidate_pairs(
 def judge_pairs(client: LLMClient, pairs: list[Pair]) -> list[dict[str, Any]]:
     def judge(pair: Pair) -> dict[str, Any]:
         sim, a, b = pair
-        verdict = _call(client, pair_request(a, b), "curate:pair")
+        data = _call(client, pair_request(a, b)) or {}
+        verdict = data.get("verdict")
         return {
             "a": a["id"],
             "b": b["id"],
             "cosine": round(sim, 4),
-            "verdict": verdict.get("verdict"),
-            "reason": verdict.get("reason", ""),
+            # Unparseable -> treated as distinct, so a bad reply can never delete a skill.
+            "verdict": verdict if verdict in VERDICTS else "parse_failed",
+            "reason": str(data.get("reason", "")),
         }
 
     with ThreadPoolExecutor(WORKERS) as pool:
@@ -143,7 +132,8 @@ CLASSIFY_SYSTEM = f"""You classify an AI-agent skill from its name and descripti
    or output). false if it only says when to trigger it (e.g. a list of phrases a user might
    say) without saying what the skill actually does.
 
-Reply in JSON: {{"domain": "<one key from the list>", "states_what": true | false}}"""
+Reply with only a JSON object, no other text:
+{{"domain": "<one key from the list>", "states_what": true | false}}"""
 
 
 def classify_request(s: Skill) -> Request:
@@ -152,11 +142,13 @@ def classify_request(s: Skill) -> Request:
 
 def classify(client: LLMClient, skills: list[Skill]) -> dict[str, dict[str, Any]]:
     def one(s: Skill) -> tuple[str, dict[str, Any]]:
-        data = _call(client, classify_request(s), "curate:classify")
+        data = _call(client, classify_request(s))
+        if data is None:
+            return s["id"], {"domain": "parse_failed", "states_what": True}
         domain = data.get("domain")
         return s["id"], {
             "domain": domain if domain in DOMAINS else "unclassified",
-            "states_what": bool(data.get("states_what", True)),
+            "states_what": data.get("states_what") is not False,
         }
 
     with ThreadPoolExecutor(WORKERS) as pool:
@@ -171,9 +163,9 @@ the skill does. Use only facts from the SKILL.md provided; do not invent feature
 Write at most 60 words: first what the skill does or produces, then one short clause on when to
 use it. Plain text, no quotes, no markdown.
 
-Reply in JSON: {"description": "<new description>"}"""
+Reply with only a JSON object, no other text: {"description": "<new description>"}"""
 
-BODY_CHARS = 4000  # enough of SKILL.md to see what the skill does, without paying for all of it
+BODY_CHARS = 4000  # enough of SKILL.md to see what the skill does, and fast to process locally
 
 
 def rewrite_request(s: Skill, body: str) -> Request:
@@ -183,10 +175,15 @@ def rewrite_request(s: Skill, body: str) -> Request:
 
 def rewrite(
     client: LLMClient, skills: list[Skill], read_body: Callable[[Skill], str]
-) -> dict[str, str]:
-    def one(s: Skill) -> tuple[str, str]:
-        data = _call(client, rewrite_request(s, read_body(s)), "curate:rewrite")
-        return s["id"], " ".join(str(data["description"]).split())
+) -> dict[str, str | None]:
+    """Return id -> new description, or None where the reply couldn't be parsed."""
+
+    def one(s: Skill) -> tuple[str, str | None]:
+        data = _call(client, rewrite_request(s, read_body(s)))
+        text = (
+            " ".join(str(data["description"]).split()) if data and data.get("description") else ""
+        )
+        return s["id"], text or None
 
     with ThreadPoolExecutor(WORKERS) as pool:
         return dict(pool.map(one, skills))

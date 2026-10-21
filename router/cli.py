@@ -6,7 +6,7 @@ from router.config import REPO_ROOT, SPEND_LEDGER, load_settings
 from router.corpus import collect as collect_mod
 from router.corpus import leaderboard, pipeline
 from router.llm import LLMClient, ResponseCache
-from router.spend import ConfirmationRequired, SpendLimitExceeded, SpendTracker
+from router.spend import SpendTracker
 
 app = typer.Typer(help="Route prompts to the skills they need.", no_args_is_help=True)
 corpus_app = typer.Typer(help="Build the skill corpus.", no_args_is_help=True)
@@ -47,22 +47,13 @@ def collect() -> None:
 
 
 @corpus_app.command()
-def curate(
-    yes: bool = typer.Option(
-        False, "--yes", help="Approve a run estimated above the confirm threshold"
-    ),
-) -> None:
-    """Apply every curation rule and write corpus/skills.jsonl (makes paid LLM calls)."""
+def curate() -> None:
+    """Apply every curation rule and write corpus/skills.jsonl (uses the local LLM)."""
     settings = load_settings()
-    tracker = SpendTracker(SPEND_LEDGER, settings.spend_limit_usd)
     client = LLMClient(
-        settings.openrouter_api_key, tracker, cache=ResponseCache(pipeline.LLM_CACHE)
+        settings.ollama_model, settings.ollama_url, cache=ResponseCache(pipeline.LLM_CACHE)
     )
-    try:
-        run_path = pipeline.run_curation(client, tracker, settings.spend_confirm_usd, yes)
-    except (SpendLimitExceeded, ConfirmationRequired) as e:
-        typer.echo(f"Stopped: {e}", err=True)
-        raise typer.Exit(1) from e
+    run_path = pipeline.run_curation(client)
     typer.echo(f"Curation run saved to {run_path.relative_to(REPO_ROOT)}")
 
 

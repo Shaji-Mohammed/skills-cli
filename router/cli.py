@@ -6,7 +6,7 @@ from router.config import REPO_ROOT, SPEND_LEDGER, load_settings
 from router.corpus import collect as collect_mod
 from router.corpus import leaderboard, pipeline
 from router.corpus import report as corpus_report
-from router.evalset import equivalence
+from router.evalset import equivalence, handwritten, slots
 from router.llm import LLMClient, ResponseCache
 from router.runs import DirtyTree
 from router.spend import SpendTracker
@@ -98,6 +98,39 @@ def equivalence_candidates(
         f"Review {equivalence.REVIEW_CSV.relative_to(REPO_ROOT)} "
         f"(run {run_path.relative_to(REPO_ROOT)})"
     )
+
+
+@evals_app.command("handwritten-slots")
+def handwritten_slots(
+    allow_dirty: bool = typer.Option(
+        False, "--allow-dirty", help="Run from uncommitted code (the run can't be quoted)"
+    ),
+) -> None:
+    """Draw the 50 target slots for hand-written implied prompts (uses the local LLM)."""
+    settings = load_settings()
+    client = LLMClient(
+        settings.ollama_model, settings.ollama_url, cache=ResponseCache(equivalence.LLM_CACHE)
+    )
+    try:
+        run_path = slots.build(client, allow_dirty=allow_dirty)
+    except DirtyTree as e:
+        typer.echo(f"Stopped: {e}", err=True)
+        raise typer.Exit(1) from e
+    typer.echo(
+        f"Wrote {slots.SHEET.relative_to(REPO_ROOT)} (run {run_path.relative_to(REPO_ROOT)})"
+    )
+
+
+@evals_app.command("check-handwritten")
+def check_handwritten() -> None:
+    """Run filled hand-written prompts through the D1-D4 filters and label checks."""
+    total, results = handwritten.check_sheet(slots.SHEET)
+    failing = [r for r in results if r["problems"]]
+    for r in failing:
+        typer.echo(f"slot {r['slot']}:")
+        for p in r["problems"]:
+            typer.echo(f"  - {p}")
+    typer.echo(f"{len(results)} of {total} rows filled; {len(failing)} with problems")
 
 
 @evals_app.command("freeze-equivalence")

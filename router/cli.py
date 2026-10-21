@@ -6,7 +6,7 @@ from router.config import REPO_ROOT, SPEND_LEDGER, load_settings
 from router.corpus import collect as collect_mod
 from router.corpus import leaderboard, pipeline, product_locked
 from router.corpus import report as corpus_report
-from router.evalset import drafts, equivalence, handwritten, slots
+from router.evalset import drafts, equivalence, handwritten, pool, slots
 from router.llm import LLMClient, ResponseCache
 from router.runs import DirtyTree
 from router.spend import SpendTracker
@@ -210,6 +210,39 @@ def draft(
         typer.echo(f"Stopped: {e}", err=True)
         raise typer.Exit(1) from e
     typer.echo(f"Wrote {drafts.OUT.relative_to(REPO_ROOT)} (run {run_path.relative_to(REPO_ROOT)})")
+
+
+@evals_app.command("pool-split")
+def pool_split(
+    allow_dirty: bool = typer.Option(
+        False, "--allow-dirty", help="Run from uncommitted code (the run can't be quoted)"
+    ),
+) -> None:
+    """Pool prompts, drop near-duplicates, split dev/test and write the review sheets."""
+    try:
+        run_path = pool.build(allow_dirty=allow_dirty)
+    except DirtyTree as e:
+        typer.echo(f"Stopped: {e}", err=True)
+        raise typer.Exit(1) from e
+    typer.echo(
+        f"Review {pool.TEST_REVIEW.relative_to(REPO_ROOT)} and "
+        f"{pool.DEV_REVIEW.relative_to(REPO_ROOT)} (run {run_path.relative_to(REPO_ROOT)})"
+    )
+
+
+@evals_app.command("apply-review")
+def apply_review(
+    allow_dirty: bool = typer.Option(
+        False, "--allow-dirty", help="Run from uncommitted code (the run can't be quoted)"
+    ),
+) -> None:
+    """Write evals/dev.jsonl and lock evals/test.jsonl from the reviewed sheets."""
+    try:
+        run_path, sha = pool.apply_review(allow_dirty=allow_dirty)
+    except DirtyTree as e:
+        typer.echo(f"Stopped: {e}", err=True)
+        raise typer.Exit(1) from e
+    typer.echo(f"Locked evals/test.jsonl sha256={sha} (run {run_path.relative_to(REPO_ROOT)})")
 
 
 @evals_app.command("check-handwritten")

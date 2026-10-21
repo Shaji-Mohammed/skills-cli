@@ -92,6 +92,18 @@ slice (which overlaps the first two).
 Every result is reported for `hand_written` and `model_drafted` separately as well as combined,
 because qwen3.5:9b both drafts prompts and acts as the fallback.
 
+**Product-locked skills are explicit-bucket only.** A skill is product-locked if a prompt can
+only select it by naming its product or hosted service, because the product is the means by
+which the capability is delivered (RunComfy, Higgsfield, Tavily/Exa, Stripe Projects, Caveman,
+Agentix, shoehorn, Kling, Firecrawl and similar). Product-locked skills never appear in implied
+prompts, hand-written or drafted. The confirmed list is `corpus/product_locked.json`: qwen
+pre-screens every skill, and a person confirms each flag.
+
+**Environment cues are allowed in implied prompts; capability names are not.** An implied
+prompt may name what the user already has ("our Vue app", "our Azure subscription", "we use
+Clerk"), but not what the skill provides: no format, tool, product or service that does the
+job. This applies to hand-written prompts and qwen's implied drafts alike.
+
 - Multi-skill target: about 70 explicit and 30+ implied. About 3 in 4 are pairs and 1 in 4 are
   triples.
 - Coverage: each skill appears in at most 3 gold sets, and at least 250 distinct skills appear

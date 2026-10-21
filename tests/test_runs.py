@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from router.runs import file_sha256, git_state, start_run
+from router.runs import DirtyTree, file_sha256, git_state, start_run
 from router.splits import TestSetLocked, load_split
 
 
@@ -18,6 +18,7 @@ def test_start_run_writes_manifest(tmp_path: Path) -> None:
         evalset_path=None,
         results_dir=tmp_path / "results",
         repo=tmp_path,
+        allow_dirty=True,
     )
     run.write_metrics({"recall": 1.0})
     run.write_predictions([{"id": 1}])
@@ -31,6 +32,22 @@ def test_start_run_writes_manifest(tmp_path: Path) -> None:
     assert manifest["git_dirty"] is True
     assert json.loads((run.path / "metrics.json").read_text()) == {"recall": 1.0}
     assert (run.path / "predictions.jsonl").read_text() == '{"id": 1}\n'
+
+
+def test_dirty_tree_refused_by_default(tmp_path: Path) -> None:
+    with pytest.raises(DirtyTree):
+        start_run("x", {}, None, None, results_dir=tmp_path / "results", repo=tmp_path)
+    assert not (tmp_path / "results").exists()
+
+
+def test_set_corpus_records_output_version(tmp_path: Path) -> None:
+    run = start_run(
+        "x", {}, None, None, results_dir=tmp_path / "r", repo=tmp_path, allow_dirty=True
+    )
+    corpus = tmp_path / "skills.jsonl"
+    corpus.write_text("{}\n")
+    run.set_corpus(corpus)
+    assert json.loads((run.path / "run.json").read_text())["corpus_version"] == file_sha256(corpus)
 
 
 def test_git_state_clean_and_dirty(tmp_path: Path) -> None:

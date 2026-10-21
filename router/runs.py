@@ -54,9 +54,20 @@ def _package_versions() -> dict[str, str]:
     return versions
 
 
+class DirtyTree(RuntimeError):
+    """Raised when a run would start from uncommitted code."""
+
+
 @dataclass
 class Run:
     path: Path
+
+    def set_corpus(self, corpus_path: Path) -> None:
+        """Record the corpus version for runs that produce the corpus rather than read it."""
+        manifest = json.loads((self.path / "run.json").read_text())
+        manifest["corpus_path"] = str(corpus_path)
+        manifest["corpus_version"] = file_sha256(corpus_path)
+        (self.path / "run.json").write_text(json.dumps(manifest, indent=2) + "\n")
 
     def write_metrics(self, metrics: dict[str, Any]) -> None:
         (self.path / "metrics.json").write_text(json.dumps(metrics, indent=2) + "\n")
@@ -74,11 +85,16 @@ def start_run(
     evalset_path: Path | None,
     results_dir: Path = RESULTS_DIR,
     repo: Path = REPO_ROOT,
+    allow_dirty: bool = False,
 ) -> Run:
+    """Call before the run does any work: the git state must describe the code that ran,
+    not the outputs the run is about to write."""
+    commit, dirty = git_state(repo)
+    if dirty and not allow_dirty:
+        raise DirtyTree("Uncommitted changes: commit first, or pass allow_dirty for a scratch run")
     now = datetime.now(UTC)
     path = results_dir / f"{now.strftime('%Y%m%dT%H%M%SZ')}_{name}"
     path.mkdir(parents=True, exist_ok=False)
-    commit, dirty = git_state(repo)
     manifest = {
         "name": name,
         "started_at": now.isoformat(),

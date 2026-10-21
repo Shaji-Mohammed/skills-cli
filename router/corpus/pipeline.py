@@ -84,8 +84,25 @@ def prefix_cluster_density(
     return sorted(rows, key=lambda r: -r["mean_cosine"])
 
 
-def run_curation(client: LLMClient, params: CurationParams | None = None) -> Path:
+def run_curation(
+    client: LLMClient, params: CurationParams | None = None, allow_dirty: bool = False
+) -> Path:
     params = params or CurationParams()
+    run = start_run(
+        "curation",
+        config={
+            **asdict(params),
+            "pair_judge_min_cosine": PAIR_JUDGE_MIN_COSINE,
+            "max_domain_share": MAX_DOMAIN_SHARE,
+            "embedding_model": DEFAULT_MODEL,
+            "llm_model": client.model,
+            "snapshot_version": file_sha256(SNAPSHOT),
+            "raw_version": file_sha256(RAW),
+        },
+        corpus_path=None,
+        evalset_path=None,
+        allow_dirty=allow_dirty,
+    )
     snapshot_size = len(json.loads(SNAPSHOT.read_text())["skills"])
     skills = read_jsonl(RAW)
     for s in skills:
@@ -186,19 +203,6 @@ def run_curation(client: LLMClient, params: CurationParams | None = None) -> Pat
         "prefix_clusters": prefix_cluster_density(skills, final_vectors),
         "corpus_version": file_sha256(SKILLS),
     }
-    run = start_run(
-        "curation",
-        config={
-            **asdict(params),
-            "pair_judge_min_cosine": PAIR_JUDGE_MIN_COSINE,
-            "max_domain_share": MAX_DOMAIN_SHARE,
-            "embedding_model": DEFAULT_MODEL,
-            "llm_model": client.model,
-            "snapshot_version": file_sha256(SNAPSHOT),
-            "raw_version": file_sha256(RAW),
-        },
-        corpus_path=SKILLS,
-        evalset_path=None,
-    )
+    run.set_corpus(SKILLS)
     run.write_metrics(metrics)
     return run.path

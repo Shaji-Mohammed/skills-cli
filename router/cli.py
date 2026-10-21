@@ -5,7 +5,9 @@ import typer
 from router.config import REPO_ROOT, SPEND_LEDGER, load_settings
 from router.corpus import collect as collect_mod
 from router.corpus import leaderboard, pipeline
+from router.corpus import report as corpus_report
 from router.llm import LLMClient, ResponseCache
+from router.runs import DirtyTree
 from router.spend import SpendTracker
 
 app = typer.Typer(help="Route prompts to the skills they need.", no_args_is_help=True)
@@ -47,14 +49,30 @@ def collect() -> None:
 
 
 @corpus_app.command()
-def curate() -> None:
+def curate(
+    allow_dirty: bool = typer.Option(
+        False, "--allow-dirty", help="Run from uncommitted code (the run can't be quoted)"
+    ),
+) -> None:
     """Apply every curation rule and write corpus/skills.jsonl (uses the local LLM)."""
     settings = load_settings()
     client = LLMClient(
         settings.ollama_model, settings.ollama_url, cache=ResponseCache(pipeline.LLM_CACHE)
     )
-    run_path = pipeline.run_curation(client)
+    try:
+        run_path = pipeline.run_curation(client, allow_dirty=allow_dirty)
+    except DirtyTree as e:
+        typer.echo(f"Stopped: {e}", err=True)
+        raise typer.Exit(1) from e
     typer.echo(f"Curation run saved to {run_path.relative_to(REPO_ROOT)}")
+
+
+@corpus_app.command()
+def report() -> None:
+    """Write corpus/CURATION.md from the latest curation run."""
+    run_dir = corpus_report.latest_run()
+    (pipeline.CORPUS_DIR / "CURATION.md").write_text(corpus_report.render(run_dir))
+    typer.echo(f"Wrote corpus/CURATION.md from {run_dir.relative_to(REPO_ROOT)}")
 
 
 if __name__ == "__main__":

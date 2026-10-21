@@ -1,0 +1,20 @@
+{
+  "name": "product_locked_prescreen",
+  "started_at": "2026-10-21T21:42:27.029872+00:00",
+  "config": {
+    "llm_model": "qwen3.5:9b",
+    "prompt": "You classify one AI-agent skill.\n\nA skill is PRODUCT-LOCKED if picking it means picking one specific product, model or library\namong interchangeable alternatives, and the user's environment would not settle that choice.\nLocked examples:\n- single-model skills: generate video with Kling 3.0, images with Nano Banana 2\n- single-provider skills: web search through Tavily or Exa, Stripe Projects\n- single-library migrations: migrate tests to shoehorn\n- skills that operate a vendor's own product: manage, set up or view stats for Caveman Cloud,\n  run the Agentix CEO agent\n\nA skill is NOT product-locked if:\n- it works inside a platform, framework or service the user already uses: Azure, Vue,\n  HyperFrames, a RunComfy account, Clerk, Firebase, Notion, Google Workspace and similar; or\n- it is a generic process skill that happens to live in a vendor's repo (for example lean\n  builds or code review from the Caveman repo); or\n- it names no product at all.\n\nWhen in doubt, answer false.\n\nReply with only a JSON object, no other text:\n{\"product_locked\": true | false, \"product\": \"<product name or empty>\",\n \"reason\": \"<at most 15 words>\"}"
+  },
+  "corpus_path": "/Users/shajimohammed/Desktop/Projects/skills_router_cli/corpus/skills.jsonl",
+  "corpus_version": "269860b82ceae5b47856aecb8f619a9d9efb5ff0f91f9e718cfc91f14b535859",
+  "evalset_path": null,
+  "evalset_version": null,
+  "git_commit": "51a32815209bfd2d58443dc9cee643cbf443e42b",
+  "git_dirty": false,
+  "python": "3.12.15",
+  "packages": {
+    "skill-router": "0.1.0",
+    "httpx": "0.28.1",
+    "typer": "0.27.3"
+  }
+}

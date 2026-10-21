@@ -2,12 +2,14 @@
 
 import typer
 
+from router import evaluate
 from router.config import REPO_ROOT, SPEND_LEDGER, load_settings
 from router.corpus import collect as collect_mod
 from router.corpus import leaderboard, pipeline, product_locked
 from router.corpus import report as corpus_report
 from router.evalset import drafts, equivalence, handwritten, pool, slots
 from router.llm import LLMClient, ResponseCache
+from router.retrieval import RetrievalConfig
 from router.runs import DirtyTree
 from router.spend import SpendTracker
 
@@ -16,6 +18,8 @@ corpus_app = typer.Typer(help="Build the skill corpus.", no_args_is_help=True)
 app.add_typer(corpus_app, name="corpus")
 evals_app = typer.Typer(help="Build the eval set.", no_args_is_help=True)
 app.add_typer(evals_app, name="evals")
+eval_app = typer.Typer(help="Evaluate routers on dev.", no_args_is_help=True)
+app.add_typer(eval_app, name="eval")
 
 
 @app.callback()
@@ -243,6 +247,46 @@ def apply_review(
         typer.echo(f"Stopped: {e}", err=True)
         raise typer.Exit(1) from e
     typer.echo(f"Locked evals/test.jsonl sha256={sha} (run {run_path.relative_to(REPO_ROOT)})")
+
+
+@eval_app.command("stage1-sweep")
+def stage1_sweep(
+    allow_dirty: bool = typer.Option(
+        False, "--allow-dirty", help="Run from uncommitted code (the run can't be quoted)"
+    ),
+) -> None:
+    """Stage 1 recall@10/20/40 on dev for every model x weight x description source."""
+    try:
+        run_path = evaluate.run_stage1_sweep(allow_dirty=allow_dirty)
+    except DirtyTree as e:
+        typer.echo(f"Stopped: {e}", err=True)
+        raise typer.Exit(1) from e
+    typer.echo(f"Saved {run_path.relative_to(REPO_ROOT)}")
+
+
+@eval_app.command("baseline-sweep")
+def baseline_sweep(
+    model: str = typer.Option("BAAI/bge-small-en-v1.5"),
+    source: str = typer.Option("original", help="original | rewritten"),
+    weight: float = typer.Option(0.7, help="Embedding weight in the hybrid score"),
+    allow_dirty: bool = typer.Option(
+        False, "--allow-dirty", help="Run from uncommitted code (the run can't be quoted)"
+    ),
+) -> None:
+    """Grid over the baseline's answer settings on dev, for one retriever config."""
+    if source not in ("original", "rewritten"):
+        raise typer.BadParameter("source must be original or rewritten")
+    cfg = RetrievalConfig(
+        embedding_model=model,
+        description_source="original" if source == "original" else "rewritten",
+        embedding_weight=weight,
+    )
+    try:
+        run_path = evaluate.sweep_baseline(cfg, allow_dirty=allow_dirty)
+    except DirtyTree as e:
+        typer.echo(f"Stopped: {e}", err=True)
+        raise typer.Exit(1) from e
+    typer.echo(f"Saved {run_path.relative_to(REPO_ROOT)}")
 
 
 @evals_app.command("check-handwritten")

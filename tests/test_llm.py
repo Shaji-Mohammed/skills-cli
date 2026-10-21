@@ -29,6 +29,18 @@ def test_chat_sends_deterministic_non_thinking_request() -> None:
     assert seen[0]["stream"] is False
 
 
+def test_seed_and_temperature_are_sent_and_change_the_cache_key(tmp_path: Path) -> None:
+    http, seen = fake_http("hi")
+    cache = ResponseCache(tmp_path / "c.jsonl")
+    client = LLMClient("m", http=http, cache=cache)
+    client.chat(MESSAGES)
+    client.chat(MESSAGES, temperature=0.7, seed=3)
+    client.chat(MESSAGES, temperature=0.7, seed=3)  # cached
+    assert len(seen) == 2
+    assert "seed" not in seen[0]["options"]
+    assert seen[1]["options"] == {"temperature": 0.7, "num_predict": 256, "seed": 3}
+
+
 def test_cache_hit_skips_the_model(tmp_path: Path) -> None:
     http, seen = fake_http("hi")
     LLMClient("m", http=http, cache=ResponseCache(tmp_path / "c.jsonl")).chat(MESSAGES)

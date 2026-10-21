@@ -6,7 +6,7 @@ from router.config import REPO_ROOT, SPEND_LEDGER, load_settings
 from router.corpus import collect as collect_mod
 from router.corpus import leaderboard, pipeline, product_locked
 from router.corpus import report as corpus_report
-from router.evalset import equivalence, handwritten, slots
+from router.evalset import drafts, equivalence, handwritten, slots
 from router.llm import LLMClient, ResponseCache
 from router.runs import DirtyTree
 from router.spend import SpendTracker
@@ -191,6 +191,25 @@ def select_handwritten(
     typer.echo(
         f"Updated {slots.SHEET.relative_to(REPO_ROOT)} (run {run_path.relative_to(REPO_ROOT)})"
     )
+
+
+@evals_app.command()
+def draft(
+    allow_dirty: bool = typer.Option(
+        False, "--allow-dirty", help="Run from uncommitted code (the run can't be quoted)"
+    ),
+) -> None:
+    """Draft 200 explicit, 95 implied and 80 no-skill prompts with qwen (uses the local LLM)."""
+    settings = load_settings()
+    client = LLMClient(
+        settings.ollama_model, settings.ollama_url, cache=ResponseCache(equivalence.LLM_CACHE)
+    )
+    try:
+        run_path = drafts.generate(client, allow_dirty=allow_dirty)
+    except DirtyTree as e:
+        typer.echo(f"Stopped: {e}", err=True)
+        raise typer.Exit(1) from e
+    typer.echo(f"Wrote {drafts.OUT.relative_to(REPO_ROOT)} (run {run_path.relative_to(REPO_ROOT)})")
 
 
 @evals_app.command("check-handwritten")

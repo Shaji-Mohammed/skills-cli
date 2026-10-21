@@ -80,14 +80,25 @@ class LLMClient:
         self.http = http or httpx.Client(timeout=300)
         self.cache = cache
 
-    def chat(self, messages: list[dict[str, str]], max_tokens: int = 256) -> ChatResult:
+    def chat(
+        self,
+        messages: list[dict[str, str]],
+        max_tokens: int = 256,
+        # Integer 0, not 0.0: it serializes as "0", matching the cache keys of earlier calls.
+        temperature: float = 0,
+        seed: int | None = None,
+    ) -> ChatResult:
+        options: dict[str, Any] = {"temperature": temperature, "num_predict": max_tokens}
+        # Only set when given, so cache keys of earlier (seedless) calls stay unchanged.
+        if seed is not None:
+            options["seed"] = seed
         body: dict[str, Any] = {
             "model": self.model,
             "messages": messages,
             "stream": False,
             # qwen3.5 thinks by default (~25 s for a one-line reply); these are short judgments.
             "think": False,
-            "options": {"temperature": 0, "num_predict": max_tokens},
+            "options": options,
         }
         key = ResponseCache.key(body)
         if self.cache is not None and (hit := self.cache.get(key)) is not None:

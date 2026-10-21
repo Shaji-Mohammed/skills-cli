@@ -1,0 +1,56 @@
+{
+  "name": "handwritten_redraw",
+  "started_at": "2026-10-21T21:27:41.486151+00:00",
+  "config": {
+    "seed": 20261023,
+    "draw": "redraw1",
+    "singles": 8,
+    "pairs": 6,
+    "min_cross_repo_pairs": 3,
+    "max_pairs_per_repo": 2,
+    "swaps": {
+      "5": "product-locked: Caveman",
+      "13": "umbrella skill: a router over the other skills in its repo",
+      "19": "product-locked: shoehorn",
+      "23": "product-locked: Kling on RunComfy",
+      "24": "product-locked: Agentix",
+      "29": "product-locked: Stripe Projects",
+      "37": "product-locked reserve: RunComfy",
+      "39": "product-locked reserve: HyperFrames",
+      "42": "product-locked: RunComfy (ai-video-generation)",
+      "43": "product-locked: web-search uses Tavily/Exa",
+      "44": "pair doubt: discovering skills then planning doesn't REQUIRE both",
+      "54": "product-locked: Higgsfield",
+      "55": "pair doubt: gws-shared is a support skill, not REQUIRED for an upload",
+      "56": "product-locked reserve: Firecrawl",
+      "58": "product-locked reserve: Caveman"
+    },
+    "product_locked_source": "named+qwen",
+    "named_products": [
+      "agentix",
+      "caveman",
+      "exa",
+      "firecrawl",
+      "higgsfield",
+      "hyperframes",
+      "kling",
+      "runcomfy",
+      "shoehorn",
+      "tavily"
+    ],
+    "llm_model": "qwen3.5:9b",
+    "swaps_sha256": "4879d9d8000e1b73ffab96180cae90461f5c36ff3e35eff7d42dfc4a30ca1b8a"
+  },
+  "corpus_path": "/Users/shajimohammed/Desktop/Projects/skills_router_cli/corpus/skills.jsonl",
+  "corpus_version": "269860b82ceae5b47856aecb8f619a9d9efb5ff0f91f9e718cfc91f14b535859",
+  "evalset_path": null,
+  "evalset_version": null,
+  "git_commit": "76c1fc481ea521de3a3ae6c657df709607d547bc",
+  "git_dirty": false,
+  "python": "3.12.15",
+  "packages": {
+    "skill-router": "0.1.0",
+    "httpx": "0.28.1",
+    "typer": "0.27.3"
+  }
+}

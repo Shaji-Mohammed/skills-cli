@@ -1,0 +1,26 @@
+{
+  "swapped_slots": [
+    "5",
+    "13",
+    "19",
+    "23",
+    "24",
+    "29",
+    "37",
+    "39",
+    "42",
+    "43",
+    "44",
+    "54",
+    "55",
+    "56",
+    "58"
+  ],
+  "excluded_product_locked": 195,
+  "pair_pool_after_exclusions": 166,
+  "pairs_judged": 7,
+  "pairs_accepted": 6,
+  "cross_repo_pairs_accepted": 1,
+  "singles_drawn": 8,
+  "sheet_sha256": "a275e07c82fac87a6d646755197135497b3dba73174549b6f37d63e4f2b4540c"
+}

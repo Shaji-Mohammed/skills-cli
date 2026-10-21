@@ -1,0 +1,21 @@
+{
+  "name": "handwritten_select",
+  "started_at": "2026-10-21T22:02:42.008465+00:00",
+  "config": {
+    "seed": 20261122,
+    "singles": 18,
+    "pairs": 7
+  },
+  "corpus_path": "/Users/shajimohammed/Desktop/Projects/skills_router_cli/corpus/skills.jsonl",
+  "corpus_version": "269860b82ceae5b47856aecb8f619a9d9efb5ff0f91f9e718cfc91f14b535859",
+  "evalset_path": null,
+  "evalset_version": null,
+  "git_commit": "1d9ea4c87e73aff7fdba200d7e24f0d80ab7dba7",
+  "git_dirty": false,
+  "python": "3.12.15",
+  "packages": {
+    "skill-router": "0.1.0",
+    "httpx": "0.28.1",
+    "typer": "0.27.3"
+  }
+}

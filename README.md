@@ -4,8 +4,8 @@ Given a natural-language prompt, return every skill it needs from a curated corp
 skills. Three-stage cascade: graph-expanded hybrid retrieval, then calibrated scoring, then an LLM
 fallback for uncertain candidates only. See [ROADMAP.md](ROADMAP.md) for the plan.
 
-**Status:** Phase 1 done: a curated corpus of 500 skills ([corpus/CURATION.md](corpus/CURATION.md)).
-No routing results yet.
+**Status:** Phase 2 done: a curated corpus of 500 skills ([corpus/CURATION.md](corpus/CURATION.md))
+and a reviewed eval set with a locked test split. No routing results yet.
 
 ## Setup
 
@@ -45,11 +45,38 @@ you reuse its skills.
 
 - Every number in this README comes from a saved run in `results/` whose `run.json` records the
   config, corpus version, eval-set version and git commit.
-- Results are reported with 95% Wilson confidence intervals, by bucket and separately for
-  hand-written and model-drafted prompts (qwen3.5:9b drafts prompts and is also the fallback).
-- The test set is locked until the final evaluation. Its SHA-256 will be recorded here when it's
-  created in Phase 2.
-- Planned test split: 150 prompts, about 75 explicit, 45 implied (about 9 hand-written), 30
-  no-skill and at least 38 multi-skill. Per-bucket intervals will be wide: with 45 items, an
-  80% score has a 95% interval of about 66–89%. Labeling rules: [evals/LABELING.md](evals/LABELING.md).
+- Results are reported with 95% Wilson confidence intervals, by bucket and separately by prompt
+  source: `model_drafted` (qwen3.5:9b, which is also the fallback) and `claude_drafted`.
 - All paid API calls go through a spend tracker with a hard $5 cap: `uv run router spend`.
+
+## Eval set
+
+Labeling rules: [evals/LABELING.md](evals/LABELING.md). Built by
+`results/20261022T000223Z_apply_review`.
+
+**The test set is locked** and isn't run until the final evaluation (Phase 7):
+
+```
+evals/test.jsonl  sha256 5e49c9221f01fe959662f4e99284cc3ea253fededf9f0675e783569654d4bc46
+```
+
+| Split | Items | Explicit | Implied | No-skill | Multi-skill | claude_drafted | Review status |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| test | 123 | 67 | 35 | 21 | 24 | 10 | 123 full (113 accepted, 10 edited; 27 dropped) |
+| dev | 217 | 111 | 66 | 40 | 44 | 15 | 67 sampled (54 accepted, 13 edited; 17 dropped), 150 unreviewed |
+
+### Known limitations
+
+- **Test is small.** 123 items after review, so per-bucket intervals are wide: with 35 implied
+  items, an 80% score has a 95% interval of about 64–90%.
+- **No-skill accuracy is optimistic.** Every no-skill prompt is general knowledge or life advice.
+  There are no hard negatives (for example, coding questions that need no skill).
+- **Near-duplicate filtering misses paraphrases.** Three no-skill dev prompts turned out to be
+  near-duplicates of test prompts and were dropped in review; the D4 filter (cosine ≥ 0.95)
+  didn't catch them.
+- **No prompt was written by a person.** The 25 prompts planned as hand-written were drafted by
+  Claude at the reviewer's request (`claude_drafted`); the rest were drafted by qwen3.5:9b. All
+  test labels were reviewed by a person, but prompt phrasing reflects two LLMs, so results may
+  overstate accuracy on real user phrasing. The roadmap's goal of 40+ hand-written implied
+  prompts was not met.
+- **Dev is mostly unreviewed.** 150 of 217 dev items kept their drafted labels unchecked.

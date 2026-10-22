@@ -81,6 +81,16 @@ corpus gives the same result without re-running the model.
 
 ## Phase 2
 
+**Lesson: D4 at cosine 0.95 misses paraphrases.** Three no-skill dev prompts were near-duplicates
+of test prompts and had to be dropped by hand in review. A 0.95 cutoff only catches near-verbatim
+copies. Next time, either lower the D4 threshold for no-skill prompts or check cross-split
+neighbours (each dev prompt's nearest test prompt) before splitting, and generate no-skill
+prompts with more distinct topics than 20 cycled ones.
+
+**The 25 "hand-written" prompts were drafted by Claude.** They were relabelled
+`source = claude_drafted` before the test set was locked. The source comparison in results is
+therefore qwen vs Claude, not model vs human.
+
 **Known over-routing risk: the design-quality cluster.** Skills that improve how a UI looks or
 feels overlap heavily, but they're kept distinct by policy rather than merged into an equivalence
 set. Each has a different approach or house style, and merging them would hide real routing

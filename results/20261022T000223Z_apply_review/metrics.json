@@ -1,0 +1,34 @@
+{
+  "dev": 217,
+  "dev_review_status": {
+    "sampled": 67,
+    "unreviewed": 150
+  },
+  "dev_review_decisions": {
+    "accept": 54,
+    "edit": 13,
+    "drop": 17
+  },
+  "dev_by_bucket": {
+    "implied": 66,
+    "explicit": 111,
+    "no_skill": 40,
+    "multi_skill": 44,
+    "claude_drafted": 15
+  },
+  "test": 123,
+  "test_review_decisions": {
+    "accept": 113,
+    "edit": 10,
+    "drop": 27
+  },
+  "test_by_bucket": {
+    "implied": 35,
+    "explicit": 67,
+    "no_skill": 21,
+    "multi_skill": 24,
+    "claude_drafted": 10
+  },
+  "dev_sha256": "7958e7226080be2176e774fb5227968eb437402ec75c7b2b8498fe397da3029d",
+  "test_sha256": "5e49c9221f01fe959662f4e99284cc3ea253fededf9f0675e783569654d4bc46"
+}

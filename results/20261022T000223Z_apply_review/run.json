@@ -1,0 +1,20 @@
+{
+  "name": "apply_review",
+  "started_at": "2026-10-22T00:02:23.905907+00:00",
+  "config": {
+    "dev_review_sha256": "cf76d36cfd7d731577efa7f5283d93b9a442b99dc1190ce07e9ba88845a5752e",
+    "test_review_sha256": "a7db34f967a73552b7b44694bf29b7fce95552659c24016e7552d6473016a130"
+  },
+  "corpus_path": "/Users/shajimohammed/Desktop/Projects/skills_router_cli/corpus/skills.jsonl",
+  "corpus_version": "269860b82ceae5b47856aecb8f619a9d9efb5ff0f91f9e718cfc91f14b535859",
+  "evalset_path": null,
+  "evalset_version": null,
+  "git_commit": "f58b82deab38a97a3f265feb0fcf9eedf52a9682",
+  "git_dirty": false,
+  "python": "3.12.15",
+  "packages": {
+    "skill-router": "0.1.0",
+    "httpx": "0.28.1",
+    "typer": "0.27.3"
+  }
+}

@@ -4,8 +4,40 @@ Given a natural-language prompt, return every skill it needs from a curated corp
 skills. Three-stage cascade: graph-expanded hybrid retrieval, then calibrated scoring, then an LLM
 fallback for uncertain candidates only. See [ROADMAP.md](ROADMAP.md) for the plan.
 
-**Status:** Phase 2 done: a curated corpus of 500 skills ([corpus/CURATION.md](corpus/CURATION.md))
-and a reviewed eval set with a locked test split. No routing results yet.
+**Status:** Phase 3 done: a curated corpus of 500 skills ([corpus/CURATION.md](corpus/CURATION.md)),
+a reviewed eval set with a locked test split, and a measured retrieval baseline on dev.
+
+## Results so far (dev only)
+
+All on dev (217 items; 177 with a non-empty gold set). Test hasn't been run.
+
+**Stage 1 retrieval** (`results/20261022T000335Z_stage1_sweep`): 28 configs. Chosen and pinned in
+`configs/stage1.json`: bge-small-en-v1.5, rewritten descriptions, embedding weight 0.8.
+
+| Retriever | recall@10 | recall@20 | recall@40 | implied recall@20 | p50 / p95 latency |
+| --- | --- | --- | --- | --- | --- |
+| BM25 only | 67.2% (60–74) | 72.9% (66–79) | 75.7% (69–81) | 72.7% (61–82) | 9.5 / 14.3 ms |
+| Embeddings only (original) | 79.7% (73–85) | 84.8% (79–89) | 92.1% (87–95) | 84.9% (74–92) | 9.1 / 13.9 ms |
+| **Hybrid, chosen** | **84.2% (78–89)** | **91.5% (86–95)** | **94.3% (90–97)** | **89.4% (80–95)** | 9.6 / 14.0 ms |
+
+The best configs differ by at most 3 items, and original vs rewritten descriptions differ by 1–2
+items, inside the intervals. Recall@20 at 91.5% is short of the 97–98% that the roadmap says
+Phase 4 must reach.
+
+**End-to-end baseline** (`results/20261022T003640Z_baseline`): the top-1 shortlist skill, or
+nothing when the best cosine is below 0.6 (settings from `results/20261022T003602Z_baseline_sweep`).
+
+| Group | Exact-set match (equivalence-aware) |
+| --- | --- |
+| Overall | 53.0% (46–60), 115/217 |
+| Explicit | 45.1% (36–54), 50/111 |
+| Implied | 43.9% (33–56), 29/66 |
+| No-skill | 90.0% (77–96), 36/40 |
+| Multi-skill | 0.0% (0–8), 0/44: top-1 can't return two skills |
+| model_drafted / claude_drafted | 54.5% (48–61) / 33.3% (15–58) |
+
+Failures: 83 wrong top-1 with gold in the shortlist, 15 gold missing from the shortlist, 4
+skills returned for no-skill prompts. Retrieval latency p50 10.7 ms, p95 16.1 ms.
 
 ## Setup
 

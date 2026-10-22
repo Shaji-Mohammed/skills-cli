@@ -1,0 +1,255 @@
+{
+  "groups": {
+    "bucket:explicit": {
+      "exact_strict": {
+        "k": 50,
+        "n": 111,
+        "rate": 0.4505,
+        "wilson95": [
+          0.3611,
+          0.5431
+        ]
+      },
+      "exact_equivalence": {
+        "k": 50,
+        "n": 111,
+        "rate": 0.4505,
+        "wilson95": [
+          0.3611,
+          0.5431
+        ]
+      },
+      "stage1_recall": {
+        "k": 103,
+        "n": 111,
+        "rate": 0.9279,
+        "wilson95": [
+          0.8642,
+          0.963
+        ]
+      },
+      "mean_precision": 0.6396,
+      "mean_recall": 0.5405
+    },
+    "bucket:implied": {
+      "exact_strict": {
+        "k": 29,
+        "n": 66,
+        "rate": 0.4394,
+        "wilson95": [
+          0.3263,
+          0.5592
+        ]
+      },
+      "exact_equivalence": {
+        "k": 29,
+        "n": 66,
+        "rate": 0.4394,
+        "wilson95": [
+          0.3263,
+          0.5592
+        ]
+      },
+      "stage1_recall": {
+        "k": 59,
+        "n": 66,
+        "rate": 0.8939,
+        "wilson95": [
+          0.7969,
+          0.9477
+        ]
+      },
+      "mean_precision": 0.6061,
+      "mean_recall": 0.5227
+    },
+    "bucket:no_skill": {
+      "exact_strict": {
+        "k": 36,
+        "n": 40,
+        "rate": 0.9,
+        "wilson95": [
+          0.7695,
+          0.9604
+        ]
+      },
+      "exact_equivalence": {
+        "k": 36,
+        "n": 40,
+        "rate": 0.9,
+        "wilson95": [
+          0.7695,
+          0.9604
+        ]
+      },
+      "stage1_recall": {
+        "k": 40,
+        "n": 40,
+        "rate": 1.0,
+        "wilson95": [
+          0.9124,
+          1.0
+        ]
+      },
+      "mean_precision": 0.9,
+      "mean_recall": 1.0
+    },
+    "multi_skill": {
+      "exact_strict": {
+        "k": 0,
+        "n": 44,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.0803
+        ]
+      },
+      "exact_equivalence": {
+        "k": 0,
+        "n": 44,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.0803
+        ]
+      },
+      "stage1_recall": {
+        "k": 38,
+        "n": 44,
+        "rate": 0.8636,
+        "wilson95": [
+          0.7329,
+          0.936
+        ]
+      },
+      "mean_precision": 0.7273,
+      "mean_recall": 0.3523
+    },
+    "overall": {
+      "exact_strict": {
+        "k": 115,
+        "n": 217,
+        "rate": 0.53,
+        "wilson95": [
+          0.4636,
+          0.5953
+        ]
+      },
+      "exact_equivalence": {
+        "k": 115,
+        "n": 217,
+        "rate": 0.53,
+        "wilson95": [
+          0.4636,
+          0.5953
+        ]
+      },
+      "stage1_recall": {
+        "k": 202,
+        "n": 217,
+        "rate": 0.9309,
+        "wilson95": [
+          0.8891,
+          0.9577
+        ]
+      },
+      "mean_precision": 0.6774,
+      "mean_recall": 0.6198
+    },
+    "source:claude_drafted": {
+      "exact_strict": {
+        "k": 5,
+        "n": 15,
+        "rate": 0.3333,
+        "wilson95": [
+          0.1518,
+          0.5829
+        ]
+      },
+      "exact_equivalence": {
+        "k": 5,
+        "n": 15,
+        "rate": 0.3333,
+        "wilson95": [
+          0.1518,
+          0.5829
+        ]
+      },
+      "stage1_recall": {
+        "k": 13,
+        "n": 15,
+        "rate": 0.8667,
+        "wilson95": [
+          0.6212,
+          0.9626
+        ]
+      },
+      "mean_precision": 0.5333,
+      "mean_recall": 0.4333
+    },
+    "source:model_drafted": {
+      "exact_strict": {
+        "k": 110,
+        "n": 202,
+        "rate": 0.5446,
+        "wilson95": [
+          0.4757,
+          0.6118
+        ]
+      },
+      "exact_equivalence": {
+        "k": 110,
+        "n": 202,
+        "rate": 0.5446,
+        "wilson95": [
+          0.4757,
+          0.6118
+        ]
+      },
+      "stage1_recall": {
+        "k": 189,
+        "n": 202,
+        "rate": 0.9356,
+        "wilson95": [
+          0.893,
+          0.962
+        ]
+      },
+      "mean_precision": 0.6881,
+      "mean_recall": 0.6337
+    }
+  },
+  "failures": {
+    "MISS_STAGE1": 15,
+    "OVERROUTING": 4,
+    "WRONG_SCORER": 83,
+    "ABSTAIN": 0
+  },
+  "paths": {
+    "abstain": {
+      "share": {
+        "k": 36,
+        "n": 217,
+        "rate": 0.1659,
+        "wilson95": [
+          0.1223,
+          0.2211
+        ]
+      },
+      "latency_ms_p50": 5.3,
+      "latency_ms_p95": 8.2
+    },
+    "retrieval": {
+      "share": {
+        "k": 181,
+        "n": 217,
+        "rate": 0.8341,
+        "wilson95": [
+          0.7789,
+          0.8777
+        ]
+      },
+      "latency_ms_p50": 10.7,
+      "latency_ms_p95": 16.1
+    }
+  }
+}

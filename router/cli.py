@@ -322,6 +322,18 @@ def baseline(
     typer.echo(f"Saved {run_path.relative_to(REPO_ROOT)}")
 
 
+@eval_app.command("stage1-check")
+def stage1_check() -> None:
+    """CI check: dev recall@20 of the pinned config in configs/stage1.json stays above its floor."""
+    metrics, ok = evaluate.stage1_check()
+    for cap in evaluate.STAGE1_CAPS:
+        r = metrics[f"recall@{cap}"]
+        typer.echo(f"recall@{cap}: {r['rate']} ({r['k']}/{r['n']}), 95% CI {r['wilson95']}")
+    if not ok:
+        typer.echo("FAIL: recall@20 below min_recall_at_20 in configs/stage1.json", err=True)
+        raise typer.Exit(1)
+
+
 @evals_app.command("check-handwritten")
 def check_handwritten() -> None:
     """Run filled hand-written prompts through the D1-D4 filters and label checks."""

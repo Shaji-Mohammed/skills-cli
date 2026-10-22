@@ -1,0 +1,11 @@
+{
+  "_comment": "Stage 1 retriever chosen from results/20261022T000335Z_stage1_sweep (recall@20 = 162/177 on dev). CI fails if dev recall@20 drops below min_recall_at_20; the floor sits about 2 items below the measured value to absorb ONNX numeric drift across machines.",
+  "retrieval": {
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "description_source": "rewritten",
+    "embedding_weight": 0.8,
+    "gate": 0.0,
+    "cap": 20
+  },
+  "min_recall_at_20": 0.90
+}

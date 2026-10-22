@@ -196,3 +196,18 @@ def answer(sl: Shortlist, item_id: str, cfg: BaselineConfig) -> Prediction:
         path="retrieval",
         latency_ms=sl.latency_ms,
     )
+
+
+STAGE1_CONFIG = SKILLS.parent.parent / "configs" / "stage1.json"
+
+
+def stage1_check(path: Path = STAGE1_CONFIG) -> tuple[dict[str, Any], bool]:
+    """CI regression check: dev recall@20 for the pinned Stage 1 config must stay above its
+    floor. Deterministic (no LLM calls) and doesn't write a results run."""
+    spec = json.loads(path.read_text())
+    cfg = RetrievalConfig(**spec["retrieval"])
+    skills, eq, items = load_skills(), load_equivalence(EQUIVALENCE), load_items("dev")
+    index = HybridIndex(skills, cfg)
+    shortlists = [index.shortlist(p, cap=max(STAGE1_CAPS)) for p in _prompts("dev")]
+    metrics = stage1_metrics(items, shortlists, cfg.cap, eq)
+    return metrics, metrics["recall@20"]["rate"] >= spec["min_recall_at_20"]

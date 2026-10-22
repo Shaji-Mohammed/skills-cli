@@ -22,4 +22,12 @@ jobs:
         run: uv run mypy
       - name: Unit tests
         run: uv run pytest -q
-      # Stage 1 recall eval on dev is added in Phase 3, once a retriever exists.
+      - name: Cache embedding model
+        uses: actions/cache@v4
+        with:
+          path: ${{ github.workspace }}/.cache/fastembed
+          key: fastembed-bge-small-en-v1.5
+      - name: Stage 1 recall on dev (deterministic, no LLM)
+        env:
+          FASTEMBED_CACHE_DIR: ${{ github.workspace }}/.cache/fastembed
+        run: uv run router eval stage1-check

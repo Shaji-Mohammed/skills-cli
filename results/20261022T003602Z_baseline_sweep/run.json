@@ -1,0 +1,26 @@
+{
+  "name": "baseline_sweep",
+  "started_at": "2026-10-22T00:36:02.189729+00:00",
+  "config": {
+    "retrieval": {
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "description_source": "rewritten",
+      "embedding_weight": 0.8,
+      "gate": 0.6,
+      "cap": 20
+    },
+    "grid_size": 60
+  },
+  "corpus_path": "/Users/shajimohammed/Desktop/Projects/skills_router_cli/corpus/skills.jsonl",
+  "corpus_version": "269860b82ceae5b47856aecb8f619a9d9efb5ff0f91f9e718cfc91f14b535859",
+  "evalset_path": "/Users/shajimohammed/Desktop/Projects/skills_router_cli/evals/dev.jsonl",
+  "evalset_version": "7958e7226080be2176e774fb5227968eb437402ec75c7b2b8498fe397da3029d",
+  "git_commit": "71fa121aec68d12976fc583974207eaaf5a79342",
+  "git_dirty": false,
+  "python": "3.12.15",
+  "packages": {
+    "skill-router": "0.1.0",
+    "httpx": "0.28.1",
+    "typer": "0.27.3"
+  }
+}

@@ -1,0 +1,1407 @@
+{
+  "grid": [
+    {
+      "answer_k": 1,
+      "answer_gate": 0.8,
+      "abstain_cosine": 0.4,
+      "exact_equivalence": {
+        "k": 79,
+        "n": 217,
+        "rate": 0.3641,
+        "wilson95": [
+          0.3029,
+          0.4299
+        ]
+      },
+      "exact_strict": {
+        "k": 79,
+        "n": 217,
+        "rate": 0.3641,
+        "wilson95": [
+          0.3029,
+          0.4299
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.8,
+      "abstain_cosine": 0.5,
+      "exact_equivalence": {
+        "k": 92,
+        "n": 217,
+        "rate": 0.424,
+        "wilson95": [
+          0.3601,
+          0.4905
+        ]
+      },
+      "exact_strict": {
+        "k": 92,
+        "n": 217,
+        "rate": 0.424,
+        "wilson95": [
+          0.3601,
+          0.4905
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.8,
+      "abstain_cosine": 0.55,
+      "exact_equivalence": {
+        "k": 102,
+        "n": 217,
+        "rate": 0.47,
+        "wilson95": [
+          0.4047,
+          0.5364
+        ]
+      },
+      "exact_strict": {
+        "k": 102,
+        "n": 217,
+        "rate": 0.47,
+        "wilson95": [
+          0.4047,
+          0.5364
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.8,
+      "abstain_cosine": 0.6,
+      "exact_equivalence": {
+        "k": 115,
+        "n": 217,
+        "rate": 0.53,
+        "wilson95": [
+          0.4636,
+          0.5953
+        ]
+      },
+      "exact_strict": {
+        "k": 115,
+        "n": 217,
+        "rate": 0.53,
+        "wilson95": [
+          0.4636,
+          0.5953
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.8,
+      "abstain_cosine": 0.65,
+      "exact_equivalence": {
+        "k": 114,
+        "n": 217,
+        "rate": 0.5253,
+        "wilson95": [
+          0.459,
+          0.5908
+        ]
+      },
+      "exact_strict": {
+        "k": 114,
+        "n": 217,
+        "rate": 0.5253,
+        "wilson95": [
+          0.459,
+          0.5908
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.85,
+      "abstain_cosine": 0.4,
+      "exact_equivalence": {
+        "k": 79,
+        "n": 217,
+        "rate": 0.3641,
+        "wilson95": [
+          0.3029,
+          0.4299
+        ]
+      },
+      "exact_strict": {
+        "k": 79,
+        "n": 217,
+        "rate": 0.3641,
+        "wilson95": [
+          0.3029,
+          0.4299
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.85,
+      "abstain_cosine": 0.5,
+      "exact_equivalence": {
+        "k": 92,
+        "n": 217,
+        "rate": 0.424,
+        "wilson95": [
+          0.3601,
+          0.4905
+        ]
+      },
+      "exact_strict": {
+        "k": 92,
+        "n": 217,
+        "rate": 0.424,
+        "wilson95": [
+          0.3601,
+          0.4905
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.85,
+      "abstain_cosine": 0.55,
+      "exact_equivalence": {
+        "k": 102,
+        "n": 217,
+        "rate": 0.47,
+        "wilson95": [
+          0.4047,
+          0.5364
+        ]
+      },
+      "exact_strict": {
+        "k": 102,
+        "n": 217,
+        "rate": 0.47,
+        "wilson95": [
+          0.4047,
+          0.5364
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.85,
+      "abstain_cosine": 0.6,
+      "exact_equivalence": {
+        "k": 115,
+        "n": 217,
+        "rate": 0.53,
+        "wilson95": [
+          0.4636,
+          0.5953
+        ]
+      },
+      "exact_strict": {
+        "k": 115,
+        "n": 217,
+        "rate": 0.53,
+        "wilson95": [
+          0.4636,
+          0.5953
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.85,
+      "abstain_cosine": 0.65,
+      "exact_equivalence": {
+        "k": 114,
+        "n": 217,
+        "rate": 0.5253,
+        "wilson95": [
+          0.459,
+          0.5908
+        ]
+      },
+      "exact_strict": {
+        "k": 114,
+        "n": 217,
+        "rate": 0.5253,
+        "wilson95": [
+          0.459,
+          0.5908
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.9,
+      "abstain_cosine": 0.4,
+      "exact_equivalence": {
+        "k": 79,
+        "n": 217,
+        "rate": 0.3641,
+        "wilson95": [
+          0.3029,
+          0.4299
+        ]
+      },
+      "exact_strict": {
+        "k": 79,
+        "n": 217,
+        "rate": 0.3641,
+        "wilson95": [
+          0.3029,
+          0.4299
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.9,
+      "abstain_cosine": 0.5,
+      "exact_equivalence": {
+        "k": 92,
+        "n": 217,
+        "rate": 0.424,
+        "wilson95": [
+          0.3601,
+          0.4905
+        ]
+      },
+      "exact_strict": {
+        "k": 92,
+        "n": 217,
+        "rate": 0.424,
+        "wilson95": [
+          0.3601,
+          0.4905
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.9,
+      "abstain_cosine": 0.55,
+      "exact_equivalence": {
+        "k": 102,
+        "n": 217,
+        "rate": 0.47,
+        "wilson95": [
+          0.4047,
+          0.5364
+        ]
+      },
+      "exact_strict": {
+        "k": 102,
+        "n": 217,
+        "rate": 0.47,
+        "wilson95": [
+          0.4047,
+          0.5364
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.9,
+      "abstain_cosine": 0.6,
+      "exact_equivalence": {
+        "k": 115,
+        "n": 217,
+        "rate": 0.53,
+        "wilson95": [
+          0.4636,
+          0.5953
+        ]
+      },
+      "exact_strict": {
+        "k": 115,
+        "n": 217,
+        "rate": 0.53,
+        "wilson95": [
+          0.4636,
+          0.5953
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.9,
+      "abstain_cosine": 0.65,
+      "exact_equivalence": {
+        "k": 114,
+        "n": 217,
+        "rate": 0.5253,
+        "wilson95": [
+          0.459,
+          0.5908
+        ]
+      },
+      "exact_strict": {
+        "k": 114,
+        "n": 217,
+        "rate": 0.5253,
+        "wilson95": [
+          0.459,
+          0.5908
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.95,
+      "abstain_cosine": 0.4,
+      "exact_equivalence": {
+        "k": 79,
+        "n": 217,
+        "rate": 0.3641,
+        "wilson95": [
+          0.3029,
+          0.4299
+        ]
+      },
+      "exact_strict": {
+        "k": 79,
+        "n": 217,
+        "rate": 0.3641,
+        "wilson95": [
+          0.3029,
+          0.4299
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.95,
+      "abstain_cosine": 0.5,
+      "exact_equivalence": {
+        "k": 92,
+        "n": 217,
+        "rate": 0.424,
+        "wilson95": [
+          0.3601,
+          0.4905
+        ]
+      },
+      "exact_strict": {
+        "k": 92,
+        "n": 217,
+        "rate": 0.424,
+        "wilson95": [
+          0.3601,
+          0.4905
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.95,
+      "abstain_cosine": 0.55,
+      "exact_equivalence": {
+        "k": 102,
+        "n": 217,
+        "rate": 0.47,
+        "wilson95": [
+          0.4047,
+          0.5364
+        ]
+      },
+      "exact_strict": {
+        "k": 102,
+        "n": 217,
+        "rate": 0.47,
+        "wilson95": [
+          0.4047,
+          0.5364
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.95,
+      "abstain_cosine": 0.6,
+      "exact_equivalence": {
+        "k": 115,
+        "n": 217,
+        "rate": 0.53,
+        "wilson95": [
+          0.4636,
+          0.5953
+        ]
+      },
+      "exact_strict": {
+        "k": 115,
+        "n": 217,
+        "rate": 0.53,
+        "wilson95": [
+          0.4636,
+          0.5953
+        ]
+      }
+    },
+    {
+      "answer_k": 1,
+      "answer_gate": 0.95,
+      "abstain_cosine": 0.65,
+      "exact_equivalence": {
+        "k": 114,
+        "n": 217,
+        "rate": 0.5253,
+        "wilson95": [
+          0.459,
+          0.5908
+        ]
+      },
+      "exact_strict": {
+        "k": 114,
+        "n": 217,
+        "rate": 0.5253,
+        "wilson95": [
+          0.459,
+          0.5908
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.8,
+      "abstain_cosine": 0.4,
+      "exact_equivalence": {
+        "k": 31,
+        "n": 217,
+        "rate": 0.1429,
+        "wilson95": [
+          0.1025,
+          0.1956
+        ]
+      },
+      "exact_strict": {
+        "k": 31,
+        "n": 217,
+        "rate": 0.1429,
+        "wilson95": [
+          0.1025,
+          0.1956
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.8,
+      "abstain_cosine": 0.5,
+      "exact_equivalence": {
+        "k": 44,
+        "n": 217,
+        "rate": 0.2028,
+        "wilson95": [
+          0.1547,
+          0.2612
+        ]
+      },
+      "exact_strict": {
+        "k": 44,
+        "n": 217,
+        "rate": 0.2028,
+        "wilson95": [
+          0.1547,
+          0.2612
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.8,
+      "abstain_cosine": 0.55,
+      "exact_equivalence": {
+        "k": 54,
+        "n": 217,
+        "rate": 0.2488,
+        "wilson95": [
+          0.196,
+          0.3104
+        ]
+      },
+      "exact_strict": {
+        "k": 54,
+        "n": 217,
+        "rate": 0.2488,
+        "wilson95": [
+          0.196,
+          0.3104
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.8,
+      "abstain_cosine": 0.6,
+      "exact_equivalence": {
+        "k": 67,
+        "n": 217,
+        "rate": 0.3088,
+        "wilson95": [
+          0.2511,
+          0.3731
+        ]
+      },
+      "exact_strict": {
+        "k": 67,
+        "n": 217,
+        "rate": 0.3088,
+        "wilson95": [
+          0.2511,
+          0.3731
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.8,
+      "abstain_cosine": 0.65,
+      "exact_equivalence": {
+        "k": 69,
+        "n": 217,
+        "rate": 0.318,
+        "wilson95": [
+          0.2596,
+          0.3826
+        ]
+      },
+      "exact_strict": {
+        "k": 69,
+        "n": 217,
+        "rate": 0.318,
+        "wilson95": [
+          0.2596,
+          0.3826
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.85,
+      "abstain_cosine": 0.4,
+      "exact_equivalence": {
+        "k": 46,
+        "n": 217,
+        "rate": 0.212,
+        "wilson95": [
+          0.1629,
+          0.2711
+        ]
+      },
+      "exact_strict": {
+        "k": 46,
+        "n": 217,
+        "rate": 0.212,
+        "wilson95": [
+          0.1629,
+          0.2711
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.85,
+      "abstain_cosine": 0.5,
+      "exact_equivalence": {
+        "k": 59,
+        "n": 217,
+        "rate": 0.2719,
+        "wilson95": [
+          0.217,
+          0.3347
+        ]
+      },
+      "exact_strict": {
+        "k": 59,
+        "n": 217,
+        "rate": 0.2719,
+        "wilson95": [
+          0.217,
+          0.3347
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.85,
+      "abstain_cosine": 0.55,
+      "exact_equivalence": {
+        "k": 69,
+        "n": 217,
+        "rate": 0.318,
+        "wilson95": [
+          0.2596,
+          0.3826
+        ]
+      },
+      "exact_strict": {
+        "k": 69,
+        "n": 217,
+        "rate": 0.318,
+        "wilson95": [
+          0.2596,
+          0.3826
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.85,
+      "abstain_cosine": 0.6,
+      "exact_equivalence": {
+        "k": 82,
+        "n": 217,
+        "rate": 0.3779,
+        "wilson95": [
+          0.316,
+          0.444
+        ]
+      },
+      "exact_strict": {
+        "k": 82,
+        "n": 217,
+        "rate": 0.3779,
+        "wilson95": [
+          0.316,
+          0.444
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.85,
+      "abstain_cosine": 0.65,
+      "exact_equivalence": {
+        "k": 83,
+        "n": 217,
+        "rate": 0.3825,
+        "wilson95": [
+          0.3204,
+          0.4487
+        ]
+      },
+      "exact_strict": {
+        "k": 83,
+        "n": 217,
+        "rate": 0.3825,
+        "wilson95": [
+          0.3204,
+          0.4487
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.9,
+      "abstain_cosine": 0.4,
+      "exact_equivalence": {
+        "k": 55,
+        "n": 217,
+        "rate": 0.2535,
+        "wilson95": [
+          0.2002,
+          0.3153
+        ]
+      },
+      "exact_strict": {
+        "k": 55,
+        "n": 217,
+        "rate": 0.2535,
+        "wilson95": [
+          0.2002,
+          0.3153
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.9,
+      "abstain_cosine": 0.5,
+      "exact_equivalence": {
+        "k": 68,
+        "n": 217,
+        "rate": 0.3134,
+        "wilson95": [
+          0.2553,
+          0.3779
+        ]
+      },
+      "exact_strict": {
+        "k": 68,
+        "n": 217,
+        "rate": 0.3134,
+        "wilson95": [
+          0.2553,
+          0.3779
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.9,
+      "abstain_cosine": 0.55,
+      "exact_equivalence": {
+        "k": 78,
+        "n": 217,
+        "rate": 0.3594,
+        "wilson95": [
+          0.2986,
+          0.4252
+        ]
+      },
+      "exact_strict": {
+        "k": 78,
+        "n": 217,
+        "rate": 0.3594,
+        "wilson95": [
+          0.2986,
+          0.4252
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.9,
+      "abstain_cosine": 0.6,
+      "exact_equivalence": {
+        "k": 91,
+        "n": 217,
+        "rate": 0.4194,
+        "wilson95": [
+          0.3557,
+          0.4859
+        ]
+      },
+      "exact_strict": {
+        "k": 91,
+        "n": 217,
+        "rate": 0.4194,
+        "wilson95": [
+          0.3557,
+          0.4859
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.9,
+      "abstain_cosine": 0.65,
+      "exact_equivalence": {
+        "k": 91,
+        "n": 217,
+        "rate": 0.4194,
+        "wilson95": [
+          0.3557,
+          0.4859
+        ]
+      },
+      "exact_strict": {
+        "k": 91,
+        "n": 217,
+        "rate": 0.4194,
+        "wilson95": [
+          0.3557,
+          0.4859
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.95,
+      "abstain_cosine": 0.4,
+      "exact_equivalence": {
+        "k": 71,
+        "n": 217,
+        "rate": 0.3272,
+        "wilson95": [
+          0.2682,
+          0.3921
+        ]
+      },
+      "exact_strict": {
+        "k": 71,
+        "n": 217,
+        "rate": 0.3272,
+        "wilson95": [
+          0.2682,
+          0.3921
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.95,
+      "abstain_cosine": 0.5,
+      "exact_equivalence": {
+        "k": 84,
+        "n": 217,
+        "rate": 0.3871,
+        "wilson95": [
+          0.3248,
+          0.4533
+        ]
+      },
+      "exact_strict": {
+        "k": 84,
+        "n": 217,
+        "rate": 0.3871,
+        "wilson95": [
+          0.3248,
+          0.4533
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.95,
+      "abstain_cosine": 0.55,
+      "exact_equivalence": {
+        "k": 94,
+        "n": 217,
+        "rate": 0.4332,
+        "wilson95": [
+          0.369,
+          0.4997
+        ]
+      },
+      "exact_strict": {
+        "k": 94,
+        "n": 217,
+        "rate": 0.4332,
+        "wilson95": [
+          0.369,
+          0.4997
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.95,
+      "abstain_cosine": 0.6,
+      "exact_equivalence": {
+        "k": 107,
+        "n": 217,
+        "rate": 0.4931,
+        "wilson95": [
+          0.4273,
+          0.5591
+        ]
+      },
+      "exact_strict": {
+        "k": 107,
+        "n": 217,
+        "rate": 0.4931,
+        "wilson95": [
+          0.4273,
+          0.5591
+        ]
+      }
+    },
+    {
+      "answer_k": 2,
+      "answer_gate": 0.95,
+      "abstain_cosine": 0.65,
+      "exact_equivalence": {
+        "k": 106,
+        "n": 217,
+        "rate": 0.4885,
+        "wilson95": [
+          0.4228,
+          0.5546
+        ]
+      },
+      "exact_strict": {
+        "k": 106,
+        "n": 217,
+        "rate": 0.4885,
+        "wilson95": [
+          0.4228,
+          0.5546
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.8,
+      "abstain_cosine": 0.4,
+      "exact_equivalence": {
+        "k": 20,
+        "n": 217,
+        "rate": 0.0922,
+        "wilson95": [
+          0.0605,
+          0.1381
+        ]
+      },
+      "exact_strict": {
+        "k": 20,
+        "n": 217,
+        "rate": 0.0922,
+        "wilson95": [
+          0.0605,
+          0.1381
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.8,
+      "abstain_cosine": 0.5,
+      "exact_equivalence": {
+        "k": 33,
+        "n": 217,
+        "rate": 0.1521,
+        "wilson95": [
+          0.1104,
+          0.2059
+        ]
+      },
+      "exact_strict": {
+        "k": 33,
+        "n": 217,
+        "rate": 0.1521,
+        "wilson95": [
+          0.1104,
+          0.2059
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.8,
+      "abstain_cosine": 0.55,
+      "exact_equivalence": {
+        "k": 43,
+        "n": 217,
+        "rate": 0.1982,
+        "wilson95": [
+          0.1506,
+          0.2562
+        ]
+      },
+      "exact_strict": {
+        "k": 43,
+        "n": 217,
+        "rate": 0.1982,
+        "wilson95": [
+          0.1506,
+          0.2562
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.8,
+      "abstain_cosine": 0.6,
+      "exact_equivalence": {
+        "k": 56,
+        "n": 217,
+        "rate": 0.2581,
+        "wilson95": [
+          0.2044,
+          0.3201
+        ]
+      },
+      "exact_strict": {
+        "k": 56,
+        "n": 217,
+        "rate": 0.2581,
+        "wilson95": [
+          0.2044,
+          0.3201
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.8,
+      "abstain_cosine": 0.65,
+      "exact_equivalence": {
+        "k": 58,
+        "n": 217,
+        "rate": 0.2673,
+        "wilson95": [
+          0.2128,
+          0.3298
+        ]
+      },
+      "exact_strict": {
+        "k": 58,
+        "n": 217,
+        "rate": 0.2673,
+        "wilson95": [
+          0.2128,
+          0.3298
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.85,
+      "abstain_cosine": 0.4,
+      "exact_equivalence": {
+        "k": 39,
+        "n": 217,
+        "rate": 0.1797,
+        "wilson95": [
+          0.1343,
+          0.2362
+        ]
+      },
+      "exact_strict": {
+        "k": 39,
+        "n": 217,
+        "rate": 0.1797,
+        "wilson95": [
+          0.1343,
+          0.2362
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.85,
+      "abstain_cosine": 0.5,
+      "exact_equivalence": {
+        "k": 52,
+        "n": 217,
+        "rate": 0.2396,
+        "wilson95": [
+          0.1877,
+          0.3006
+        ]
+      },
+      "exact_strict": {
+        "k": 52,
+        "n": 217,
+        "rate": 0.2396,
+        "wilson95": [
+          0.1877,
+          0.3006
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.85,
+      "abstain_cosine": 0.55,
+      "exact_equivalence": {
+        "k": 62,
+        "n": 217,
+        "rate": 0.2857,
+        "wilson95": [
+          0.2297,
+          0.3491
+        ]
+      },
+      "exact_strict": {
+        "k": 62,
+        "n": 217,
+        "rate": 0.2857,
+        "wilson95": [
+          0.2297,
+          0.3491
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.85,
+      "abstain_cosine": 0.6,
+      "exact_equivalence": {
+        "k": 75,
+        "n": 217,
+        "rate": 0.3456,
+        "wilson95": [
+          0.2855,
+          0.4111
+        ]
+      },
+      "exact_strict": {
+        "k": 75,
+        "n": 217,
+        "rate": 0.3456,
+        "wilson95": [
+          0.2855,
+          0.4111
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.85,
+      "abstain_cosine": 0.65,
+      "exact_equivalence": {
+        "k": 76,
+        "n": 217,
+        "rate": 0.3502,
+        "wilson95": [
+          0.2899,
+          0.4158
+        ]
+      },
+      "exact_strict": {
+        "k": 76,
+        "n": 217,
+        "rate": 0.3502,
+        "wilson95": [
+          0.2899,
+          0.4158
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.9,
+      "abstain_cosine": 0.4,
+      "exact_equivalence": {
+        "k": 52,
+        "n": 217,
+        "rate": 0.2396,
+        "wilson95": [
+          0.1877,
+          0.3006
+        ]
+      },
+      "exact_strict": {
+        "k": 52,
+        "n": 217,
+        "rate": 0.2396,
+        "wilson95": [
+          0.1877,
+          0.3006
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.9,
+      "abstain_cosine": 0.5,
+      "exact_equivalence": {
+        "k": 65,
+        "n": 217,
+        "rate": 0.2995,
+        "wilson95": [
+          0.2425,
+          0.3635
+        ]
+      },
+      "exact_strict": {
+        "k": 65,
+        "n": 217,
+        "rate": 0.2995,
+        "wilson95": [
+          0.2425,
+          0.3635
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.9,
+      "abstain_cosine": 0.55,
+      "exact_equivalence": {
+        "k": 75,
+        "n": 217,
+        "rate": 0.3456,
+        "wilson95": [
+          0.2855,
+          0.4111
+        ]
+      },
+      "exact_strict": {
+        "k": 75,
+        "n": 217,
+        "rate": 0.3456,
+        "wilson95": [
+          0.2855,
+          0.4111
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.9,
+      "abstain_cosine": 0.6,
+      "exact_equivalence": {
+        "k": 88,
+        "n": 217,
+        "rate": 0.4055,
+        "wilson95": [
+          0.3424,
+          0.472
+        ]
+      },
+      "exact_strict": {
+        "k": 88,
+        "n": 217,
+        "rate": 0.4055,
+        "wilson95": [
+          0.3424,
+          0.472
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.9,
+      "abstain_cosine": 0.65,
+      "exact_equivalence": {
+        "k": 88,
+        "n": 217,
+        "rate": 0.4055,
+        "wilson95": [
+          0.3424,
+          0.472
+        ]
+      },
+      "exact_strict": {
+        "k": 88,
+        "n": 217,
+        "rate": 0.4055,
+        "wilson95": [
+          0.3424,
+          0.472
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.95,
+      "abstain_cosine": 0.4,
+      "exact_equivalence": {
+        "k": 71,
+        "n": 217,
+        "rate": 0.3272,
+        "wilson95": [
+          0.2682,
+          0.3921
+        ]
+      },
+      "exact_strict": {
+        "k": 71,
+        "n": 217,
+        "rate": 0.3272,
+        "wilson95": [
+          0.2682,
+          0.3921
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.95,
+      "abstain_cosine": 0.5,
+      "exact_equivalence": {
+        "k": 84,
+        "n": 217,
+        "rate": 0.3871,
+        "wilson95": [
+          0.3248,
+          0.4533
+        ]
+      },
+      "exact_strict": {
+        "k": 84,
+        "n": 217,
+        "rate": 0.3871,
+        "wilson95": [
+          0.3248,
+          0.4533
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.95,
+      "abstain_cosine": 0.55,
+      "exact_equivalence": {
+        "k": 94,
+        "n": 217,
+        "rate": 0.4332,
+        "wilson95": [
+          0.369,
+          0.4997
+        ]
+      },
+      "exact_strict": {
+        "k": 94,
+        "n": 217,
+        "rate": 0.4332,
+        "wilson95": [
+          0.369,
+          0.4997
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.95,
+      "abstain_cosine": 0.6,
+      "exact_equivalence": {
+        "k": 107,
+        "n": 217,
+        "rate": 0.4931,
+        "wilson95": [
+          0.4273,
+          0.5591
+        ]
+      },
+      "exact_strict": {
+        "k": 107,
+        "n": 217,
+        "rate": 0.4931,
+        "wilson95": [
+          0.4273,
+          0.5591
+        ]
+      }
+    },
+    {
+      "answer_k": 3,
+      "answer_gate": 0.95,
+      "abstain_cosine": 0.65,
+      "exact_equivalence": {
+        "k": 106,
+        "n": 217,
+        "rate": 0.4885,
+        "wilson95": [
+          0.4228,
+          0.5546
+        ]
+      },
+      "exact_strict": {
+        "k": 106,
+        "n": 217,
+        "rate": 0.4885,
+        "wilson95": [
+          0.4228,
+          0.5546
+        ]
+      }
+    }
+  ],
+  "best": {
+    "answer_k": 1,
+    "answer_gate": 0.8,
+    "abstain_cosine": 0.6,
+    "exact_equivalence": {
+      "k": 115,
+      "n": 217,
+      "rate": 0.53,
+      "wilson95": [
+        0.4636,
+        0.5953
+      ]
+    },
+    "exact_strict": {
+      "k": 115,
+      "n": 217,
+      "rate": 0.53,
+      "wilson95": [
+        0.4636,
+        0.5953
+      ]
+    }
+  }
+}

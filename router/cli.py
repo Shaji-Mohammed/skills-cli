@@ -289,6 +289,39 @@ def baseline_sweep(
     typer.echo(f"Saved {run_path.relative_to(REPO_ROOT)}")
 
 
+@eval_app.command()
+def baseline(
+    model: str = typer.Option("BAAI/bge-small-en-v1.5"),
+    source: str = typer.Option("rewritten", help="original | rewritten"),
+    weight: float = typer.Option(0.8, help="Embedding weight in the hybrid score"),
+    answer_k: int = typer.Option(1),
+    answer_gate: float = typer.Option(0.9),
+    abstain_cosine: float = typer.Option(0.6),
+    allow_dirty: bool = typer.Option(
+        False, "--allow-dirty", help="Run from uncommitted code (the run can't be quoted)"
+    ),
+) -> None:
+    """Run the retrieval-only baseline on dev and save predictions and full metrics."""
+    if source not in ("original", "rewritten"):
+        raise typer.BadParameter("source must be original or rewritten")
+    cfg = evaluate.BaselineConfig(
+        RetrievalConfig(
+            embedding_model=model,
+            description_source="original" if source == "original" else "rewritten",
+            embedding_weight=weight,
+        ),
+        answer_k=answer_k,
+        answer_gate=answer_gate,
+        abstain_cosine=abstain_cosine,
+    )
+    try:
+        run_path = evaluate.run_baseline(cfg, allow_dirty=allow_dirty)
+    except DirtyTree as e:
+        typer.echo(f"Stopped: {e}", err=True)
+        raise typer.Exit(1) from e
+    typer.echo(f"Saved {run_path.relative_to(REPO_ROOT)}")
+
+
 @evals_app.command("check-handwritten")
 def check_handwritten() -> None:
     """Run filled hand-written prompts through the D1-D4 filters and label checks."""

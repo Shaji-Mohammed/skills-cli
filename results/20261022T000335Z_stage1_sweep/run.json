@@ -1,0 +1,221 @@
+{
+  "name": "stage1_sweep",
+  "started_at": "2026-10-22T00:03:35.119725+00:00",
+  "config": {
+    "configs": [
+      {
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "description_source": "original",
+        "embedding_weight": 0.5,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "description_source": "original",
+        "embedding_weight": 0.6,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "description_source": "original",
+        "embedding_weight": 0.7,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "description_source": "original",
+        "embedding_weight": 0.8,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "description_source": "original",
+        "embedding_weight": 0.9,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "description_source": "original",
+        "embedding_weight": 0.0,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "description_source": "original",
+        "embedding_weight": 1.0,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "description_source": "rewritten",
+        "embedding_weight": 0.5,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "description_source": "rewritten",
+        "embedding_weight": 0.6,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "description_source": "rewritten",
+        "embedding_weight": 0.7,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "description_source": "rewritten",
+        "embedding_weight": 0.8,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "description_source": "rewritten",
+        "embedding_weight": 0.9,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "description_source": "rewritten",
+        "embedding_weight": 0.0,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "description_source": "rewritten",
+        "embedding_weight": 1.0,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "description_source": "original",
+        "embedding_weight": 0.5,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "description_source": "original",
+        "embedding_weight": 0.6,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "description_source": "original",
+        "embedding_weight": 0.7,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "description_source": "original",
+        "embedding_weight": 0.8,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "description_source": "original",
+        "embedding_weight": 0.9,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "description_source": "original",
+        "embedding_weight": 0.0,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "description_source": "original",
+        "embedding_weight": 1.0,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "description_source": "rewritten",
+        "embedding_weight": 0.5,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "description_source": "rewritten",
+        "embedding_weight": 0.6,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "description_source": "rewritten",
+        "embedding_weight": 0.7,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "description_source": "rewritten",
+        "embedding_weight": 0.8,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "description_source": "rewritten",
+        "embedding_weight": 0.9,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "description_source": "rewritten",
+        "embedding_weight": 0.0,
+        "gate": 0.0,
+        "cap": 40
+      },
+      {
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "description_source": "rewritten",
+        "embedding_weight": 1.0,
+        "gate": 0.0,
+        "cap": 40
+      }
+    ],
+    "caps": [
+      10,
+      20,
+      40
+    ]
+  },
+  "corpus_path": "/Users/shajimohammed/Desktop/Projects/skills_router_cli/corpus/skills.jsonl",
+  "corpus_version": "269860b82ceae5b47856aecb8f619a9d9efb5ff0f91f9e718cfc91f14b535859",
+  "evalset_path": "/Users/shajimohammed/Desktop/Projects/skills_router_cli/evals/dev.jsonl",
+  "evalset_version": "7958e7226080be2176e774fb5227968eb437402ec75c7b2b8498fe397da3029d",
+  "git_commit": "93391a4777a3db88cb1aed95ce93f86990bd6994",
+  "git_dirty": false,
+  "python": "3.12.15",
+  "packages": {
+    "skill-router": "0.1.0",
+    "httpx": "0.28.1",
+    "typer": "0.27.3"
+  }
+}

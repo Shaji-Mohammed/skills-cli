@@ -85,12 +85,16 @@ slice (which overlaps the first two).
 | Bucket | Definition | Target | Source |
 | --- | --- | ---: | --- |
 | explicit | Names the format, tool or platform | 200 (50%) | model_drafted |
-| implied | Describes only the goal; no format, tool or platform named | 120 (30%) | 25 hand_written, 95 model_drafted |
+| implied | Describes only the goal; no format, tool or platform named | 120 (30%) | 25 claude_drafted, 95 model_drafted |
 | no-skill | Answerable without any skill, or out of scope for the corpus | 80 (20%) | model_drafted |
 | *multi-skill (slice)* | Gold set of 2 or 3 skills | ≥ 100 (≥ 25%) | both |
 
-Every result is reported for `hand_written` and `model_drafted` separately as well as combined,
-because qwen3.5:9b both drafts prompts and acts as the fallback.
+Every result is reported for `claude_drafted` and `model_drafted` (qwen) separately as well as
+combined, because qwen3.5:9b both drafts prompts and acts as the fallback.
+
+**Correction (2026-10-22): no eval prompt was written by a person.** The 25 slot-sheet prompts,
+planned as hand-written, were drafted by Claude at the reviewer's request, so their source is
+`claude_drafted`. The source comparison is qwen drafts vs Claude drafts, not model vs human.
 
 **Product-locked skills are explicit-bucket only.** A skill is product-locked if picking it
 means picking one specific product, model or library among interchangeable alternatives, and
@@ -122,7 +126,7 @@ job. This applies to hand-written prompts and qwen's implied drafts alike.
 - Multi-skill combinations must occur together in real workflows. They come from cross-references
   in skill text, kept only if qwen judges that one realistic task needs both. They're never
   sampled at random.
-- Hand-written implied prompts: 25 slots (18 singles, 7 pairs) chosen by a seeded draw from the
+- Claude-drafted implied prompts (planned as hand-written): 25 slots (18 singles, 7 pairs) chosen by a seeded draw from the
   live main slots of `evals/handwritten/implied_slots.csv` (`use = yes`); the rest are
   `unused`.
 
@@ -131,7 +135,7 @@ job. This applies to hand-written prompts and qwen's implied drafts alike.
 - **Input:** the gold skill's SKILL.md body (frontmatter removed). Never the original or the
   rewritten description.
 - **Model:** qwen3.5:9b, with a fixed seed and temperature 0, and responses cached and committed.
-- **Every prompt records** its `source` (`model_drafted` or `hand_written`), bucket, gold set,
+- **Every prompt records** its `source` (`model_drafted` or `claude_drafted`), bucket, gold set,
   the skill it was drafted from and its `review_status`.
 
 ## 5. Review

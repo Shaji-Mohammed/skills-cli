@@ -67,7 +67,10 @@ def hand_written_items(skills: list[dict[str, Any]], eq: dict[str, str]) -> list
             "prompt": " ".join(r["prompt"].split()),
             "gold": sorted(g for g in r["gold"].split(";") if g),
             "bucket": "implied",
-            "source": "hand_written",
+            # The slot-sheet prompts were drafted by Claude at the reviewer's request, not
+            # written by a person (relabelled 2026-10-22; the sheet itself still says
+            # hand_written). The label keeps them separate from qwen's drafts.
+            "source": "claude_drafted",
             "helpful_excluded": r["helpful_excluded"],
         }
         for r in rows
@@ -316,7 +319,7 @@ def apply_review(allow_dirty: bool = False) -> tuple[Path, str]:
     def strata(group: list[Item]) -> dict[str, int]:
         return dict(Counter(it["bucket"] for it in group)) | {
             "multi_skill": sum(it["multi_skill"] for it in group),
-            "hand_written": sum(it["source"] == "hand_written" for it in group),
+            "claude_drafted": sum(it["source"] == "claude_drafted" for it in group),
         }
 
     sha = file_sha256(TEST)

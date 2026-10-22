@@ -26,7 +26,7 @@ FAILURES = ("MISS_STAGE1", "OVERROUTING", "WRONG_SCORER", "ABSTAIN")
 class Item:
     id: str
     bucket: str  # explicit | implied | no_skill
-    source: str  # model_drafted | hand_written
+    source: str  # model_drafted (qwen) | claude_drafted
     gold: frozenset[str]
 
     @property
